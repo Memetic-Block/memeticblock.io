@@ -1,17 +1,10 @@
 <template>
     <div class="index-page">
-      <v-container>
-  
-        <v-row>
-          <v-col cols="12">
-            <h1>Memetic Block</h1>
-          </v-col>
-        </v-row>
-
-        <v-row>
-            <v-btn color="primary" size="small">Vuetify theme test</v-btn>
-        </v-row>
-
-      </v-container>
+        <div class="flex-stack">
+            <div class="flex-horiz-center">
+                <img src="/images/logoWhite.png" width="288" height="343" />
+            </div>
+            <img src="/images/memeticBlock.png" width="366" height="61" />
+        </div>
     </div>
-  </template>
+</template>
