@@ -1,0 +1,22 @@
+.index-page {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--v-theme-background));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.surface-bg {
+    background-color: rgb(var(--v-theme-surface));
+}
+
+.flex-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-horiz-center {
+    display: flex;
+    justify-content: center;
+}
