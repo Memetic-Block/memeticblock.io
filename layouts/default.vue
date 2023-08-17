@@ -3,7 +3,6 @@
         <v-main class="app-main">
             <slot />
         </v-main>
-        <Footer />
     </v-app>
 </template>
 
