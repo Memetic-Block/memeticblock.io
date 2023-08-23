@@ -6,12 +6,6 @@ module.exports = {
   env: {
     browser: true
   },
-  // parser: '@typescript-eslint/parser',
-  // parserOptions: {
-  //   project: true,
-  //   tsconfigRootDir: __dirname,
-  //   extraFileExtensions: [ '.vue' ]
-  // },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: "@typescript-eslint/parser",
