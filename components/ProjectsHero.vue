@@ -2,7 +2,7 @@
     <div id="projects-hero" class="projects-hero surface-bg">
         <div class="client-logo">
             <img
-                src="/logo/logo_by_daliah_ammar_dark_transparent.png"
+                src="/logo/art-by-city/logo_by_daliah_ammar_dark_transparent.png"
                 alt="Art x By x City"
             />
         </div>
