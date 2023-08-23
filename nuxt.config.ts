@@ -15,7 +15,12 @@ export default defineNuxtConfig({
           name: 'Description',
           content: 'Memetic Block website'
         }
-      ]
+      ],
+      link: [{
+        rel: 'icon',
+        type: 'image/png',
+        href: '/images/MemBlockLogo.png'
+      }]
     }
   },
 
