@@ -1,4 +1,4 @@
 <template>
-    <LandingHero />
-    <ProjectsHero />
+  <LandingHero />
+  <ProjectsHero />
 </template>
