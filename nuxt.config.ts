@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       link: [{
         rel: 'icon',
         type: 'image/png',
-        href: '/images/MemBlockLogo.png'
+        href: '/logo/memetic-block/memetic-block-favicon.png'
       }]
     }
   },
