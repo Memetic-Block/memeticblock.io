@@ -11,19 +11,19 @@ export default defineNuxtPlugin(nuxtApp => {
       defaultTheme: 'dark',
       themes: {
         dark: {
-            colors: {
-              primary: '#C82323',
-              secondary: '#df2626',
-              'gray-text': '#999999',
-              surface: '#333333',
-              background: '#222222',
-              'chalk-background': '#E1E1E1',
-              'off-white': '#F8F8F8',
-              error: '#FF5252',
-              info: '#2196F3',
-              success: '#4CAF50',
-              warning: '#FFC107',
-            }
+          colors: {
+            primary: '#C82323',
+            secondary: '#df2626',
+            'gray-text': '#999999',
+            surface: '#333333',
+            background: '#222222',
+            'chalk-background': '#E1E1E1',
+            'off-white': '#F8F8F8',
+            error: '#FF5252',
+            info: '#2196F3',
+            success: '#4CAF50',
+            warning: '#FFC107',
+          }
         }
       }
     }
