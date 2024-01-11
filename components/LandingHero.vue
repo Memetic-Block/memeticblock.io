@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-  <DownArrow scroll-to="projects-hero" />
+  <!-- <DownArrow scroll-to="projects-hero" /> -->
 </template>
 
 <style scoped>
