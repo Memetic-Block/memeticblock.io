@@ -24,3 +24,10 @@ jobs:
 
       - name: Deploy to S3
         run: aws s3 sync .output/public s3://memeticblock.io --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+          --distribution-id ${{ secrets.MEMETIC_CLOUDFRONT_DISTRIBUTION_ID }} \
+          --paths "/*"
+
