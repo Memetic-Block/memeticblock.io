@@ -17,7 +17,7 @@ jobs:
           aws-region: us-east-2
 
       - name: Install Dependencies
-        run: npm i --production
+        run: npm i
 
       - name: Build Static WebApp
         run: npm run generate
