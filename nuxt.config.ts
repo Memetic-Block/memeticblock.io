@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-
   ssr: false,
 
   app: {
@@ -38,9 +37,11 @@ export default defineNuxtConfig({
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css'
   ],
+
   build: {
     transpile: ['vuetify']
   },
+
   vite: {
     define: {
       'process.env.DEBUG': false
@@ -50,5 +51,8 @@ export default defineNuxtConfig({
   /**
    * Vue Router Config
    */
-  pages: true
+  pages: true,
+
+  modules: ['@tresjs/nuxt'],
+  compatibilityDate: '2025-02-14'
 })
