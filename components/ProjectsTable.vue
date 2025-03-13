@@ -25,7 +25,9 @@
     </thead>
     <tbody>
       <tr v-for="project in projects" :key="project.name">
-        <td>{{ project.name }}<sup v-if="project.sup">{{ project.sup }}</sup></td>
+        <td>
+          {{ project.name }}<sup v-if="project.sup">{{ project.sup }}</sup>
+        </td>
         <td>{{ project.type }}</td>
         <td :class="`text-${project.statusColor || 'success'}`">
           {{ project.status }}
@@ -41,27 +43,35 @@
     <tfoot>
       <tr>
         <td colspan="4" style="font-size: 12px">
-          <sup>*</sup> Memetic Block provides Engineering Consulting Services
-          to the Anyone Protocol.
+          <sup>*</sup>
+          Project owned by a third party with Engineering Consulting Services
+          provided by Memetic Block.
         </td>
       </tr>
     </tfoot>
   </table>
   <p>
-    <a href="https://github.com/memetic-block" target="_blank">
-      github.com/memetic-block
-    </a>
+    For code, please see
+    <a href="https://github.com/memetic-block" target="_blank">github.com/memetic-block</a>
+    or
+    <a href="https://github.com/art-by-city" target="_blank">github.com/art-by-city</a>
   </p>
   <hr />
   <p>Moral Obligatories</p>
   <ul>
     <li>
       <a href="https://berkeleymono.com" target="_blank">Berkeley Mono</a> font
-      by <a href="https://usgraphics.com/" target="_blank">U.S. Graphics Company</a>
+      by
+      <a href="https://usgraphics.com/" target="_blank">
+        U.S. Graphics Company
+      </a>
     </li>
     <li>
       Design stylesheets & inspiration from
-      <a href="https://owickstrom.github.io/the-monospace-web" target="_blank">The Monospace Web</a>
+      <a
+        href="https://owickstrom.github.io/the-monospace-web"
+        target="_blank"
+      >The Monospace Web</a>
       by <a href="https://wickstrom.tech/" target="_blank">Oskar Wickström</a>
     </li>
   </ul>
