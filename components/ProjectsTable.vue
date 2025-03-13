@@ -2,7 +2,9 @@
   <p id="projects">
     <span class="font-weight-black">MEMETIC BLOCK</span> is a
     <span class="font-italic">Software Guild</span> focused on building
-    distributed systems and realizing creativity in the spaces between them.
+    distributed systems of value and
+    realizing creativity in the spaces
+    between them.
   </p>
   <p>
     We believe that software is willpower automated.
@@ -47,12 +49,12 @@
   <ul>
     <li>
       <a href="https://berkeleymono.com" target="_blank">Berkeley Mono</a> font
-      by <a href="https://usgraphics.com/">U.S. Graphics Company</a>
+      by <a href="https://usgraphics.com/" target="_blank">U.S. Graphics Company</a>
     </li>
     <li>
       Design stylesheets & inspiration from
-      <a href="https://owickstrom.github.io/the-monospace-web">The Monospace Web</a>
-      by <a href="https://wickstrom.tech/">Oskar Wickström</a>
+      <a href="https://owickstrom.github.io/the-monospace-web" target="_blank">The Monospace Web</a>
+      by <a href="https://wickstrom.tech/" target="_blank">Oskar Wickström</a>
     </li>
   </ul>
 </template>
