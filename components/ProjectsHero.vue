@@ -1,7 +1,7 @@
 <template>
   <div
     id="projects-hero"
-    class="projects-hero surface-bg"
+    class="projects-hero"
   >
     <div class="client-logo">
       <img
@@ -14,15 +14,15 @@
 
 <style scoped>
 .projects-hero {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 200px;
-    padding: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  padding: 100px;
 }
 
 .client-logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 </style>

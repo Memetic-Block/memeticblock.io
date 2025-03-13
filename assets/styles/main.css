@@ -1,7 +1,12 @@
 @import "@/assets/styles/fonts.css";
 
+:root {
+    color-scheme: dark;
+}
+
 html {
     scroll-behavior: smooth;
+    background-color: rgb(var(--v-theme-background));
 }
 
 .background-bg {
