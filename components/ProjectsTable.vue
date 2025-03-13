@@ -25,7 +25,7 @@
     </thead>
     <tbody>
       <tr v-for="project in projects" :key="project.name">
-        <td>{{ project.name }}</td>
+        <td>{{ project.name }}<sup v-if="project.sup">{{ project.sup }}</sup></td>
         <td>{{ project.type }}</td>
         <td :class="`text-${project.statusColor || 'success'}`">
           {{ project.status }}
@@ -38,6 +38,14 @@
         </td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="font-size: 12px">
+          <sup>*</sup> Memetic Block provides Engineering Consulting Services
+          to the Anyone Protocol.
+        </td>
+      </tr>
+    </tfoot>
   </table>
   <p>
     <a href="https://github.com/memetic-block" target="_blank">
@@ -66,7 +74,8 @@ const projects = [
     type: 'DePIN VPN Network',
     status: 'Testnet',
     url: 'https://anyone.io',
-    linkText: 'anyone.io'
+    linkText: 'anyone.io',
+    sup: '*'
   },
   {
     name: 'Art By City',
