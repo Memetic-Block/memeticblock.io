@@ -157,7 +157,7 @@ const projects = [
     status: 'Live',
     url: 'https://frostor.xyz',
     linkText: 'frostor.xyz',
-    info: ['100k+ $ARIO Staked.', 'Top 5 perfomance.']
+    info: ['100k+ $ARIO staked.', 'Top 5 perfomance.']
   },
   {
     name: 'Love4src',
@@ -165,7 +165,7 @@ const projects = [
     status: 'Live',
     url: 'https://love4src.com',
     linkText: 'love4src.com',
-    info: ['100k+ $ARIO Staked.', 'Top 5 perfomance.']
+    info: ['100k+ $ARIO staked.', 'Top 5 perfomance.']
   },
   {
     name: 'Operation Dog wif Sunburn',
