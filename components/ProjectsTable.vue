@@ -69,7 +69,11 @@
         <td :class="`text-${project.statusColor || 'success'}`">
           {{ project.status }}
         </td>
-        <td v-for="info in project.info" :key="info" v-html="info"></td>
+        <td>
+          <template v-for="info in project.info" :key="info"> 
+            <span v-html="info"></span><br />
+          </template>
+        </td>
         <td>
           <a v-if="project.url" :href="project.url" target="_blank">
             {{ project.linkText }}
