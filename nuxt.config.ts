@@ -23,42 +23,52 @@ export default defineNuxtConfig({
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/Fontspring-DEMO-proximanova-light.otf'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/Fontspring-DEMO-proximanova-bold.otf'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Bold.woff'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Bold.woff2'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-BoldItalic.woff'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-BoldItalic.woff2'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Italic.woff'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Italic.woff2'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Regular.woff'
         },
         {
           rel: 'preload',
+          as: 'font',
           href: '/fonts/BerkeleyMono-Regular.woff2'
         },
       ]
