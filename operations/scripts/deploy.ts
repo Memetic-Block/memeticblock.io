@@ -1,6 +1,5 @@
 import { ANT, ArweaveSigner } from '@ar.io/sdk'
 import { TurboFactory } from '@ardrive/turbo-sdk'
-import { copyFileSync } from 'fs'
 
 // ANT-MEMETICBLOCK
 const processId = 'xmUsfnCXTIkyHyPVku79F9DuK0uroUGk3gQr-88SaTI'

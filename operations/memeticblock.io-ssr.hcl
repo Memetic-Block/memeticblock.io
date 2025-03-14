@@ -1,4 +1,4 @@
-job "deploy-memeticblock.io-ssr" {
+job "memeticblock.io-ssr" {
   datacenters = ["mb-hel"]
   type = "service"
 
@@ -6,8 +6,16 @@ job "deploy-memeticblock.io-ssr" {
     attempts = 0
   }
 
-  group "deploy-memeticblock.io-ssr-group" {
+  group "memeticblock.io-ssr-group" {
     count = 1
+
+    update {
+      stagger      = "30s"
+      max_parallel = 1
+      canary       = 1
+      auto_revert  = true
+      auto_promote = true
+    }
 
     network {
       mode = "bridge"
@@ -17,29 +25,17 @@ job "deploy-memeticblock.io-ssr" {
       }
     }
 
-    task "deploy-memeticblock.io-ssr-task" {
+    task "memeticblock.io-ssr-task" {
       driver = "docker"
 
       config {
-        image = "ghcr.io/memetic-block/memeticblock.io:[[.commit_sha]]"
+        image = "ghcr.io/memetic-block/memeticblock.io:stage"
         force_pull = true
-      }
-
-      vault { policies = ["memeticblock-arns-deployer"] }
-
-      template {
-        data = <<-EOH
-        {{ with secret "kv/memeticblock/permaweb_deployer" }}
-          PERMAWEB_KEY="{{ .Data.data.b64jwk }}"
-        {{ end }}
-        EOH
-        destination = "secrets/file.env"
-        env         = true
       }
       
       env {
         PHASE="live"
-        DASHBOARD_VERSION="[[.commit_sha]]"
+        DASHBOARD_VERSION="8dfedd92e26dcb3023fb93f3f173ea322d3132fa13d69e468e311afb36137caa"
       }
 
       restart {
