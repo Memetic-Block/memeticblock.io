@@ -14,7 +14,43 @@
     <a href="https://x.com/memeticblock" target="_blank">x.com/memeticblock</a>
   </p>
   <hr />
-  <table>
+  <div v-if="mobile">
+    <ul class="tree">
+      <li>
+        <p style="margin: 0;">
+          <strong>Projects</strong>
+        </p>
+        <ul class="incremental">
+          <li v-for="project in projects" :key="project.name">
+            {{ project.name }}<sup v-if="project.sup">{{ project.sup }}</sup>
+            <ul class="incremental">
+              <li>{{ project.type }}</li>
+              <li>
+                <span :class="`text-${project.statusColor || 'success'}`">
+                  {{ project.status }}
+                </span>
+              </li>
+              <li v-for="info in project.info" :key="info">
+                <span v-html="info"></span>
+              </li>
+              <li>
+                <a v-if="project.url" :href="project.url" target="_blank">
+                  {{ project.linkText }}
+                </a>
+                <span v-else>{{ project.linkText }}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="font-italic" style="font-size: 12px">
+      <sup>*</sup>
+      Project owned by a third party with Engineering Consulting Services
+      provided by Memetic Block.
+    </div>
+  </div>
+  <table v-else>
     <thead>
       <tr>
         <th class="width-min">Project</th>
@@ -33,7 +69,7 @@
         <td :class="`text-${project.statusColor || 'success'}`">
           {{ project.status }}
         </td>
-        <td v-html="project.info"></td>
+        <td v-for="info in project.info" :key="info" v-html="info"></td>
         <td>
           <a v-if="project.url" :href="project.url" target="_blank">
             {{ project.linkText }}
@@ -80,6 +116,10 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
+
+const { mobile } = useDisplay()
+
 const projects = [
   {
     name: 'Anyone Protocol',
@@ -88,7 +128,7 @@ const projects = [
     url: 'https://anyone.io',
     linkText: 'anyone.io',
     sup: '*',
-    info: '4,000+ relays registered.'
+    info: ['4,000+ relays registered.']
   },
   {
     name: 'Art By City',
@@ -96,7 +136,7 @@ const projects = [
     status: 'Rendering Grass',
     url: 'https://artby.city',
     linkText: 'artby.city',
-    info: '40+ artists.<br />10+ exhibitions.'
+    info: ['40+ artists.', '10+ exhibitions.']
   },
   {
     name: 'Art By City Digital',
@@ -105,7 +145,7 @@ const projects = [
     statusColor: 'info',
     url: 'https://artbycity.frostor.xyz',
     linkText: 'artbycity.frostor.xyz',
-    info: '60+ artists.<br />40+ gigabytes of art.<br />31k+ data transactions.'
+    info: ['60+ artists.', '40+ gigabytes of art.', '31k+ data transactions.']
   },
   {
     name: 'Frostor',
@@ -113,7 +153,7 @@ const projects = [
     status: 'Live',
     url: 'https://frostor.xyz',
     linkText: 'frostor.xyz',
-    info: '100k+ $ARIO Staked.<br />Top 5 perfomance.'
+    info: ['100k+ $ARIO Staked.', 'Top 5 perfomance.']
   },
   {
     name: 'Love4src',
@@ -121,7 +161,7 @@ const projects = [
     status: 'Live',
     url: 'https://love4src.com',
     linkText: 'love4src.com',
-    info: '100k+ $ARIO Staked.<br />Top 5 perfomance.'
+    info: ['100k+ $ARIO Staked.', 'Top 5 perfomance.']
   },
   {
     name: 'Operation Dog wif Sunburn',
@@ -130,7 +170,7 @@ const projects = [
     statusColor: 'warning',
     url: 'https://██████████████.net',
     linkText: '██████████████.net',
-    info: '██████████████'
+    info: ['██████████████']
   },
   {
     name: 'Project Glass Memory',
@@ -138,7 +178,7 @@ const projects = [
     status: 'Closed Alpha',
     url: 'https://██████████████.net',
     linkText: '██████████████.net',
-    info: 'Inquire for demo.'
+    info: ['Inquire for demo.']
   },
   {
     name: 'AO Encrypted Messages',
@@ -146,7 +186,7 @@ const projects = [
     status: 'Published',
     url: 'https://www.npmjs.com/package/@memetic-block/ao-encrypted-messages',
     linkText: 'npm',
-    info: 'Encrypted Voicemail on Arweave.'
+    info: ['Encrypted Voicemail on Arweave.']
   },
   {
     // name: '@memetic-block/ans-104',
@@ -156,7 +196,7 @@ const projects = [
     statusColor: 'warning',
     // url: 'https://www.npmjs.com/package/@memetic-block/ans-104',
     linkText: 'npm',
-    info: 'Lean and mean.<br />Coming soon.<br />Dang it, Bobby.'
+    info: ['Lean and mean.', 'Coming soon.', 'Dang it, Bobby.']
   },
   {
     name: 'Operation Bird Brain',
@@ -165,7 +205,7 @@ const projects = [
     statusColor: 'info',
     url: 'https://██████████████.net',
     linkText: '██████████████.net',
-    info: '100k+ epochs of neural violence.'
+    info: ['100k+ epochs of neural violence.']
   }
 ]
 </script>
