@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr: false,
+  ssr: true,
 
   app: {
     baseURL: '/',
@@ -53,6 +53,6 @@ export default defineNuxtConfig({
    */
   pages: true,
 
-  modules: ['@tresjs/nuxt'],
+  modules: [],
   compatibilityDate: '2025-02-14'
 })
