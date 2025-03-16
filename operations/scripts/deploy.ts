@@ -57,12 +57,12 @@ async function deploy() {
   const { id: deployedTxId } = undername === '@'
     ? await ant.setBaseNameRecord({
       transactionId: manifestResponse.id,
-      ttlSeconds: 900
+      ttlSeconds: 3600
     })
     : await ant.setUndernameRecord({
       undername,
       transactionId: manifestResponse.id,
-      ttlSeconds: 900
+      ttlSeconds: 3600
     })
   console.info(
     'Deployed!  Please wait 20 - 30 minutes for ARNS to update!',
