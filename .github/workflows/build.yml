@@ -26,6 +26,9 @@ jobs:
       - name: Set up environment variables
         run: echo "NUXT_PUBLIC_COMMIT_HASH=${{ github.sha }}" >> $GITHUB_ENV
 
+      - name: Debug runner user
+        run: whoami
+
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}" --build-arg NUXT_PUBLIC_COMMIT_HASH=${{ github.sha }}
 
