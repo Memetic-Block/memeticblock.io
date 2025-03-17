@@ -1,4 +1,4 @@
-name: Build memeticblock.io docker image
+name: Build memeticblock.io docker image & deploy ssr
 
 on:
   push:
