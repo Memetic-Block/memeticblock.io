@@ -45,6 +45,7 @@ job "memeticblock.io-ssr" {
         {{- end }}
         EOF
         env = true
+        destination = "local/env"
       }
 
       restart {
