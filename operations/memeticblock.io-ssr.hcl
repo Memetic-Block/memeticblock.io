@@ -29,13 +29,22 @@ job "memeticblock.io-ssr" {
       driver = "docker"
 
       config {
-        image = "ghcr.io/memetic-block/memeticblock.io:stage"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:stage"
         force_pull = true
       }
       
       env {
         PHASE="live"
         DASHBOARD_VERSION="8dfedd92e26dcb3023fb93f3f173ea322d3132fa13d69e468e311afb36137caa"
+      }
+
+      template {
+        data = <<-EOF
+        {{- range service "container-registry" }}
+        CONTAINER_REGISTRY_ADDR="{{ .Address }}:{{ .Port }}"
+        {{- end }}
+        EOF
+        env = true
       }
 
       restart {
