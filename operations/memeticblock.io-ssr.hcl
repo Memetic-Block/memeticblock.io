@@ -29,13 +29,12 @@ job "memeticblock.io-ssr" {
       driver = "docker"
 
       config {
-        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:stage"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:latest"
         force_pull = true
       }
       
       env {
-        PHASE="live"
-        DASHBOARD_VERSION="8dfedd92e26dcb3023fb93f3f173ea322d3132fa13d69e468e311afb36137caa"
+        PHASE="stage"
       }
 
       template {
