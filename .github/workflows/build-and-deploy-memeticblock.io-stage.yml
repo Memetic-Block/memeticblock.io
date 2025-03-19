@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - name: docker-build-memeticblock.io
         run: |
-          docker build . 
+          docker build . \
             --file Dockerfile \
             --tag $IMAGE_NAME \
             --label "runnumber=${GITHUB_RUN_ID}" \
