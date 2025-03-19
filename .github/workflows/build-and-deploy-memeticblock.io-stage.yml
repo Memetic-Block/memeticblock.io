@@ -5,7 +5,6 @@ on:
       - master
 env:
   IMAGE_NAME: memeticblock.io
-  VERSION: latest
 jobs:
   build-and-push-memeticblock-io-stage:
     runs-on: self-hosted
@@ -30,11 +29,14 @@ jobs:
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
   deploy-memeticblock-io-stage:
     needs: build-and-push-memeticblock-io-stage
     runs-on: self-hosted
     steps:
       - name: Deploy new version
-        run: nomad job run operations/memeticblock.io-ssr.hcl
+        run: |
+          echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
+          levant render -var-file=deploy-vars.json -out runtime.hcl operations/memeticblock.io-ssr-stage.hcl
+          nomad job run runtime.hcl

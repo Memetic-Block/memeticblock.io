@@ -33,8 +33,7 @@ job "deploy-memeticblock.io-ar" {
       }
       
       env {
-        PHASE="live"
-        DASHBOARD_VERSION="8dfedd92e26dcb3023fb93f3f173ea322d3132fa13d69e468e311afb36137caa"
+        PHASE="live-ar"
       }
 
       restart {

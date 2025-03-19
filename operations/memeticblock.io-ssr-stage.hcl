@@ -1,4 +1,4 @@
-job "memeticblock.io-ssr" {
+job "memeticblock.io-ssr-stage" {
   datacenters = ["mb-hel"]
   type = "service"
 
@@ -6,7 +6,7 @@ job "memeticblock.io-ssr" {
     attempts = 0
   }
 
-  group "memeticblock.io-ssr-group" {
+  group "memeticblock.io-ssr-stage-group" {
     count = 1
 
     update {
@@ -20,16 +20,16 @@ job "memeticblock.io-ssr" {
     network {
       mode = "bridge"
       port "ssr" {
-        to = 3000
+        to           = 3000
         host_network = "wireguard"
       }
     }
 
-    task "memeticblock.io-ssr-task" {
+    task "memeticblock.io-ssr-stage-task" {
       driver = "docker"
 
       config {
-        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:latest"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:[[.image_tag]]"
         force_pull = true
       }
       
@@ -49,7 +49,7 @@ job "memeticblock.io-ssr" {
 
       restart {
         attempts = 0
-        mode = "fail"
+        mode     = "fail"
       }
 
       resources {
@@ -61,12 +61,21 @@ job "memeticblock.io-ssr" {
         name = "memeticblock-io-ssr"
         port = "ssr"
 
+        check {
+          type     = "http"
+          port     = "ssr"
+          path     = "/"
+          interval = "10s"
+          timeout  = "5s"
+        }
+
         tags = [
           "traefik.enable=true",
           "traefik.http.routers.memeticblock-io-ssr.entrypoints=https",          
           "traefik.http.routers.memeticblock-io-ssr.tls=true",
           "traefik.http.routers.memeticblock-io-ssr.tls.certresolver=memetic-block",
-          "traefik.http.routers.memeticblock-io-ssr.rule=Host(`memeticblock.io`) || Host(`www.memeticblock.io`) || Host(`memeticblock.com`) || Host(`www.memeticblock.com`) || Host(`memeticblock.net`) || Host(`www.memeticblock.net`)"
+          "traefik.http.routers.memeticblock-io-ssr.rule=Host(`memeticblock-io-stage.hel.memeticblock.net`)"
+          # "traefik.http.routers.memeticblock-io-ssr.rule=Host(`memeticblock.io`) || Host(`www.memeticblock.io`) || Host(`memeticblock.com`) || Host(`www.memeticblock.com`) || Host(`memeticblock.net`) || Host(`www.memeticblock.net`)"
         ]
       }
     }
