@@ -1,0 +1,28 @@
+name: Build memeticblock.io image for STAGE
+on:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+env:
+  IMAGE_NAME: memeticblock.io
+
+jobs:
+  publish:
+    runs-on: self-hosted
+
+    steps:
+      - name: Deploy new version
+        run: |
+          IMAGE_ID=$CONTAINER_REGISTRY_ADDR/${{ github.repository_owner }}/$IMAGE_NAME
+
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+          # Strip git ref prefix from version
+          VERSION=${{ github.ref_name }}
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+          
+          echo "Deploying new version [$IMAGE_ID:$VERSION]"
+          # nomad job run operations/memeticblock.io-ssr.hcl
