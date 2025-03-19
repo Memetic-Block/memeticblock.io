@@ -71,10 +71,10 @@ job "memeticblock.io-ssr-stage" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.memeticblock-io-ssr.entrypoints=https",          
-          "traefik.http.routers.memeticblock-io-ssr.tls=true",
-          "traefik.http.routers.memeticblock-io-ssr.tls.certresolver=memetic-block",
-          "traefik.http.routers.memeticblock-io-ssr.rule=Host(`memeticblock-io-stage.hel.memeticblock.net`)"
+          "traefik.http.routers.memeticblock-io-ssr-stage.entrypoints=https",          
+          "traefik.http.routers.memeticblock-io-ssr-stage.tls=true",
+          "traefik.http.routers.memeticblock-io-ssr-stage.tls.certresolver=memetic-block",
+          "traefik.http.routers.memeticblock-io-ssr-stage.rule=Host(`memeticblock-io-stage.hel.memeticblock.net`)"
         ]
       }
     }
