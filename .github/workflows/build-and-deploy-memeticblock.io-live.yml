@@ -38,7 +38,6 @@ jobs:
     steps:
       - name: Deploy new version
         run: |
-          VERSION=$(echo ${{ github.ref_name }} | sed -e 's/^v//')
-          echo -e "{ \"image_tag\":\"$VERSION\" }" > deploy-vars.json
+          echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
           levant render -var-file=deploy-vars.json -out runtime-live.hcl operations/memeticblock.io-ssr-live.hcl
           nomad job run runtime-live.hcl

@@ -71,7 +71,7 @@ job "memeticblock.io-ssr-live" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.memeticblock-io-ssr.entrypoints=https",          
+          "traefik.http.routers.memeticblock-io-ssr.entrypoints=https",
           "traefik.http.routers.memeticblock-io-ssr.tls=true",
           "traefik.http.routers.memeticblock-io-ssr.tls.certresolver=memetic-block",
           "traefik.http.routers.memeticblock-io-ssr.rule=Host(`memeticblock.io`) || Host(`www.memeticblock.io`) || Host(`memeticblock.com`) || Host(`www.memeticblock.com`) || Host(`memeticblock.net`) || Host(`www.memeticblock.net`)"

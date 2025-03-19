@@ -71,7 +71,7 @@ job "memeticblock.io-ssr-stage" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.memeticblock-io-ssr-stage.entrypoints=https",          
+          "traefik.http.routers.memeticblock-io-ssr-stage.entrypoints=https",
           "traefik.http.routers.memeticblock-io-ssr-stage.tls=true",
           "traefik.http.routers.memeticblock-io-ssr-stage.tls.certresolver=memetic-block",
           "traefik.http.routers.memeticblock-io-ssr-stage.rule=Host(`memeticblock-io-stage.hel.memeticblock.net`)"
