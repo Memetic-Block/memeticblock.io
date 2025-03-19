@@ -1,4 +1,4 @@
-job "memeticblock.io-ssr-stage" {
+job "memeticblock.io-ssr-live" {
   datacenters = ["mb-hel"]
   type = "service"
 
@@ -6,7 +6,7 @@ job "memeticblock.io-ssr-stage" {
     attempts = 0
   }
 
-  group "memeticblock.io-ssr-stage-group" {
+  group "memeticblock.io-ssr-live-group" {
     count = 1
 
     update {
@@ -25,14 +25,14 @@ job "memeticblock.io-ssr-stage" {
       }
     }
 
-    task "memeticblock.io-ssr-stage-task" {
+    task "memeticblock.io-ssr-live-task" {
       driver = "docker"
 
       config {
         image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:[[.image_tag]]"
         force_pull = true
       }
-      
+
       env {
         PHASE="stage"
       }
@@ -58,7 +58,7 @@ job "memeticblock.io-ssr-stage" {
       }
 
       service {
-        name = "memeticblock-io-ssr-stage"
+        name = "memeticblock-io-ssr"
         port = "ssr"
 
         check {
