@@ -7,7 +7,7 @@ env:
   IMAGE_NAME: memeticblock.io
   VERSION: latest
 jobs:
-  build-memeticblock-io-stage:
+  build-and-push-memeticblock-io-stage:
     runs-on: self-hosted
     permissions:
       contents: read
@@ -33,7 +33,7 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
   deploy-memeticblock-io-stage:
-    needs: build-memeticblock-io-stage
+    needs: build-and-push-memeticblock-io-stage
     runs-on: self-hosted
     steps:
       - name: Deploy new version
