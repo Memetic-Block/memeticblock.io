@@ -48,5 +48,5 @@ jobs:
       - name: Deploy new version to Arweave
         run: |
           echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
-          levant render -var-file=deploy-vars.json -out deploy-live-ar.hcl operations/memeticblock.io-ar-live.hcl
+          levant render -var-file=deploy-vars.json -out deploy-live-ar.hcl operations/deploy-memeticblock.io-ar-live.hcl
           nomad job run deploy-live-ar.hcl
