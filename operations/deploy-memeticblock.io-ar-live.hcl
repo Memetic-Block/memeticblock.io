@@ -13,7 +13,7 @@ job "deploy-memeticblock.io-ar-live" {
       driver = "docker"
 
       config {
-        image = "ghcr.io/memetic-block/memeticblock.io:[[.image_tag]]"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:[[.image_tag]]"
         entrypoint = ["npm"]
         command = "run"
         args = ["deploy"]
