@@ -1,4 +1,4 @@
-name: Build memeticblock.io image for STAGE
+name: Deploy memeticblock.io SSR to STAGE
 on:
   workflow_run:
     workflows: [Build]
@@ -7,7 +7,7 @@ env:
   IMAGE_NAME: memeticblock.io
 
 jobs:
-  publish:
+  deploy:
     runs-on: self-hosted
 
     steps:

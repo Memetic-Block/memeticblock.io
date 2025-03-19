@@ -7,7 +7,7 @@ env:
   IMAGE_NAME: memeticblock.io
 
 jobs:
-  publish:
+  build:
     runs-on: self-hosted
     permissions:
       packages: write
