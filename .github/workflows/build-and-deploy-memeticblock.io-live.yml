@@ -1,12 +1,12 @@
-name: build-and-deploy-memeticblock.io-stage
+name: build-and-deploy-memeticblock.io-live
 on:
   push:
-    branches: 
-      - master
+    tags: 
+      - "v*"
 env:
   IMAGE_NAME: memeticblock.io
 jobs:
-  build-and-push-memeticblock-io-stage:
+  build-and-push-memeticblock-io-live:
     runs-on: self-hosted
     permissions:
       contents: read
@@ -27,16 +27,18 @@ jobs:
           IMAGE_ID=$CONTAINER_REGISTRY_ADDR/${{ github.repository_owner }}/$IMAGE_NAME
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          VERSION=$(echo ${{ github.ref_name }} | sed -e 's/^v//')
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
-          docker tag $IMAGE_NAME $IMAGE_ID:latest
-          docker push $IMAGE_ID:latest
-  deploy-memeticblock-io-stage:
-    needs: build-and-push-memeticblock-io-stage
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+  deploy-memeticblock-io-live:
+    needs: build-and-push-memeticblock-io-live
     runs-on: self-hosted
     steps:
       - name: Deploy new version
         run: |
-          echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
-          levant render -var-file=deploy-vars.json -out runtime-stage.hcl operations/memeticblock.io-ssr-stage.hcl
-          nomad job run runtime-stage.hcl
+          VERSION=$(echo ${{ github.ref_name }} | sed -e 's/^v//')
+          echo -e "{ \"image_tag\":\"$VERSION\" }" > deploy-vars.json
+          levant render -var-file=deploy-vars.json -out runtime-live.hcl operations/memeticblock.io-ssr-live.hcl
+          nomad job run runtime-live.hcl
