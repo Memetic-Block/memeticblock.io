@@ -1,4 +1,4 @@
-job "deploy-memeticblock.io-ar" {
+job "deploy-memeticblock.io-ar-live" {
   datacenters = ["mb-hel"]
   type = "batch"
 
@@ -6,15 +6,14 @@ job "deploy-memeticblock.io-ar" {
     attempts = 0
   }
 
-  group "deploy-memeticblock.io-ar-group" {
+  group "deploy-memeticblock.io-ar-live-group" {
     count = 1
 
-    task "deploy-memeticblock.io-ar-task" {
+    task "deploy-memeticblock.io-ar-live-task" {
       driver = "docker"
 
       config {
-        image = "ghcr.io/memetic-block/memeticblock.io:stage"
-        force_pull = true
+        image = "ghcr.io/memetic-block/memeticblock.io:[[.image_tag]]"
         entrypoint = ["npm"]
         command = "run"
         args = ["deploy"]

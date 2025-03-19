@@ -41,3 +41,12 @@ jobs:
           echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
           levant render -var-file=deploy-vars.json -out runtime-live.hcl operations/memeticblock.io-ssr-live.hcl
           nomad job run runtime-live.hcl
+  deploy-memeticblock-io-live-arweave:
+    needs: build-and-push-memeticblock-io-live
+    runs-on: self-hosted
+    steps:
+      - name: Deploy new version to Arweave
+        run: |
+          echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
+          levant render -var-file=deploy-vars.json -out deploy-live-ar.hcl operations/memeticblock.io-ar-live.hcl
+          nomad job run deploy-live-ar.hcl

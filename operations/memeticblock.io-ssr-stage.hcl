@@ -30,7 +30,6 @@ job "memeticblock.io-ssr-stage" {
 
       config {
         image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:[[.image_tag]]"
-        force_pull = true
       }
       
       env {
