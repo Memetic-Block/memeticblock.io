@@ -1,7 +1,7 @@
-name: Deploy memeticblock.io SSR to STAGE
+name: deploy-memeticblock.io-ssr-stage
 on:
   workflow_run:
-    workflows: [Build]
+    workflows: [build-memeticblock.io-stage]
     types: [completed]
 env:
   IMAGE_NAME: memeticblock.io

@@ -1,4 +1,4 @@
-name: Build memeticblock.io image for STAGE
+name: build-memeticblock.io-stage
 on:
   push:
     branches: 
