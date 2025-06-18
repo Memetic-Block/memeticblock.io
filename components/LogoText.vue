@@ -1,6 +1,8 @@
 <template>
-  <span class="logo-text-bold mr-3">MEMETIC</span>
-  <span class="logo-text-light">BLOCK</span>
+  <h1>
+    <span class="logo-text-bold mr-3">MEMETIC</span>
+    <span class="logo-text-light">BLOCK</span>
+  </h1>
 </template>
 
 <style scoped>
