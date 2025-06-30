@@ -11,7 +11,9 @@
   </p>
   <p>
     We are currently <span class="text-success">OPEN</span> to new projects ->
-    <a href="https://x.com/memeticblock" target="_blank">x.com/memeticblock</a>
+    <a href="mailto:build@memeticblock.com" target="_blank"
+      >build@memeticblock.com</a
+    >
   </p>
   <hr />
   <div v-if="mobile">
