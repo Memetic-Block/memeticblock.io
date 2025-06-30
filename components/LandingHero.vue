@@ -7,7 +7,7 @@
       <div class="flex-horiz-center">
         <MemeticBlockLogo />
       </div>
-      <div class="mt-2">
+      <div class="mt-2 text-center">
         <LogoText />
       </div>
     </div>
