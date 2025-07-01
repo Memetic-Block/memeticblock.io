@@ -15,6 +15,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: set-up-build-environment-variables
+        run: echo "NUXT_PUBLIC_COMMIT_HASH=${{ github.sha }}" >> $GITHUB_ENV
       - name: docker-build-memeticblock.io
         run: |
           docker build . \
@@ -27,6 +29,7 @@ jobs:
           IMAGE_ID=$CONTAINER_REGISTRY_ADDR/${{ github.repository_owner }}/$IMAGE_NAME
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          echo -e "{\"deploy\":\"$VERSION\",\"commit_sha\":\"${GITHUB_SHA}\"}" > deploy-vars.json
           docker tag $IMAGE_NAME $IMAGE_ID:${{ github.sha }}
           docker push $IMAGE_ID:${{ github.sha }}
           docker tag $IMAGE_NAME $IMAGE_ID:latest
