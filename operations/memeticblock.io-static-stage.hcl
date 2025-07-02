@@ -63,11 +63,11 @@ job "memeticblock.io-static-stage" {
         data = <<-EOF
         #!/bin/sh
 
-        echo "Building token-admin static files"
+        echo "Building memeticblock.io static files"
         npm run build
 
-        echo "Syncing token-admin static files to cloudflare r2"
-        rclone sync dist r2:${DEPLOY_BUCKET}/
+        echo "Syncing memeticblock.io static files to cloudflare r2"
+        rclone sync .output/public r2:${DEPLOY_BUCKET}/
         EOF
         destination = "local/entrypoint.sh"
         perms = "0755"
