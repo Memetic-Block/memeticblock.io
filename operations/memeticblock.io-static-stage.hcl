@@ -64,7 +64,7 @@ job "memeticblock.io-static-stage" {
         #!/bin/sh
 
         echo "Building memeticblock.io static files"
-        npm run build
+        npm run generate
 
         echo "Syncing memeticblock.io static files to cloudflare r2"
         rclone sync .output/public r2:${DEPLOY_BUCKET}/
