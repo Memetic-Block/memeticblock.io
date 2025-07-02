@@ -66,6 +66,13 @@ job "memeticblock.io-static-live" {
         echo "Building memeticblock.io static files"
         npm run generate
 
+        echo "Fixing permissions on generated files"
+        find .output/public -type f -exec chmod 644 {} \;
+        find .output/public -type d -exec chmod 755 {} \;
+
+        echo "Listing contents of .output/public"
+        ls -la .output/public
+
         echo "Syncing memeticblock.io static files to cloudflare r2"
         rclone sync .output/public r2:${DEPLOY_BUCKET}/
         EOF
