@@ -34,12 +34,12 @@ jobs:
           docker push $IMAGE_ID:${{ github.sha }}
           docker tag $IMAGE_NAME $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
-  deploy-memeticblock-io-stage:
+  deploy-memeticblock-io-static-stage:
     needs: build-and-push-memeticblock-io-stage
     runs-on: self-hosted
     steps:
       - name: Deploy new version
         run: |
           echo -e "{ \"image_tag\":\"${{ github.sha }}\" }" > deploy-vars.json
-          levant render -var-file=deploy-vars.json -out runtime-stage.hcl operations/memeticblock.io-ssr-stage.hcl
+          levant render -var-file=deploy-vars.json -out runtime-stage.hcl operations/memeticblock.io-static-stage.hcl
           nomad job run runtime-stage.hcl
