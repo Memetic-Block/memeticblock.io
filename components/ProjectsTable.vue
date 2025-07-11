@@ -16,7 +16,7 @@
     >
   </p>
   <hr />
-  <div v-if="mobile">
+  <div v-if="mobile" id="projects-display">
     <ul class="tree">
       <li>
         <p style="margin: 0;">
@@ -52,7 +52,7 @@
       provided by Memetic Block.
     </div>
   </div>
-  <table v-else>
+  <table v-else id="projects-display">
     <thead>
       <tr>
         <th class="width-min">Project</th>
