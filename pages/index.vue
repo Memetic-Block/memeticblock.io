@@ -10,3 +10,7 @@
   <br />
   <ProjectsTable />
 </template>
+
+<script setup lang="ts">
+useHead({ title: 'Memetic Block' })
+</script>

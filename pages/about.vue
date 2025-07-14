@@ -151,7 +151,7 @@
   }
 </style>
 
-<script>
+<script setup lang="ts">
 useHead({
   meta: [
     { property: "og:title", content: "About | Memetic Block" },
