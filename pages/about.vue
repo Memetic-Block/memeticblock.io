@@ -167,6 +167,6 @@ useHead({
     { property: "og:type", content: "website" },
     { name: "keywords", content: "blockchain development, smart contract development, decentralized applications, Web3, DePIN" }
   ],
-  title: "About Memetic Block"
+  title: "About | Memetic Block"
 });
 </script>
