@@ -12,5 +12,8 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Memetic Block' })
+useHead({
+  title: 'Memetic Block',
+  link: [ { rel: 'canonical', href: 'https://memeticblock.com' } ]
+})
 </script>
