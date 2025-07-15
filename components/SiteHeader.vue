@@ -12,7 +12,7 @@
         </li>
         <li>
           <NuxtLink
-            href="mailto:build@memeticblock.com"
+            href="/contact"
             style="text-decoration: none"
           >
             Contact Us

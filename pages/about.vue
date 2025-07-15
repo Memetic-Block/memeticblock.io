@@ -6,7 +6,7 @@
       <p>
         We build custom, scalable blockchain solutions to power your business.
       </p>
-      <a class="button" href="mailto:build@memeticblock.com?subject=Connect%20with%20Memetic%20Block">Get a Free Quote</a>
+      <a class="button" href="/contact">Get a Free Quote</a>
     </section>
 
     <hr />
@@ -113,7 +113,7 @@
         Whether you're looking to build a DePIN network, create Web3 applications, or integrate blockchain technology into your existing systems, we're here to help you succeed.
       </p>
       <div>
-        <a class="button" href="mailto:build@memeticblock.com?subject=Connect%20with%20Memetic%20Block">Get Started Today</a>
+        <a class="button" href="/contact">Get Started Today</a>
       </div>
       <h3 class="mt-12">Contact Information</h3>
       <ul>
@@ -168,5 +168,5 @@ useHead({
     { name: "keywords", content: "blockchain development, smart contract development, decentralized applications, Web3, DePIN" }
   ],
   title: "About | Memetic Block"
-});
+})
 </script>
