@@ -2,7 +2,9 @@
   <main>
     <section> 
       <h1 class="text-center pt-12">Memetic Block - Contact Us</h1>
-      <iframe
+      <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://syxro.mjt.lu/wgt/syxro/0sq8/form?c=6a5f0e82" width="100%" style="height: 0;"></iframe>
+
+      <!-- <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLScTjtZhF42e8YWQkw3DCJXzpyaRLz4cKSFDvBKnIf5F-1e8Dw/viewform?embedded=true"
         width="100%"
         height="780"
@@ -11,7 +13,7 @@
         marginwidth="0"
       >
         Loading Contact Form
-      </iframe>
+      </iframe> -->
     </section>
   </main>
 </template>
@@ -32,6 +34,12 @@ useHead({
     { property: "og:type", content: "website" },
     { name: "keywords", content: "blockchain development, smart contract development, decentralized applications, Web3, DePIN" }
   ],
-  title: "Contact Us | Memetic Block"
+  title: 'Contact Us | Memetic Block',
+  script: [
+    {
+      src: 'https://app.mailjet.com/pas-nc-embedded-v1.js',
+      type: 'text/javascript'
+    }
+  ]
 })
 </script>
