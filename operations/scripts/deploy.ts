@@ -1,5 +1,6 @@
 import { ANT, ArweaveSigner } from '@ar.io/sdk'
 import { TurboFactory } from '@ardrive/turbo-sdk'
+import Arweave from 'arweave'
 
 // ANT-MEMETICBLOCK
 const processId = 'xmUsfnCXTIkyHyPVku79F9DuK0uroUGk3gQr-88SaTI'
@@ -18,11 +19,15 @@ if (process.env.PHASE === 'stage') {
 }
 
 async function deploy() {
+  console.log('Deploying to Arweave via', url, 'with gateway', gatewayUrl)
+
   const jwk = JSON.parse(
     Buffer
       .from(process.env.PERMAWEB_KEY || 'NO_KEY', 'base64')
       .toString('utf-8')
   )
+  const arweave = Arweave.init({})
+  const address = arweave.wallets.jwkToAddress(jwk)
   const signer = new ArweaveSigner(jwk)
   const turbo = TurboFactory.authenticated({
     signer,
@@ -30,6 +35,8 @@ async function deploy() {
     uploadServiceConfig: { url }
   })
   const ant = ANT.init({ processId, signer })
+
+  console.info('Deploying as', address, 'to undername', undername)
 
   const {
     fileResponses,

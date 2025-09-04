@@ -19,6 +19,12 @@ job "deploy-memeticblock.io-ar-live" {
         args = ["deploy"]
       }
 
+      env {
+        PHASE="live"
+        GATEWAY="https://arweave.net"
+        BUNDLER="https://upload.ardrive.io"
+      }
+
       vault { policies = ["memeticblock-arns-deployer"] }
 
       template {
@@ -39,10 +45,6 @@ job "deploy-memeticblock.io-ar-live" {
         EOF
         env = true
         destination = "local/env"
-      }
-      
-      env {
-        PHASE="live"
       }
 
       restart {
