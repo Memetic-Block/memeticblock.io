@@ -1,13 +1,17 @@
 import { ANT, ArweaveSigner } from '@ar.io/sdk'
 import { TurboFactory } from '@ardrive/turbo-sdk'
 import Arweave from 'arweave'
+import { readFileSync } from 'fs'
 
 // ANT-MEMETICBLOCK
-const processId = 'xmUsfnCXTIkyHyPVku79F9DuK0uroUGk3gQr-88SaTI'
-
+const processId = '_FB4vtcNXwBw9yz4BEJ3tZCTkWoQqP3mLzr1T5TBo14'
+const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
+if (!PRIVATE_KEY) {
+  throw new Error('PRIVATE_KEY is not set!')
+}
 const DEPLOY_FOLDER = `${process.cwd()}/.output/public`
-const gatewayUrl = process.env.GATEWAY || 'https://ar.anyone.tech'
-const url = process.env.BUNDLER || 'https://ar.anyone.tech/bundler'
+const gatewayUrl = process.env.GATEWAY || 'https://arweave.net'
+const url = process.env.BUNDLER || 'https://upload.ardrive.io'
 
 let undername = 'dev'
 if (process.env.PHASE === 'stage') {
@@ -21,13 +25,9 @@ if (process.env.PHASE === 'stage') {
 async function deploy() {
   console.log('Deploying to Arweave via', url, 'with gateway', gatewayUrl)
 
-  const jwk = JSON.parse(
-    Buffer
-      .from(process.env.PERMAWEB_KEY || 'NO_KEY', 'base64')
-      .toString('utf-8')
-  )
+  const jwk = JSON.parse(readFileSync(PRIVATE_KEY, 'utf-8'))
   const arweave = Arweave.init({})
-  const address = arweave.wallets.jwkToAddress(jwk)
+  const address = await arweave.wallets.jwkToAddress(jwk)
   const signer = new ArweaveSigner(jwk)
   const turbo = TurboFactory.authenticated({
     signer,
@@ -47,6 +47,10 @@ async function deploy() {
     folderPath: DEPLOY_FOLDER,
     dataItemOpts: {
       tags: [{ name: 'Deploy-Nonce', value: Date.now().toString() }]
+    },
+    manifestOptions: {
+      indexFile: 'index.html',
+      fallbackFile: 'index.html'
     }
   })
 
