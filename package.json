@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,6 +15,7 @@
     "@ar.io/sdk": "^3.8.4",
     "@ardrive/turbo-sdk": "^1.23.0",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.14.0",
     "@types/node": "^18.17.1",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
@@ -27,5 +29,8 @@
     "@mdi/font": "^7.2.96",
     "sass": "^1.65.1",
     "vuetify": "^3.3.12"
+  },
+  "overrides": {
+    "@dha-team/arbundles": "1.0.3"
   }
 }

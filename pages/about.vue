@@ -117,9 +117,9 @@
       </div>
       <h3 class="mt-12">Contact Information</h3>
       <ul>
-        <li>Email: <a href="mailto:build@memeticblock.com?subject=Connect%20with%20Memetic%20Block">build@memeticblock.com</a></li>
-        <li>Twitter: <a href="https://x.com/memeticblock">@memeticblock</a></li>
-        <li>Website: <a href="https://memeticblock.io">memeticblock.io</a></li>
+        <li>Email: <a class="underline" href="mailto:build@memeticblock.com?subject=Connect%20with%20Memetic%20Block">build@memeticblock.com</a></li>
+        <li>Twitter: <a class="underline" href="https://x.com/memeticblock">@memeticblock</a></li>
+        <li>Website: <a class="underline" href="https://memeticblock.io">memeticblock.io</a></li>
       </ul>
       <p style="margin-top: 40px;">Ready to build the future of decentralized technology? We're currently <span class="text-success">OPEN</span> to new projects.</p>
     </section>

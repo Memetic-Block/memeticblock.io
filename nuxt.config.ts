@@ -24,16 +24,6 @@ export default defineNuxtConfig({
         {
           rel: 'preload',
           as: 'font',
-          href: '/fonts/Fontspring-DEMO-proximanova-light.otf'
-        },
-        {
-          rel: 'preload',
-          as: 'font',
-          href: '/fonts/Fontspring-DEMO-proximanova-bold.otf'
-        },
-        {
-          rel: 'preload',
-          as: 'font',
           href: '/fonts/BerkeleyMono-Bold.woff'
         },
         {
@@ -104,6 +94,12 @@ export default defineNuxtConfig({
    */
   pages: true,
 
-  modules: [],
+  modules: ['@nuxtjs/tailwindcss'],
+  
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+  },
+
   compatibilityDate: '2025-02-14'
 })

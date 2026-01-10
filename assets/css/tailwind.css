@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  /* Berkeley Mono font faces */
+  @font-face {
+    font-family: 'Berkeley Mono';
+    font-style: normal;
+    font-weight: 100 500;
+    src:
+      url('/fonts/BerkeleyMono-Regular.woff') format('woff'),
+      url('/fonts/BerkeleyMono-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Berkeley Mono';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url('/fonts/BerkeleyMono-Bold.woff') format('woff'),
+      url('/fonts/BerkeleyMono-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Berkeley Mono';
+    font-style: italic;
+    font-weight: 100 500;
+    src:
+      url('/fonts/BerkeleyMono-Italic.woff') format('woff'),
+      url('/fonts/BerkeleyMono-Italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Berkeley Mono';
+    font-style: oblique;
+    font-weight: 100 500;
+    src:
+      url('/fonts/BerkeleyMono-Italic.woff') format('woff'),
+      url('/fonts/BerkeleyMono-Italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Berkeley Mono';
+    font-style: italic;
+    font-weight: bold;
+    src:
+      url('/fonts/BerkeleyMono-BoldItalic.woff') format('woff'),
+      url('/fonts/BerkeleyMono-BoldItalic.woff2') format('woff2');
+  }
+
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply bg-background text-white font-mono;
+  }
+
+  body {
+    @apply min-h-screen antialiased;
+  }
+}
+
+/* Component utilities - migrated from main.css */
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 border-2 border-white uppercase font-medium 
+           text-white no-underline transition-colors duration-200
+           hover:bg-white hover:text-background;
+  }
+
+  .btn-primary {
+    @apply bg-primary border-primary hover:bg-secondary hover:border-secondary hover:text-white;
+  }
+
+  .container-page {
+    @apply max-w-6xl mx-auto px-4 md:px-8 lg:px-16;
+  }
+}
+
+/* Legacy utility classes for gradual migration */
+@layer utilities {
+  .background-bg {
+    @apply bg-background;
+  }
+
+  .surface-bg {
+    @apply bg-surface;
+  }
+
+  .flex-stack {
+    @apply flex flex-col;
+  }
+
+  .flex-horiz-center {
+    @apply flex justify-center;
+  }
+}

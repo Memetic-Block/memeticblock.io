@@ -28,7 +28,8 @@
     /* position: fixed;
     bottom: 0; */
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-bottom: 15px;
     cursor: pointer;
 }
