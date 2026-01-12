@@ -1,9 +1,6 @@
-# Nuxt dev/build outputs
-.output
-.nuxt
-.nitro
-.cache
+# Vite dev/build outputs
 dist
+.vite-ssg-temp
 
 # Node dependencies
 node_modules

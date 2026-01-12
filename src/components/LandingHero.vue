@@ -11,3 +11,8 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import MemeticBlockLogo from './MemeticBlockLogo.vue'
+import LogoText from './LogoText.vue'
+</script>

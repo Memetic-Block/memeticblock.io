@@ -15,19 +15,19 @@
           <p class="font-bold mb-2">Links</p>
           <ul class="list-none m-0 p-0 space-y-2">
             <li>
-              <NuxtLink href="/" class="text-gray-text hover:text-white no-underline transition-colors">
+              <RouterLink to="/" class="text-gray-text hover:text-white no-underline transition-colors">
                 Home
-              </NuxtLink>
+              </RouterLink>
             </li>
             <li>
-              <NuxtLink href="/about" class="text-gray-text hover:text-white no-underline transition-colors">
+              <RouterLink to="/about" class="text-gray-text hover:text-white no-underline transition-colors">
                 About
-              </NuxtLink>
+              </RouterLink>
             </li>
             <li>
-              <NuxtLink href="/contact" class="text-gray-text hover:text-white no-underline transition-colors">
+              <RouterLink to="/contact" class="text-gray-text hover:text-white no-underline transition-colors">
                 Contact
-              </NuxtLink>
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
                 target="_blank"
                 class="text-gray-text hover:text-white no-underline transition-colors"
               >
-                Twitter/X
+                X (Twitter)
               </a>
             </li>
           </ul>
@@ -67,13 +67,15 @@
       </div>
 
       <!-- Copyright -->
-      <div class="mt-8 pt-4 border-t border-white/10 text-center text-gray-text text-sm">
-        <p class="m-0">&copy; {{ currentYear }} Memetic Block. All rights reserved.</p>
+      <div class="mt-8 pt-6 border-t border-white/10 text-center text-sm text-gray-text">
+        <p>&copy; {{ currentYear }} Memetic Block. All rights reserved.</p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+import { computed } from 'vue'
+
+const currentYear = computed(() => new Date().getFullYear())
 </script>
