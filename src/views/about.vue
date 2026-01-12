@@ -7,7 +7,7 @@
       <p class="mb-6">
         We build custom, scalable blockchain solutions to power your business.
       </p>
-      <a class="btn" href="/contact">Get a Free Quote</a>
+      <RouterLink class="btn" to="/contact">Get a Free Quote</RouterLink>
     </section>
 
     <hr class="border-white/20 my-12" />
@@ -89,7 +89,7 @@
         </article>
       </div>
       
-      <a class="btn" href="/#projects">View Full Portfolio</a>
+      <RouterLink class="btn" to="/#projects">View Full Portfolio</RouterLink>
     </section>
 
     <hr class="border-white/20 my-12" />
@@ -125,7 +125,7 @@
       <p class="mb-8">
         Whether you're looking to build a DePIN network, create Web3 applications, or integrate blockchain technology into your existing systems, we're here to help you succeed.
       </p>
-      <a class="btn" href="/contact">Get Started Today</a>
+      <RouterLink class="btn" to="/contact">Get Started Today</RouterLink>
       
       <div class="mt-12 text-left max-w-md mx-auto">
         <h3 class="text-xl font-bold mb-4">Contact Information</h3>
@@ -142,21 +142,23 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
 useHead({
+  title: 'About',
   meta: [
-    { property: "og:title", content: "About | Memetic Block" },
+    { property: 'og:title', content: 'About | Memetic Block' },
     {
-      name: "description",
-      content: "Memetic Block delivers custom blockchain and decentralized software solutions. Contact us for innovative, scalable development projects."
+      name: 'description',
+      content: 'Memetic Block delivers custom blockchain and decentralized software solutions. Contact us for innovative, scalable development projects.'
     },
-    { name: "twitter:title", content: "About | Memetic Block" },
+    { name: 'twitter:title', content: 'About | Memetic Block' },
     {
-      name: "twitter:description",
-      content: "Memetic Block delivers custom blockchain and decentralized software solutions for businesses."
+      name: 'twitter:description',
+      content: 'Memetic Block delivers custom blockchain and decentralized software solutions for businesses.'
     },
-    { property: "og:type", content: "website" },
-    { name: "keywords", content: "blockchain development, smart contract development, decentralized applications, Web3, DePIN" }
+    { property: 'og:type', content: 'website' },
+    { name: 'keywords', content: 'blockchain development, smart contract development, decentralized applications, Web3, DePIN' }
   ],
-  title: "About | Memetic Block"
 })
 </script>

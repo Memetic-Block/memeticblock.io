@@ -120,14 +120,6 @@ const projects = [
     linkText: 'frostor.xyz',
     info: ['200k+ $ARIO staked.', 'Top performance.']
   },
-  // {
-  //   name: 'Art By City',
-  //   type: 'Web3 Empowered Gallery',
-  //   status: 'Rendering Grass',
-  //   url: 'https://artby.city',
-  //   linkText: 'artby.city',
-  //   info: ['40+ artists.', '10+ exhibitions.']
-  // },
   {
     name: 'Art By City',
     type: 'Artist Web3 Empowerment',
@@ -137,57 +129,5 @@ const projects = [
     linkText: 'artbycity',
     info: ['60+ artists.', '40+ gb of art.', '31k+ data transactions.']
   },
-  // {
-  //   name: 'Love4src',
-  //   type: 'Arweave Gateway, ar.io',
-  //   status: 'Live',
-  //   url: 'https://love4src.com',
-  //   linkText: 'love4src.com',
-  //   info: ['100k+ $ARIO staked.', 'Top 5 perfomance.']
-  // },
-  // {
-  //   name: 'Operation Dog wif Sunburn',
-  //   type: '██████████████',
-  //   status: 'Materializing 2025Q2',
-  //   statusColor: 'warning',
-  //   url: 'https://██████████████.net',
-  //   linkText: '██████████████.net',
-  //   info: ['██████████████']
-  // },
-  // {
-  //   name: 'Project Glass Memory',
-  //   type: 'Neural Radiance Fields Service',
-  //   status: 'Closed Alpha',
-  //   url: 'https://██████████████.net',
-  //   linkText: '██████████████.net',
-  //   info: ['Inquire for demo.']
-  // },
-  // {
-  //   name: 'AO Encrypted Messages',
-  //   type: 'Software Library',
-  //   status: 'Published',
-  //   url: 'https://www.npmjs.com/package/@memetic-block/ao-encrypted-messages',
-  //   linkText: 'npm',
-  //   info: ['Encrypted Voicemail on Arweave.']
-  // },
-  // {
-  //   // name: '@memetic-block/ans-104',
-  //   name: 'Project Hank Hill\'s Ass',
-  //   type: 'Software Library',
-  //   status: 'Finalizing 2025Q2',
-  //   statusColor: 'warning',
-  //   // url: 'https://www.npmjs.com/package/@memetic-block/ans-104',
-  //   linkText: 'npm',
-  //   info: ['Lean and mean.', 'Coming soon.', 'Dang it, Bobby.']
-  // },
-  // {
-  //   name: 'Operation Bird Brain',
-  //   type: '██████████████',
-  //   status: 'PAUSED',
-  //   statusColor: 'info',
-  //   url: 'https://██████████████.net',
-  //   linkText: '██████████████.net',
-  //   info: ['100k+ epochs of neural violence.']
-  // }
 ]
 </script>

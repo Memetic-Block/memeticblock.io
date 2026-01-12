@@ -9,7 +9,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
 if (!PRIVATE_KEY) {
   throw new Error('PRIVATE_KEY is not set!')
 }
-const DEPLOY_FOLDER = `${process.cwd()}/.output/public`
+const DEPLOY_FOLDER = `${process.cwd()}/dist`
 const gatewayUrl = process.env.GATEWAY || 'https://arweave.net'
 const url = process.env.BUNDLER || 'https://upload.ardrive.io'
 

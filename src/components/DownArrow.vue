@@ -25,22 +25,26 @@
 
 <style scoped>
 .down-arrow {
-    /* position: fixed;
-    bottom: 0; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 </style>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
 const props = defineProps<{
   scrollTo?: string
 }>()
 
+const router = useRouter()
+
 const onScrollClicked = async () => {
-  if (props.scrollTo) { await useRouter().push(`#${props.scrollTo}`) }
+  if (props.scrollTo) {
+    await router.push(`#${props.scrollTo}`)
+  }
 }
 </script>

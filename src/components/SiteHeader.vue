@@ -2,29 +2,29 @@
   <header class="w-full py-4 px-4 md:px-8">
     <nav class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo/Brand -->
-      <NuxtLink href="/" class="flex items-center gap-3 no-underline hover:text-primary">
+      <RouterLink to="/" class="flex items-center gap-3 no-underline hover:text-primary">
         <MemeticBlockLogo class="w-7 h-7" />
         <span class="text-lg mt-0">
           <span class="font-bold">MEMETIC</span> <span class="font-normal">BLOCK</span>
         </span>
-      </NuxtLink>
+      </RouterLink>
 
       <!-- Desktop Navigation -->
       <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
         <li>
-          <NuxtLink href="/" class="no-underline hover:text-primary transition-colors">
+          <RouterLink to="/" class="no-underline hover:text-primary transition-colors">
             Home
-          </NuxtLink>
+          </RouterLink>
         </li>
         <li>
-          <NuxtLink href="/about" class="no-underline hover:text-primary transition-colors">
+          <RouterLink to="/about" class="no-underline hover:text-primary transition-colors">
             About
-          </NuxtLink>
+          </RouterLink>
         </li>
         <li>
-          <NuxtLink href="/contact" class="no-underline hover:text-primary transition-colors">
+          <RouterLink to="/contact" class="no-underline hover:text-primary transition-colors">
             Contact Us
-          </NuxtLink>
+          </RouterLink>
         </li>
       </ul>
 
@@ -48,31 +48,31 @@
       <div v-if="mobileMenuOpen" class="md:hidden mt-4 pb-4 border-t border-white/20">
         <ul class="flex flex-col gap-4 list-none m-0 p-0 pt-4">
           <li>
-            <NuxtLink
-              href="/"
+            <RouterLink
+              to="/"
               class="block no-underline hover:text-primary transition-colors"
               @click="mobileMenuOpen = false"
             >
               Home
-            </NuxtLink>
+            </RouterLink>
           </li>
           <li>
-            <NuxtLink
-              href="/about"
+            <RouterLink
+              to="/about"
               class="block no-underline hover:text-primary transition-colors"
               @click="mobileMenuOpen = false"
             >
               About
-            </NuxtLink>
+            </RouterLink>
           </li>
           <li>
-            <NuxtLink
-              href="/contact"
+            <RouterLink
+              to="/contact"
               class="block no-underline hover:text-primary transition-colors"
               @click="mobileMenuOpen = false"
             >
               Contact Us
-            </NuxtLink>
+            </RouterLink>
           </li>
         </ul>
       </div>
@@ -81,6 +81,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import MemeticBlockLogo from './MemeticBlockLogo.vue'
+
 const mobileMenuOpen = ref(false)
 </script>
 
