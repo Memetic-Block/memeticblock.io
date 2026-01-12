@@ -9,6 +9,7 @@ html {
     background-color: rgb(var(--v-theme-background));
 }
 
+/* Legacy utility classes - prefer Tailwind equivalents */
 .background-bg {
     background-color: rgb(var(--v-theme-background));
 }
@@ -25,49 +26,4 @@ html {
 .flex-horiz-center {
     display: flex;
     justify-content: center;
-}
-
-.button {
-  text-decoration: none;
-  border: var(--border-thickness) solid var(--text-color);
-  padding: 
-  calc(var(--line-height) / 2 - var(--border-thickness))
-  calc(1ch - var(--border-thickness));
-  margin: 0;
-  font: inherit;
-  font-weight: inherit;
-  height: calc(var(--line-height) * 2);
-  width: auto;
-  overflow: visible;
-  /* background: var(--background-color); */
-  color: var(--text-color);
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
-}
-
-.button:focus, input:focus {
-  --border-thickness: 3px;
-  outline: none;
-}
-
-.button::-moz-focus-inner {
-  padding: 0;
-  border: 0
-}
-
-.button {
-  text-transform: uppercase;
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-}
-
-.button:hover {
-  /* background: var(--background-color-alt); */
-  transform: translate(2px, 2px);
-}
-
-.button:active {
-  transform: translate(2px, 2px);
 }

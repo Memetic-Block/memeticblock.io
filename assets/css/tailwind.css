@@ -54,9 +54,12 @@
     color-scheme: dark;
   }
 
-  html {
+  html,
+  body,
+  .v-application {
     scroll-behavior: smooth;
-    @apply bg-background text-white font-mono;
+    font-family: 'Berkeley Mono', monospace !important;
+    @apply bg-background text-white;
   }
 
   body {

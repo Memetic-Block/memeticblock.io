@@ -1,14 +1,9 @@
 <template>
-  <LandingHero />
-  <DownArrow scrollTo="projects" />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <ProjectsTable />
+  <div>
+    <LandingHero />
+    <DownArrow scrollTo="projects" />
+    <ProjectsTable />
+  </div>
 </template>
 
 <script setup lang="ts">
