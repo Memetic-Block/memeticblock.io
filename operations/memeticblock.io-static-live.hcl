@@ -67,14 +67,14 @@ job "memeticblock.io-static-live" {
         npm run generate
 
         echo "Fixing permissions on generated files"
-        find .output/public -type f -exec chmod 644 {} \;
-        find .output/public -type d -exec chmod 755 {} \;
+        find dist -type f -exec chmod 644 {} \;
+        find dist -type d -exec chmod 755 {} \;
 
-        echo "Listing contents of .output/public"
-        ls -la .output/public
+        echo "Listing contents of dist"
+        ls -la dist
 
         echo "Syncing memeticblock.io static files to cloudflare r2"
-        rclone sync .output/public r2:${DEPLOY_BUCKET}/
+        rclone sync dist r2:${DEPLOY_BUCKET}/
         EOF
         destination = "local/entrypoint.sh"
         perms = "0755"

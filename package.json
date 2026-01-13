@@ -7,7 +7,7 @@
     "build": "vite-ssg build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "deploy": "vite-ssg build && tsx operations/scripts/deploy.ts"
+    "deploy": "npm run build && tsx operations/scripts/deploy.ts"
   },
   "dependencies": {
     "vue": "^3.5.13",
