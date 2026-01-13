@@ -34,17 +34,16 @@
 </style>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-
 const props = defineProps<{
   scrollTo?: string
 }>()
 
-const router = useRouter()
-
-const onScrollClicked = async () => {
+const onScrollClicked = () => {
   if (props.scrollTo) {
-    await router.push(`#${props.scrollTo}`)
+    const element = document.getElementById(props.scrollTo)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 </script>
