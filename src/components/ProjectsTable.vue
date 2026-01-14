@@ -22,12 +22,28 @@
 
     <!-- Projects Grid -->
     <div class="border-t border-white/20 pt-8">
-      <h2 class="text-2xl font-bold mb-6">Projects</h2>
-      <div class="projects-grid grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <h2 class="text-2xl font-bold mb-6">Our Work</h2>
+      <div class="projects-grid grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+        <!-- Centered Logo -->
+        <div class="logo-center hidden sm:block pointer-events-none z-10">
+          <MemeticBlockLogo class="w-10 h-10" />
+        </div>
         <article
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project.name"
-          class="border border-white/30 p-6 hover:border-primary transition-colors"
+          :class="[
+            'border',
+            'border-white/30 before:border-white/30 after:border-white/30',
+            'px-6 py-4',
+            'hover:border-primary',
+            'transition-colors',
+            'flex flex-col',
+            'angled-corner',
+            index === 0 ? 'corner-bottom-right' : '',
+            index === 1 ? 'corner-bottom-left' : '',
+            index === 2 ? 'corner-top-right' : '',
+            index === 3 ? 'corner-top-left' : ''
+          ]"
         >
           <h3 class="text-lg font-bold m-0">
             {{ project.name }}<sup v-if="project.sup" class="text-xs">{{ project.sup }}</sup>
@@ -43,20 +59,22 @@
               {{ project.status }}
             </span>
           <p class="text-gray-text text-sm mb-4 m-0">{{ project.type }}</p>
-          <ul class="list-none m-0 p-0 mb-4 space-y-1">
+          <ul class="list-none m-0 p-0 mb-4 space-y-1 flex-1">
             <li v-for="info in project.info" :key="info" class="text-sm">
               <span v-html="info"></span>
             </li>
           </ul>
-          <a
-            v-if="project.url"
-            :href="project.url"
-            target="_blank"
-            class="inline-block text-sm underline hover:text-primary transition-colors"
-          >
-            {{ project.linkText }} →
-          </a>
-          <span v-else class="text-sm text-gray-text">{{ project.linkText }}</span>
+          <div :class="['text-right', index % 2 === 0 ? 'sm:text-left' : 'sm:text-right']">
+            <a
+              v-if="project.url"
+              :href="project.url"
+              target="_blank"
+              class="inline-block text-sm underline hover:text-primary transition-colors"
+            >
+              {{ project.linkText }} →
+            </a>
+            <span v-else class="text-sm text-gray-text">{{ project.linkText }}</span>
+          </div>
         </article>
       </div>
       <p class="mt-6 text-xs text-gray-text italic">
@@ -67,30 +85,123 @@
     <!-- GitHub Links -->
     <div class="border-t border-white/20 pt-8 mt-8">
       <p>
-        For code, please see
+        For code & other projects, please see
         <a class="underline hover:text-primary transition-colors" href="https://github.com/memetic-block" target="_blank">github.com/memetic-block</a>
         or
         <a class="underline hover:text-primary transition-colors" href="https://github.com/art-by-city" target="_blank">github.com/art-by-city</a>
       </p>
     </div>
-
-    <!-- Credits -->
-    <div class="border-t border-white/20 pt-8 mt-8">
-      <p class="font-bold mb-4">Moral Obligatories</p>
-      <ul class="list-disc list-inside m-0 p-0">
-        <li>
-          <a class="underline hover:text-primary transition-colors" href="https://berkeleymono.com" target="_blank">Berkeley Mono</a> font
-          by
-          <a class="underline hover:text-primary transition-colors" href="https://usgraphics.com/" target="_blank">
-            U.S. Graphics Company
-          </a>
-        </li>
-      </ul>
-    </div>
   </section>
 </template>
 
+<style scoped>
+.projects-grid {
+  --gap: 1.5rem; /* gap-6 = 24px = 1.5rem */
+}
+
+.logo-center {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - var(--gap) / 2);
+  transform: translate(-50%, -50%);
+}
+
+.angled-corner {
+  position: relative;
+  --corner-size: 24px;
+  --border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* On small screens, use regular border */
+@media (max-width: 639px) {
+  .angled-corner {
+    border: 1px solid var(--border-color) !important;
+  }
+  .angled-corner:hover {
+    border-color: var(--color-primary) !important;
+  }
+  .angled-corner::before,
+  .angled-corner::after {
+    display: none;
+  }
+}
+
+/* On sm+ screens, use angled corners */
+@media (min-width: 640px) {
+  .angled-corner {
+    border: none !important;
+  }
+
+  .angled-corner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--border-color);
+    z-index: -1;
+  }
+
+  .angled-corner::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: var(--color-background);
+    clip-path: inherit;
+    z-index: -1;
+  }
+
+  .angled-corner:hover {
+    --border-color: var(--color-primary);
+  }
+
+  /* Top-left card: angled corner on bottom-right */
+  .corner-bottom-right {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--corner-size)),
+      calc(100% - var(--corner-size)) 100%,
+      0 100%
+    );
+  }
+
+  /* Top-right card: angled corner on bottom-left */
+  .corner-bottom-left {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      var(--corner-size) 100%,
+      0 calc(100% - var(--corner-size))
+    );
+  }
+
+  /* Bottom-left card: angled corner on top-right */
+  .corner-top-right {
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--corner-size)) 0,
+      100% var(--corner-size),
+      100% 100%,
+      0 100%
+    );
+  }
+
+  /* Bottom-right card: angled corner on top-left */
+  .corner-top-left {
+    clip-path: polygon(
+      var(--corner-size) 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 var(--corner-size)
+    );
+  }
+}
+</style>
+
 <script setup lang="ts">
+import MemeticBlockLogo from './MemeticBlockLogo.vue'
+
 const projects = [
   {
     name: 'Anyone Protocol',
@@ -118,7 +229,7 @@ const projects = [
     status: 'Live',
     url: 'https://frostor.xyz',
     linkText: 'frostor.xyz',
-    info: ['200k+ $ARIO staked.', 'Top performance.']
+    info: ['200k+ $ARIO staked.']
   },
   {
     name: 'Art By City',

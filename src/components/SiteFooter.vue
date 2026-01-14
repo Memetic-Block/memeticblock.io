@@ -4,7 +4,12 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Brand -->
         <div>
-          <p class="font-bold text-lg mb-2">MEMETIC BLOCK</p>
+          <div class="flex items-center gap-3 mb-2">
+            <MemeticBlockLogo class="w-7 h-7" />
+            <p class="font-bold text-lg m-0">
+              <span class="font-bold">MEMETIC</span> <span class="font-normal">BLOCK</span>
+            </p>
+          </div>
           <p class="text-gray-text text-sm">
             A Software Guild focused on building distributed systems of value.
           </p>
@@ -69,6 +74,13 @@
       <!-- Copyright -->
       <div class="mt-8 pt-6 border-t border-white/10 text-center text-sm text-gray-text">
         <p>&copy; {{ currentYear }} Memetic Block. All rights reserved.</p>
+        <p>
+          <a class="underline hover:text-primary transition-colors" href="https://berkeleymono.com" target="_blank">Berkeley Mono</a> font
+          by
+          <a class="underline hover:text-primary transition-colors" href="https://usgraphics.com/" target="_blank">
+            U.S. Graphics Company
+          </a>
+        </p>
       </div>
     </div>
   </footer>
@@ -76,6 +88,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import MemeticBlockLogo from './MemeticBlockLogo.vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>
