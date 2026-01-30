@@ -125,7 +125,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, onMounted, onUnmounted, nextTick } from 'vue'
 import { useHead } from '@unhead/vue'
 
 // Turnstile type declarations
@@ -227,6 +227,8 @@ onMounted(async () => {
   
   try {
     await loadTurnstileScript()
+    // Wait for Vue to render the container element before initializing Turnstile
+    await nextTick()
     renderTurnstile()
   } catch (error) {
     console.error('Turnstile failed to load:', error)
