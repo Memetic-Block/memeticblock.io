@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_FORM_API_URL: string
+  readonly VITE_SHOW_CONTACT_FORM?: string
 }
 
 interface ImportMeta {

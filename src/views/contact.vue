@@ -2,10 +2,11 @@
   <div class="py-8">
     <section class="text-center mb-12">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-      <p class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
+      <p v-if="showContactForm" class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
+      <p v-else class="text-gray-text mb-8">Have a question or want to work with us? Reach out via email below.</p>
     </section>
     
-    <section class="max-w-2xl mx-auto">
+    <section v-if="showContactForm" class="max-w-2xl mx-auto">
       <!-- Success Message -->
       <div v-if="isSuccess" class="text-center py-12">
         <div class="text-success text-5xl mb-4">✓</div>
@@ -112,8 +113,8 @@
       </form>
     </section>
     
-    <section class="text-center mt-12 pt-8 border-t border-white/20">
-      <p class="mb-4">Or reach out directly:</p>
+    <section :class="['text-center', showContactForm ? 'mt-12 pt-8 border-t border-white/20' : 'mt-8']">
+      <p v-if="showContactForm" class="mb-4">Or reach out directly:</p>
       <p class="text-lg">
         <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com">
           build@memeticblock.com
@@ -151,6 +152,7 @@ interface TurnstileOptions {
 
 const formApiUrl = import.meta.env.VITE_FORM_API_URL as string || 'https://forms.hel.memeticblock.net'
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITEKEY as string
+const showContactForm = import.meta.env.VITE_SHOW_CONTACT_FORM === 'true'
 
 const formData = reactive({
   name: '',
@@ -221,6 +223,8 @@ function resetTurnstile() {
 }
 
 onMounted(async () => {
+  if (!showContactForm) return
+  
   try {
     await loadTurnstileScript()
     renderTurnstile()

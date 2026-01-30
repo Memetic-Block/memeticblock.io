@@ -43,6 +43,7 @@ job "memeticblock.io-static-live" {
         DEPLOY_BUCKET = "memeticblock-io"
         VITE_FORM_API_URL = "https://forms.hel.memeticblock.net"
         VITE_TURNSTILE_SITEKEY = "0x4AAAAAACVZwzgy5BMUxnDC"
+        VITE_SHOW_CONTACT_FORM="true"
       }
 
       vault { policies = [ "memeticblock-io-cloudflare-deployer" ] }
