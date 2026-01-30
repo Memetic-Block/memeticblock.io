@@ -2,6 +2,11 @@ job "memeticblock.io-static-live" {
   datacenters = [ "mb-hel" ]
   type = "batch"
 
+  constraint {
+    attribute = "${meta.env}"
+    value     = "edge-worker"
+  }
+
   reschedule { attempts = 0 }
 
   group "memeticblock.io-static-live-group" {
@@ -11,19 +16,13 @@ job "memeticblock.io-static-live" {
       driver = "docker"
 
       config {
-        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:[[.image_tag]]"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:${VITE_VERSION_SHA}"
         force_pull = true
         entrypoint = [ "/workdir/entrypoint.sh" ]
         mount {
           type = "bind"
           source = "local/entrypoint.sh"
           target = "/workdir/entrypoint.sh"
-          readonly = true
-        }
-        mount {
-          type = "bind"
-          source = "secrets/rclone.conf"
-          target = "/root/.config/rclone/rclone.conf"
           readonly = true
         }
       }
@@ -34,13 +33,14 @@ job "memeticblock.io-static-live" {
       }
 
       resources {
-        cpu    = 4096
-        memory = 4096
+        cpu    = 512
+        memory = 512
       }
 
       env {
         PHASE = "live"
-        DEPLOY_BUCKET = "memeticblock-io"
+        PROJECT_NAME = "memeticblock-io"
+        VITE_VERSION_SHA="[[.image_tag]]"
         VITE_FORM_API_URL = "https://forms.hel.memeticblock.net"
         VITE_TURNSTILE_SITEKEY = "0x4AAAAAACVZwzgy5BMUxnDC"
         VITE_SHOW_CONTACT_FORM="true"
@@ -50,16 +50,13 @@ job "memeticblock.io-static-live" {
 
       template {
         data = <<-EOF
-        {{ with secret "kv/memeticblock/cloudflare-deployer" }}[r2]
-        type = s3
-        provider = Cloudflare
-        region = auto
-        endpoint = {{ .Data.data.ENDPOINT }}
-        access_key_id = {{ .Data.data.ACCESS_KEY_ID }}
-        secret_access_key = {{ .Data.data.SECRET_ACCESS_KEY }}
-        {{ end }}
+        {{- with secret "kv/memeticblock/cloudflare-deployer" }}
+        CLOUDFLARE_ACCOUNT_ID={{ .Data.data.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN={{ .Data.data.CLOUDFLARE_API_TOKEN }}
+        {{- end }}
         EOF
-        destination = "secrets/rclone.conf"
+        destination = "secrets/cloudflare.env"
+        env = true
       }
 
       template {
@@ -67,17 +64,10 @@ job "memeticblock.io-static-live" {
         #!/bin/sh
 
         echo "Building memeticblock.io static files"
-        npm run generate
+        npm run build
 
-        echo "Fixing permissions on generated files"
-        find dist -type f -exec chmod 644 {} \;
-        find dist -type d -exec chmod 755 {} \;
-
-        echo "Listing contents of dist"
-        ls -la dist
-
-        echo "Syncing memeticblock.io static files to cloudflare r2"
-        rclone sync dist r2:${DEPLOY_BUCKET}/
+        echo "Deploying static site to Cloudflare Pages"
+        npm run deploy:static
         EOF
         destination = "local/entrypoint.sh"
         perms = "0755"

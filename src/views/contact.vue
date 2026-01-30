@@ -1,6 +1,6 @@
 <template>
   <div class="py-8">
-    <section class="text-center mb-12">
+    <section class="text-center mb-6">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
       <p v-if="showContactForm" class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
       <p v-else class="text-gray-text mb-8">Have a question or want to work with us? Reach out via email below.</p>

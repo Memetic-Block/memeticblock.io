@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vue-tsc -b && vite-ssg build --mock",
     "preview": "vite preview",
     "lint": "eslint .",
-    "deploy": "npm run build && tsx operations/scripts/deploy.ts"
+    "deploy:arweave": "tsx operations/scripts/deploy.ts",
+    "deploy:static": "npx wrangler pages deploy /usr/src/app/dist --project-name=$PROJECT_NAME"
   },
   "dependencies": {
     "vue": "^3.5.13",
