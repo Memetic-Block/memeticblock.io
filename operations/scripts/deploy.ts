@@ -63,7 +63,7 @@ async function deploy() {
   console.info(`Manifest id ${manifestResponse.id}`)
   console.info('Manifest', JSON.stringify(manifest))
   console.info('Updating ANT undername', undername)
-  const { id: deployedTxId } = undername === '@'
+  const { id: messageId } = undername === '@'
     ? await ant.setBaseNameRecord({
       transactionId: manifestResponse.id,
       ttlSeconds: 3600
@@ -75,7 +75,7 @@ async function deploy() {
     })
   console.info(
     'Deployed!  Please wait 20 - 30 minutes for ARNS to update!',
-    deployedTxId
+    `https://aolink.frostor.xyz/#/message/${messageId}`
   )
 }
 
