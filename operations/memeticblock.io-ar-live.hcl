@@ -31,7 +31,7 @@ job "deploy-memeticblock.io-ar-live" {
       template {
         data = <<-EOH
         {{- with secret "kv/memeticblock/permaweb_deployer" }}
-        PRIVATE_KEY="{{ .Data.data.b64jwk }}"
+        PRIVATE_KEY="{{ base64Decode .Data.data.b64jwk }}"
         {{- end }}
         EOH
         destination = "secrets/file.env"
