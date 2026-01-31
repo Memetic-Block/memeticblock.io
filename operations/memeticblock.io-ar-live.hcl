@@ -16,7 +16,7 @@ job "deploy-memeticblock.io-ar-live" {
         image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:${VITE_VERSION_SHA}"
         entrypoint = ["npm"]
         command = "run"
-        args = ["deploy"]
+        args = ["deploy:arweave"]
       }
 
       env {
