@@ -23,7 +23,7 @@ if (process.env.PHASE === 'stage') {
 }
 
 async function deploy() {
-  console.log('Deploying to Arweave via', url, 'with gateway', gatewayUrl)
+  console.log(`Deploying to Arweave via ${url} with gateway ${gatewayUrl} and process ID ${processId}`)
 
   const jwk = JSON.parse(readFileSync(PRIVATE_KEY, 'utf-8'))
   const arweave = Arweave.init({})
@@ -36,7 +36,7 @@ async function deploy() {
   })
   const ant = ANT.init({ processId, signer })
 
-  console.info('Deploying as', address, 'to undername', undername)
+  console.info(`Deploying as ${address} to undername ${undername}`)
 
   const {
     fileResponses,
