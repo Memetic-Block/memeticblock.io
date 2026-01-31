@@ -13,7 +13,7 @@ job "deploy-memeticblock.io-ar-live" {
       driver = "docker"
 
       config {
-        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:39dd001700cd3556e63c1817910624b35c335a06"
+        image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:${VITE_VERSION_SHA}"
         entrypoint = ["npm"]
         command = "run"
         args = ["deploy"]
@@ -23,6 +23,7 @@ job "deploy-memeticblock.io-ar-live" {
         PHASE="live"
         GATEWAY="https://arweave.net"
         BUNDLER="https://upload.ardrive.io"
+        VITE_VERSION_SHA="[[.image_tag]]"
       }
 
       vault { policies = ["memeticblock-arns-deployer"] }
@@ -53,8 +54,8 @@ job "deploy-memeticblock.io-ar-live" {
       }
 
       resources {
-        cpu    = 4096
-        memory = 4096
+        cpu    = 512
+        memory = 512
       }
     }
   }
