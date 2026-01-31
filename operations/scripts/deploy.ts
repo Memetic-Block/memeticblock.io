@@ -4,7 +4,7 @@ import Arweave from 'arweave'
 import { readFileSync } from 'fs'
 
 // ANT-MEMETICBLOCK
-const processId = '_FB4vtcNXwBw9yz4BEJ3tZCTkWoQqP3mLzr1T5TBo14'
+const processId = process.env.PROCESS_ID || 'DGdhes06axbhPRKuwWtDqLYHjYf3B9pwIfDBChdkt20'
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
 if (!PRIVATE_KEY) {
   throw new Error('PRIVATE_KEY is not set!')
