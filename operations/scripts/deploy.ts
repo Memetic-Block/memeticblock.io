@@ -1,13 +1,12 @@
 import { ANT, ArweaveSigner } from '@ar.io/sdk'
 import { TurboFactory } from '@ardrive/turbo-sdk'
 import Arweave from 'arweave'
-import { readFileSync } from 'fs'
 
 // ANT-MEMETICBLOCK
 const processId = process.env.PROCESS_ID || 'DGdhes06axbhPRKuwWtDqLYHjYf3B9pwIfDBChdkt20'
-const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
-if (!PRIVATE_KEY) {
-  throw new Error('PRIVATE_KEY is not set!')
+const PRIVATE_KEY_BASE64 = process.env.PRIVATE_KEY_BASE64 || ''
+if (!PRIVATE_KEY_BASE64) {
+  throw new Error('PRIVATE_KEY_BASE64 is not set!')
 }
 const DEPLOY_FOLDER = `${process.cwd()}/dist`
 const gatewayUrl = process.env.GATEWAY || 'https://arweave.net'
@@ -24,8 +23,7 @@ if (process.env.PHASE === 'stage') {
 
 async function deploy() {
   console.log(`Deploying to Arweave via ${url} with gateway ${gatewayUrl} and process ID ${processId}`)
-  console.log('Using private key', PRIVATE_KEY.substring(0, 100) + '...')
-  const jwk = JSON.parse(PRIVATE_KEY)
+  const jwk = JSON.parse(Buffer.from(PRIVATE_KEY_BASE64, 'base64').toString('utf-8'))
   const arweave = Arweave.init({})
   const address = await arweave.wallets.jwkToAddress(jwk)
   const signer = new ArweaveSigner(jwk)
