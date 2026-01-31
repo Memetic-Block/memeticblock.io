@@ -24,7 +24,7 @@ if (process.env.PHASE === 'stage') {
 
 async function deploy() {
   console.log(`Deploying to Arweave via ${url} with gateway ${gatewayUrl} and process ID ${processId}`)
-
+  console.log('Using private key', PRIVATE_KEY.substring(0, 100) + '...')
   const jwk = JSON.parse(PRIVATE_KEY)
   const arweave = Arweave.init({})
   const address = await arweave.wallets.jwkToAddress(jwk)
