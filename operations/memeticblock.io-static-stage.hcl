@@ -17,7 +17,6 @@ job "memeticblock.io-static-stage" {
 
       config {
         image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:${VITE_VERSION_SHA}"
-        force_pull = true
         entrypoint = [ "/workdir/entrypoint.sh" ]
         mount {
           type = "bind"

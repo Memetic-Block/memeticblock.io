@@ -14,9 +14,13 @@ job "deploy-memeticblock.io-ar-live" {
 
       config {
         image = "${CONTAINER_REGISTRY_ADDR}/memetic-block/memeticblock.io:${VITE_VERSION_SHA}"
-        entrypoint = ["npm"]
-        command = "run"
-        args = ["deploy:arweave"]
+        entrypoint = [ "/workdir/entrypoint.sh" ]
+        mount {
+          type = "bind"
+          source = "local/entrypoint.sh"
+          target = "/workdir/entrypoint.sh"
+          readonly = true
+        }
       }
 
       env {
@@ -24,6 +28,20 @@ job "deploy-memeticblock.io-ar-live" {
         GATEWAY="https://arweave.net"
         BUNDLER="https://upload.ardrive.io"
         VITE_VERSION_SHA="[[.image_tag]]"
+      }
+
+      template {
+        data = <<-EOF
+        #!/bin/sh
+
+        echo "Building memeticblock.io static files"
+        npm run build
+
+        echo "Deploying static site to Arweave"
+        npm run deploy:arweave
+        EOF
+        destination = "local/entrypoint.sh"
+        perms = "0755"
       }
 
       vault { policies = ["memeticblock-arns-deployer"] }
