@@ -64,12 +64,20 @@
               <span v-html="info"></span>
             </li>
           </ul>
-          <div :class="['text-right', index % 2 === 0 ? 'sm:text-left' : 'sm:text-right']">
+          <div class="flex justify-between items-center gap-4">
+            <RouterLink
+              v-if="project.moreInfoLink"
+              :to="project.moreInfoLink"
+              class="text-sm text-white underline cursor-pointer hover:text-primary transition-colors"
+            >
+              More info
+            </RouterLink>
+            <span v-else></span>
             <a
               v-if="project.url"
               :href="project.url"
               target="_blank"
-              class="inline-block text-sm underline hover:text-primary transition-colors"
+              class="text-sm underline hover:text-primary transition-colors"
             >
               {{ project.linkText }} →
             </a>
@@ -209,6 +217,7 @@ const projects = [
     status: 'Live',
     url: 'https://anyone.io',
     linkText: 'anyone.io',
+    moreInfoLink: '/about#anyone-protocol',
     sup: '*',
     info: ['6,000+ relays registered.']
   },
@@ -218,6 +227,7 @@ const projects = [
     status: 'Live Alpha',
     url: 'https://wuzzy.io',
     linkText: 'wuzzy.io',
+    moreInfoLink: '/about#wuzzy-search',
     info: [
       'Premiere Permaweb Search Engine',
       'Agents of AO Hackathon Winner 2025'
@@ -229,6 +239,7 @@ const projects = [
     status: 'Live',
     url: 'https://frostor.xyz',
     linkText: 'frostor.xyz',
+    moreInfoLink: '/about#frostor',
     info: ['200k+ $ARIO staked.']
   },
   {
@@ -238,6 +249,7 @@ const projects = [
     statusColor: 'info',
     url: 'https://artbycity.frostor.xyz',
     linkText: 'artbycity',
+    moreInfoLink: '/about#art-by-city',
     info: ['60+ artists.', '40+ gb of art.', '31k+ data transactions.']
   },
 ]

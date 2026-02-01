@@ -17,7 +17,21 @@ const routes: RouteRecordRaw[] = [
 
 export const createApp = ViteSSG(
   App,
-  { routes },
+  {
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: 'smooth',
+        }
+      }
+      if (savedPosition) {
+        return savedPosition
+      }
+      return { top: 0 }
+    },
+  },
   ({ app, router, isClient }) => {
     // Global hooks or plugins can be registered here
   }

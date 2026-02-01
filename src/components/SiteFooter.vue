@@ -64,7 +64,7 @@
                 target="_blank"
                 class="text-gray-text hover:text-white no-underline transition-colors"
               >
-                X (Twitter)
+                @memeticblock on X
               </a>
             </li>
           </ul>

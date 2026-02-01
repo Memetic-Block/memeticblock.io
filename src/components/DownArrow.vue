@@ -6,9 +6,10 @@
       viewBox="0 0 32 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      class="transition-colors hover:fill-primary"
     >
       <path
-        fill="white"
+        fill="currentColor"
         d="
           M16 19.1938C15.425 19.1938 14.8438 18.975 14.4063
           18.5313L0.537524 4.66255C-0.343726 3.7813 -0.343726
@@ -30,6 +31,11 @@
   justify-content: center;
   margin-bottom: 4rem;
   cursor: pointer;
+  color: white;
+}
+
+.down-arrow:hover {
+  color: var(--color-primary);
 }
 </style>
 
