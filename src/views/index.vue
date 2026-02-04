@@ -1,7 +1,7 @@
 <template>
   <div>
     <LandingHero />
-    <DownArrow scrollTo="projects" />
+    <DownArrow scroll-to="projects" />
     <ProjectsTable />
   </div>
 </template>
@@ -14,6 +14,6 @@ import ProjectsTable from '@/components/ProjectsTable.vue'
 
 useHead({
   title: 'Memetic Block',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.com' }]
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com' }],
 })
 </script>

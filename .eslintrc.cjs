@@ -21,19 +21,17 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:prettier/recommended',
   ],
   rules: {
-    indent: [ 'error', 2 ],
-    'max-len': [ 'error', {
-      code: 80,
-      tabWidth: 2
-    }],
+    // indent: [ 'warn', 2 ],
+    // 'max-len': [ 'warn', {
+    //   code: 120,
+    //   tabWidth: 2
+    // }],
     'vue/multi-word-component-names': 'off',
     'vue/component-tags-order': 'off',
-    'vue/max-attributes-per-line': ['warn', {
-      singleline: { max: 12 },
-      multiline: { max: 1 }
-    }],
+    'vue/max-attributes-per-line': 'off',
     'vue/block-order': ['warn', {
       order: [ 'template', 'style', 'script' ]
     }]

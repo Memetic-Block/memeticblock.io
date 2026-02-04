@@ -14,15 +14,16 @@ import SiteFooter from './components/SiteFooter.vue'
 import { useHead } from '@unhead/vue'
 
 useHead({
-  titleTemplate: (title) => title ? `${title} | Memetic Block` : 'Memetic Block',
+  titleTemplate: (title) => (title ? `${title} | Memetic Block` : 'Memetic Block'),
   meta: [
-    { name: 'description', content: 'Memetic Block - A Software Guild focused on building distributed systems of value.' },
+    {
+      name: 'description',
+      content: 'Memetic Block - A Software Guild focused on building distributed systems of value.',
+    },
     { property: 'og:site_name', content: 'Memetic Block' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
-  link: [
-    { rel: 'canonical', href: 'https://memeticblock.com' },
-  ],
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com' }],
 })
 </script>

@@ -10,9 +10,7 @@
               <span class="font-bold">MEMETIC</span> <span class="font-normal">BLOCK</span>
             </p>
           </div>
-          <p class="text-gray-text text-sm">
-            A Software Guild focused on building distributed systems of value.
-          </p>
+          <p class="text-gray-text text-sm">A Software Guild focused on building distributed systems of value.</p>
         </div>
 
         <!-- Links -->
@@ -27,6 +25,11 @@
             <li>
               <RouterLink to="/about" class="text-gray-text hover:text-white no-underline transition-colors">
                 About
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/case-studies" class="text-gray-text hover:text-white no-underline transition-colors">
+                Case Studies
               </RouterLink>
             </li>
             <li>
@@ -75,8 +78,10 @@
       <div class="mt-8 pt-6 border-t border-white/10 text-center text-sm text-gray-text">
         <p>&copy; {{ currentYear }} Memetic Block. All rights reserved.</p>
         <p>
-          <a class="underline hover:text-primary transition-colors" href="https://berkeleymono.com" target="_blank">Berkeley Mono</a> font
-          by
+          <a class="underline hover:text-primary transition-colors" href="https://berkeleymono.com" target="_blank"
+            >Berkeley Mono</a
+          >
+          font by
           <a class="underline hover:text-primary transition-colors" href="https://usgraphics.com/" target="_blank">
             U.S. Graphics Company
           </a>

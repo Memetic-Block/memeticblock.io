@@ -12,28 +12,23 @@
       <!-- Desktop Navigation -->
       <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
         <li>
-          <RouterLink to="/" class="no-underline hover:text-primary transition-colors">
-            Home
+          <RouterLink to="/" class="no-underline hover:text-primary transition-colors"> Home </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about" class="no-underline hover:text-primary transition-colors"> About </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/case-studies" class="no-underline hover:text-primary transition-colors">
+            Case Studies
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/about" class="no-underline hover:text-primary transition-colors">
-            About
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/contact" class="no-underline hover:text-primary transition-colors">
-            Contact Us
-          </RouterLink>
+          <RouterLink to="/contact" class="no-underline hover:text-primary transition-colors"> Contact Us </RouterLink>
         </li>
       </ul>
 
       <!-- Mobile Hamburger Button -->
-      <button
-        class="md:hidden p-2 text-white"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-        aria-label="Toggle menu"
-      >
+      <button class="md:hidden p-2 text-white" aria-label="Toggle menu" @click="mobileMenuOpen = !mobileMenuOpen">
         <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -67,6 +62,15 @@
           </li>
           <li>
             <RouterLink
+              to="/case-studies"
+              class="block no-underline hover:text-primary transition-colors"
+              @click="mobileMenuOpen = false"
+            >
+              Case Studies
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
               to="/contact"
               class="block no-underline hover:text-primary transition-colors"
               @click="mobileMenuOpen = false"
@@ -80,13 +84,6 @@
   </header>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import MemeticBlockLogo from './MemeticBlockLogo.vue'
-
-const mobileMenuOpen = ref(false)
-</script>
-
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
@@ -99,3 +96,10 @@ const mobileMenuOpen = ref(false)
   transform: translateY(-10px);
 }
 </style>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import MemeticBlockLogo from './MemeticBlockLogo.vue'
+
+const mobileMenuOpen = ref(false)
+</script>

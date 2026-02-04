@@ -5,19 +5,17 @@
       <p v-if="showContactForm" class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
       <p v-else class="text-gray-text mb-8">Have a question or want to work with us? Reach out via email below.</p>
     </section>
-    
+
     <section v-if="showContactForm" class="max-w-2xl mx-auto">
       <!-- Success Message -->
       <div v-if="isSuccess" class="text-center py-12">
         <div class="text-success text-5xl mb-4">✓</div>
         <h2 class="text-2xl font-bold mb-4">Thank You!</h2>
-        <p class="text-gray-text">
-          Your message has been sent successfully. We'll get back to you soon.
-        </p>
+        <p class="text-gray-text">Your message has been sent successfully. We'll get back to you soon.</p>
       </div>
 
       <!-- Contact Form -->
-      <form v-else @submit.prevent="submitForm" class="space-y-6">
+      <form v-else class="space-y-6" @submit.prevent="submitForm">
         <div>
           <div class="flex justify-between items-center mb-2">
             <label for="name" class="block text-sm font-medium">Name <span class="text-error">*</span></label>
@@ -94,11 +92,7 @@
 
         <div class="text-center">
           <!-- Turnstile Captcha (shown when no valid token) -->
-          <div
-            v-if="!turnstileToken"
-            id="turnstile-container"
-            class="flex justify-center"
-          ></div>
+          <div v-if="!turnstileToken" id="turnstile-container" class="flex justify-center" />
 
           <!-- Submit Button (shown when token is valid) -->
           <button
@@ -112,7 +106,7 @@
         </div>
       </form>
     </section>
-    
+
     <section :class="['text-center', showContactForm ? 'mt-12 pt-8 border-t border-white/20' : 'mt-8']">
       <p v-if="showContactForm" class="mb-4">Or reach out directly:</p>
       <p class="text-lg">
@@ -150,7 +144,7 @@ interface TurnstileOptions {
   size?: 'normal' | 'flexible' | 'compact'
 }
 
-const formApiUrl = import.meta.env.VITE_FORM_API_URL as string || 'https://forms.hel.memeticblock.net'
+const formApiUrl = import.meta.env.VITE_FORM_API_URL || 'https://forms.hel.memeticblock.net'
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITEKEY as string
 const showContactForm = import.meta.env.VITE_SHOW_CONTACT_FORM === 'true'
 
@@ -158,7 +152,7 @@ const formData = reactive({
   name: '',
   email: '',
   subject: '',
-  message: ''
+  message: '',
 })
 
 const isSubmitting = ref(false)
@@ -210,7 +204,7 @@ function renderTurnstile() {
         window.turnstile.reset(turnstileWidgetId.value)
       }
     },
-    theme: 'dark'
+    theme: 'dark',
   })
 }
 
@@ -224,7 +218,7 @@ function resetTurnstile() {
 
 onMounted(async () => {
   if (!showContactForm) return
-  
+
   try {
     await loadTurnstileScript()
     // Wait for Vue to render the container element before initializing Turnstile
@@ -250,12 +244,12 @@ async function submitForm() {
     const response = await fetch(`${formApiUrl}/form`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         ...formData,
-        turnstileToken: turnstileToken.value
-      })
+        turnstileToken: turnstileToken.value,
+      }),
     })
 
     if (!response.ok) {
@@ -277,15 +271,18 @@ useHead({
     { property: 'og:title', content: 'Contact Us | Memetic Block' },
     {
       name: 'description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.'
+      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
     },
     { name: 'twitter:title', content: 'Contact Us | Memetic Block' },
     {
       name: 'twitter:description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.'
+      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
     },
     { property: 'og:type', content: 'website' },
-    { name: 'keywords', content: 'blockchain development, smart contract development, decentralized applications, Web3, DePIN' }
-  ]
+    {
+      name: 'keywords',
+      content: 'blockchain development, smart contract development, decentralized applications, Web3, DePIN',
+    },
+  ],
 })
 </script>

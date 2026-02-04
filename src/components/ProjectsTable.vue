@@ -3,15 +3,10 @@
     <!-- Intro -->
     <div class="mb-8">
       <p class="text-lg">
-        <span class="font-bold">MEMETIC BLOCK</span> is a
-        <span class="italic">Software Guild</span> focused on building
-        distributed systems of value and
-        realizing creativity in the spaces
-        between them.
+        <span class="font-bold">MEMETIC BLOCK</span> is a <span class="italic">Software Guild</span> focused on building
+        distributed systems of value and realizing creativity in the spaces between them.
       </p>
-      <p class="mt-4">
-        We believe that software is willpower automated.
-      </p>
+      <p class="mt-4">We believe that software is willpower automated.</p>
       <p class="mt-4">
         We are currently <span class="text-success font-bold">OPEN</span> to new projects →
         <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com" target="_blank">
@@ -42,26 +37,30 @@
             index === 0 ? 'corner-bottom-right' : '',
             index === 1 ? 'corner-bottom-left' : '',
             index === 2 ? 'corner-top-right' : '',
-            index === 3 ? 'corner-top-left' : ''
+            index === 3 ? 'corner-top-left' : '',
           ]"
         >
           <h3 class="text-lg font-bold m-0">
             {{ project.name }}<sup v-if="project.sup" class="text-xs">{{ project.sup }}</sup>
           </h3>
           <span
-              :class="[
-                'text-xs font-bold uppercase py-1',
-                project.statusColor === 'info' ? 'text-info' :
-                project.statusColor === 'warning' ? 'text-warning' :
-                'text-success'
-              ]"
-            >
-              {{ project.status }}
-            </span>
-          <p class="text-gray-text text-sm mb-4 m-0">{{ project.type }}</p>
+            :class="[
+              'text-xs font-bold uppercase py-1',
+              project.statusColor === 'info'
+                ? 'text-info'
+                : project.statusColor === 'warning'
+                  ? 'text-warning'
+                  : 'text-success',
+            ]"
+          >
+            {{ project.status }}
+          </span>
+          <p class="text-gray-text text-sm mb-4 m-0">
+            {{ project.type }}
+          </p>
           <ul class="list-none m-0 p-0 mb-4 space-y-1 flex-1">
             <li v-for="info in project.info" :key="info" class="text-sm">
-              <span v-html="info"></span>
+              <span>{{ info }}</span>
             </li>
           </ul>
           <div class="flex justify-between items-center gap-4">
@@ -72,7 +71,7 @@
             >
               More info
             </RouterLink>
-            <span v-else></span>
+            <span v-else />
             <a
               v-if="project.url"
               :href="project.url"
@@ -94,9 +93,16 @@
     <div class="border-t border-white/20 pt-8 mt-8">
       <p>
         For code & other projects, please see
-        <a class="underline hover:text-primary transition-colors" href="https://github.com/memetic-block" target="_blank">github.com/memetic-block</a>
+        <a
+          class="underline hover:text-primary transition-colors"
+          href="https://github.com/memetic-block"
+          target="_blank"
+          >github.com/memetic-block</a
+        >
         or
-        <a class="underline hover:text-primary transition-colors" href="https://github.com/art-by-city" target="_blank">github.com/art-by-city</a>
+        <a class="underline hover:text-primary transition-colors" href="https://github.com/art-by-city" target="_blank"
+          >github.com/art-by-city</a
+        >
       </p>
     </div>
   </section>
@@ -163,46 +169,22 @@
 
   /* Top-left card: angled corner on bottom-right */
   .corner-bottom-right {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% calc(100% - var(--corner-size)),
-      calc(100% - var(--corner-size)) 100%,
-      0 100%
-    );
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--corner-size)), calc(100% - var(--corner-size)) 100%, 0 100%);
   }
 
   /* Top-right card: angled corner on bottom-left */
   .corner-bottom-left {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      var(--corner-size) 100%,
-      0 calc(100% - var(--corner-size))
-    );
+    clip-path: polygon(0 0, 100% 0, 100% 100%, var(--corner-size) 100%, 0 calc(100% - var(--corner-size)));
   }
 
   /* Bottom-left card: angled corner on top-right */
   .corner-top-right {
-    clip-path: polygon(
-      0 0,
-      calc(100% - var(--corner-size)) 0,
-      100% var(--corner-size),
-      100% 100%,
-      0 100%
-    );
+    clip-path: polygon(0 0, calc(100% - var(--corner-size)) 0, 100% var(--corner-size), 100% 100%, 0 100%);
   }
 
   /* Bottom-right card: angled corner on top-left */
   .corner-top-left {
-    clip-path: polygon(
-      var(--corner-size) 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 var(--corner-size)
-    );
+    clip-path: polygon(var(--corner-size) 0, 100% 0, 100% 100%, 0 100%, 0 var(--corner-size));
   }
 }
 </style>
@@ -219,7 +201,7 @@ const projects = [
     linkText: 'anyone.io',
     moreInfoLink: '/about#anyone-protocol',
     sup: '*',
-    info: ['6,000+ relays registered.']
+    info: ['6,000+ relays registered.'],
   },
   {
     name: 'Wuzzy Search',
@@ -228,10 +210,7 @@ const projects = [
     url: 'https://wuzzy.io',
     linkText: 'wuzzy.io',
     moreInfoLink: '/about#wuzzy-search',
-    info: [
-      'Premiere Permaweb Search Engine',
-      'Agents of AO Hackathon Winner 2025'
-    ]
+    info: ['Premiere Permaweb Search Engine', 'Agents of AO Hackathon Winner 2025'],
   },
   {
     name: 'Frostor',
@@ -240,7 +219,7 @@ const projects = [
     url: 'https://frostor.xyz',
     linkText: 'frostor.xyz',
     moreInfoLink: '/about#frostor',
-    info: ['200k+ $ARIO staked.']
+    info: ['200k+ $ARIO staked.'],
   },
   {
     name: 'Art By City',
@@ -250,7 +229,7 @@ const projects = [
     url: 'https://artbycity.frostor.xyz',
     linkText: 'artbycity',
     moreInfoLink: '/about#art-by-city',
-    info: ['60+ artists.', '40+ gb of art.', '31k+ data transactions.']
+    info: ['60+ artists.', '40+ gb of art.', '31k+ data transactions.'],
   },
 ]
 </script>
