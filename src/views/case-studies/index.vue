@@ -45,7 +45,7 @@
                   From Zero to Anyone
                 </h3>
                 <p class="text-sm text-gray-text mb-3" itemprop="alternativeHeadline">Anyone Protocol</p>
-                <p class="text-xs text-gray-text mt-2">Published Feb 4, 2026</p>
+                <p class="text-xs text-gray-text mt-2">Published Feb 5, 2026</p>
               </div>
               <div class="md:col-span-3">
                 <p class="text-gray-text mb-6 leading-relaxed" itemprop="description">
