@@ -363,6 +363,7 @@ useHead({
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
     { name: 'twitter:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
+    { name: "twitter:card", content: 'summary_large_image' }
   ],
   script: [
     {
