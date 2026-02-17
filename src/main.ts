@@ -15,6 +15,7 @@ import About from './views/about.vue'
 import Contact from './views/contact.vue'
 import CaseStudies from './views/case-studies/index.vue'
 import CaseStudyAnyoneProtocol from './views/case-studies/anyone-protocol.vue'
+import CaseStudyBareMetalPrivateCloud from './views/case-studies/bare-metal-private-cloud.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'Home', component: Home },
@@ -22,6 +23,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/contact', name: 'Contact', component: Contact },
   { path: '/case-studies', name: 'CaseStudies', component: CaseStudies },
   { path: '/case-studies/anyone-protocol', name: 'CaseStudyAnyoneProtocol', component: CaseStudyAnyoneProtocol },
+  { path: '/case-studies/bare-metal-private-cloud', name: 'CaseStudyBareMetalPrivateCloud', component: CaseStudyBareMetalPrivateCloud },
 ]
 
 export const createApp = ViteSSG(App, {

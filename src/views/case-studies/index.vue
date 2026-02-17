@@ -23,6 +23,62 @@
         <h2 id="case-studies-heading" class="sr-only">Featured Case Studies</h2>
 
         <div class="space-y-6 md:space-y-8">
+          <!-- Bare Metal Private Cloud Case Study Card -->
+          <RouterLink
+            to="/case-studies/bare-metal-private-cloud"
+            class="group block p-6 md:p-8 border border-white/20 hover:border-primary/50 transition-colors duration-300 no-underline"
+            itemprop="hasPart"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <div class="grid md:grid-cols-4 gap-6 items-start">
+              <div class="md:col-span-1">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary border border-primary/30 mb-4"
+                >
+                  Infrastructure & DevOps
+                </span>
+                <h3
+                  class="text-xl md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors"
+                  itemprop="headline"
+                >
+                  Beyond the Cloud
+                </h3>
+                <p class="text-sm text-gray-text mb-3" itemprop="alternativeHeadline">Bare-Metal Private Cloud</p>
+                <p class="text-xs text-gray-text mt-2">Published Feb 18, 2026</p>
+              </div>
+              <div class="md:col-span-3">
+                <p class="text-gray-text mb-6 leading-relaxed" itemprop="description">
+                  How Memetic Block builds and operates private bare-metal cloud infrastructure to keep
+                  critical decentralized systems online when centralized providers go down. Full-stack
+                  observability, independent CI/CD, and bounded blast radius by design.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Full-Stack</p>
+                    <p class="text-xs text-gray-text">Observability</p>
+                  </div>
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Independent</p>
+                    <p class="text-xs text-gray-text">CI/CD Pipelines</p>
+                  </div>
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Isolated</p>
+                    <p class="text-xs text-gray-text">Networking</p>
+                  </div>
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Bounded</p>
+                    <p class="text-xs text-gray-text">Blast Radius</p>
+                  </div>
+                </div>
+                <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+                  <span>Read full case study</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </div>
+          </RouterLink>
+
           <!-- Anyone Protocol Case Study Card -->
           <RouterLink
             to="/case-studies/anyone-protocol"
@@ -153,6 +209,12 @@ useHead({
               position: 1,
               name: 'Anyone Protocol Case Study',
               url: 'https://memeticblock.io/case-studies/anyone-protocol',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Beyond the Cloud: Bare-Metal Private Cloud',
+              url: 'https://memeticblock.io/case-studies/bare-metal-private-cloud',
             },
           ],
         },
