@@ -28,6 +28,13 @@
           </span>
         </div>
 
+        <img
+          src="/images/case-studies/bare-metal-private-cloud-notext.png"
+          alt="Beyond the Cloud: Bare-Metal Private Cloud Case Study"
+          class="w-full h-full object-contain rounded-lg mb-6"
+          itemprop="image"
+        />
+
         <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" itemprop="headline">
           Beyond the Cloud
         </h1>

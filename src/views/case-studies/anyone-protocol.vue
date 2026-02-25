@@ -28,6 +28,13 @@
           </span>
         </div>
 
+        <img
+          src="/images/case-studies/fromzerotoanyone-notext.png"
+          alt="From Zero to Anyone: Anyone Protocol Case Study"
+          class="w-full h-full object-cover rounded-lg mb-6"
+          itemprop="image"
+        />
+
         <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" itemprop="headline">
           From Zero to Anyone
         </h1>

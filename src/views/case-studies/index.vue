@@ -31,6 +31,12 @@
             itemscope
             itemtype="https://schema.org/Article"
           >
+            <img
+              src="/images/case-studies/bare-metal-private-cloud-notext.png"
+              alt="Beyond the Cloud: Bare-Metal Private Cloud Case Study"
+              class="w-full h-full object-cover rounded-lg mb-6"
+              itemprop="image"
+            />
             <div class="grid md:grid-cols-4 gap-6 items-start">
               <div class="md:col-span-1">
                 <span
@@ -87,6 +93,12 @@
             itemscope
             itemtype="https://schema.org/Article"
           >
+            <img
+              src="/images/case-studies/fromzerotoanyone-notext.png"
+              alt="From Zero to Anyone: Anyone Protocol Case Study"
+              class="w-full h-full object-cover rounded-lg mb-6"
+              itemprop="image"
+            />
             <div class="grid md:grid-cols-4 gap-6 items-start">
               <div class="md:col-span-1">
                 <span
