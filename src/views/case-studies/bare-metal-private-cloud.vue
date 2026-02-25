@@ -42,7 +42,7 @@
         <div class="flex flex-wrap gap-6 text-sm text-gray-text border-t border-b border-white/10 py-4">
           <div><span class="text-white font-medium">Used By:</span> Anyone Protocol, Wuzzy Search, Frostor.xyz</div>
           <div><span class="text-white font-medium">Scope:</span> Private bare-metal cloud infrastructure</div>
-          <div><span class="text-white font-medium">Published:</span> <time itemprop="datePublished" datetime="2026-02-18">Feb 18, 2026</time></div>
+          <div><span class="text-white font-medium">Published:</span> <time itemprop="datePublished" :datetime="datePublished">Feb 25, 2026</time></div>
         </div>
       </header>
 
@@ -273,8 +273,8 @@
     </div>
 
     <!-- Hidden metadata -->
-    <meta itemprop="datePublished" content="2026-02-18" />
-    <meta itemprop="dateModified" content="2026-02-18" />
+    <meta itemprop="datePublished" :content="datePublished" />
+    <meta itemprop="dateModified" :content="dateModified" />
     <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
       <meta itemprop="name" content="Memetic Block" />
       <meta itemprop="url" content="https://memeticblock.io" />
@@ -317,6 +317,9 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 
+const datePublished = '2026-02-25'
+const dateModified = '2026-02-25'
+
 useHead({
   title: 'Beyond the Cloud | Bare-Metal Private Cloud Infrastructure',
   link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies/bare-metal-private-cloud' }],
@@ -339,7 +342,8 @@ useHead({
     },
     { property: 'og:type', content: 'article' },
     { property: 'og:url', content: 'https://memeticblock.io/case-studies/bare-metal-private-cloud' },
-    { property: 'article:published_time', content: '2026-02-18' },
+    { property: 'article:published_time', content: datePublished },
+    { property: 'article:modified_time', content: dateModified },
     { property: 'article:author', content: 'Memetic Block' },
     { property: 'article:section', content: 'Case Studies' },
     { property: 'article:tag', content: 'Infrastructure' },
@@ -375,8 +379,8 @@ useHead({
           'How Memetic Block builds and operates private bare-metal cloud infrastructure to keep critical ' +
           'decentralized systems online when centralized providers go down.',
         url: 'https://memeticblock.io/case-studies/bare-metal-private-cloud',
-        datePublished: '2026-02-18',
-        dateModified: '2026-02-18',
+        datePublished: datePublished,
+        dateModified: dateModified,
         author: {
           '@type': 'Organization',
           name: 'Memetic Block',
