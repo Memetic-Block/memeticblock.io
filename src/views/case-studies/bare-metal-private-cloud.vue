@@ -32,7 +32,7 @@
           Beyond the Cloud
         </h1>
         <h2 class="text-2xl md:text-3xl font-semibold mb-4">
-          Why We Run Bare Metal, And Why You Should Too
+          Why We Run Bare Metal, and Why You Should Too
         </h2>
 
         <p class="text-xl text-gray-text mb-8" itemprop="description">
@@ -367,6 +367,8 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { property: 'og:image', content: 'https://memeticblock.io/images/case-studies/bare-metal-private-cloud.png' },
+    { name: 'twitter:image', content: 'https://memeticblock.io/images/case-studies/bare-metal-private-cloud.png' },
   ],
   script: [
     {
@@ -374,7 +376,7 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Beyond the Cloud: Why We Run Bare Metal, And Why You Should Too',
+        headline: 'Beyond the Cloud: Why We Run Bare Metal, and Why You Should Too',
         description:
           'How Memetic Block builds and operates private bare-metal cloud infrastructure to keep critical ' +
           'decentralized systems online when centralized providers go down.',
