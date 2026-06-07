@@ -6,8 +6,9 @@
         <LogoText />
       </div>
       <p class="mt-6 max-w-2xl text-gray-text text-base md:text-lg leading-relaxed">
-        A software guild combining senior engineers with agentic coding teams under deliberate
-        human-in-the-loop oversight — delivering enterprise-grade distributed systems.
+        A software guild combining senior engineers with agentic coding teams under human-in-the-loop oversight.
+        We deliver high-quality production software — from complex distributed systems to web applications,
+        SaaS platforms, and B2B products.
       </p>
     </div>
   </div>

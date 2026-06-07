@@ -4,13 +4,14 @@
     <div class="mb-8">
       <p class="text-lg">
         <span class="font-bold">MEMETIC BLOCK</span> is a <span class="italic">Software Guild</span> combining
-        senior engineers with agentic coding teams operating under deliberate human-in-the-loop oversight
-        to deliver enterprise-grade distributed systems.
+        senior engineers with agentic coding teams operating under deliberate human-in-the-loop oversight.
+        We deliver high-quality production software — from complex distributed systems to web applications,
+        SaaS platforms, and B2B products.
       </p>
       <p class="mt-4">We believe that software is willpower automated.</p>
       <p class="mt-4">
-        We are currently <span class="text-success font-bold">OPEN</span> to new enterprise projects →
-        <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry" target="_blank">
+        We are currently <span class="text-success font-bold">OPEN</span> to new projects →
+        <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com?subject=Project%20Inquiry" target="_blank">
           build@memeticblock.com
         </a>
       </p>

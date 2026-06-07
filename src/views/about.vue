@@ -7,11 +7,12 @@
           Senior Engineers +<br /><span class="text-primary">Agentic Teams</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-text mb-8 max-w-2xl mx-auto" itemprop="description">
-          A software guild delivering enterprise-grade distributed systems, DePIN networks, and Web3 infrastructure
-          through deliberate human-in-the-loop oversight.
+          A software guild combining senior engineers with agentic coding teams under human-in-the-loop oversight.
+          High-quality production software — from distributed systems and DePIN networks to web applications,
+          SaaS platforms, and B2B products.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a class="btn btn-primary" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry"> Start Your Project </a>
+          <a class="btn btn-primary" href="mailto:build@memeticblock.com?subject=Project%20Inquiry"> Start Your Project </a>
           <RouterLink class="btn" to="#projects"> View Our Work </RouterLink>
         </div>
       </div>
@@ -32,15 +33,15 @@
           </div>
           <div class="md:col-span-3 space-y-6">
             <p class="text-lg leading-relaxed">
-              <strong class="text-white">Memetic Block is a Software Guild</strong> founded by experienced distributed
-              systems engineers and blockchain architects. We combine senior engineers with agentic coding teams
-              operating under deliberate human-in-the-loop oversight.
+              <strong class="text-white">Memetic Block is a Software Guild</strong> founded by experienced
+              software engineers and distributed systems architects. We combine senior engineers with agentic
+              coding teams operating under deliberate human-in-the-loop oversight.
             </p>
             <p class="text-gray-text leading-relaxed">
               We believe that <em>software is willpower automated</em>. This philosophy drives our approach:
               senior engineers set architecture, define constraints, and review every meaningful decision while
-              agentic teams accelerate execution — delivering enterprise-grade outcomes at a pace traditional
-              teams can't match.
+              agentic teams accelerate execution — delivering production-grade quality at a pace traditional
+              teams can't match, across whatever you're building.
             </p>
           </div>
         </div>
@@ -53,7 +54,7 @@
         <div class="text-center mb-12 md:mb-16">
           <h2 id="expertise-heading" class="text-3xl md:text-4xl font-bold mb-4">Our Expertise</h2>
           <p class="text-gray-text max-w-2xl mx-auto">
-            Full-stack blockchain development capabilities spanning the entire Web3 ecosystem
+            End-to-end software development across distributed systems, web products, and technical infrastructure
           </p>
         </div>
 
@@ -81,23 +82,23 @@
             <ul class="space-y-3 text-gray-text text-sm">
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
+                <span>Web applications & full-stack product development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-1">→</span>
+                <span>Distributed systems & backend infrastructure</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-1">→</span>
                 <span>Multi-chain development (Ethereum, Arweave, Solana)</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>DePIN infrastructure networks</span>
+                <span>DePIN networks & Web3 infrastructure</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Web3 gateways & distributed storage</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary mt-1">→</span>
-                <span>Smart contract development & auditing</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary mt-1">→</span>
-                <span>AI integration & neural networks</span>
+                <span>AI integration & agentic tooling</span>
               </li>
             </ul>
           </div>
@@ -121,27 +122,27 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-4">Industries We Serve</h3>
+            <h3 class="text-xl font-bold mb-4">What We Build</h3>
             <ul class="space-y-3 text-gray-text text-sm">
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Privacy networks & decentralized VPN</span>
+                <span>SaaS products & B2B software</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Digital art & NFT platforms</span>
+                <span>Internet infrastructure & developer platforms</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Blockchain gaming & metaverse</span>
+                <span>Complex distributed systems & DePIN networks</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Supply chain & IoT infrastructure</span>
+                <span>Web3 applications & smart contracts</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Enterprise blockchain solutions</span>
+                <span>Internal tooling, automation & agentic systems</span>
               </li>
             </ul>
           </div>
@@ -169,23 +170,23 @@
             <ul class="space-y-3 text-gray-text text-sm">
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Full-stack dApp development</span>
+                <span>Full-stack application development</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Protocol engineering & optimization</span>
+                <span>Protocol engineering & systems architecture</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>DePIN architecture & deployment</span>
+                <span>Production ops, CI/CD & observability</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Web3 UX/UI design</span>
+                <span>Security review & dependency auditing</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-primary mt-1">→</span>
-                <span>Technical consulting</span>
+                <span>Technical strategy & consulting</span>
               </li>
             </ul>
           </div>
@@ -193,8 +194,8 @@
 
         <!-- Mid-page CTA -->
         <div class="mt-12 md:mt-16 text-center">
-          <p class="text-gray-text mb-4">Ready to leverage our expertise for your project?</p>
-          <RouterLink class="btn btn-primary" to="/contact"> Schedule a Technical Consultation </RouterLink>
+          <p class="text-gray-text mb-4">Have a project in mind? We'd love to hear about it.</p>
+          <a class="btn btn-primary" href="mailto:build@memeticblock.com?subject=Project%20Inquiry"> Get in Touch </a>
         </div>
       </div>
     </section>
@@ -416,14 +417,14 @@
     <section id="contact-cta" class="py-20 md:py-28" aria-labelledby="cta-heading">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 id="cta-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Ready to Ship Enterprise-Grade Software Faster?
+          Ready to Build Something Great?
         </h2>
         <p class="text-xl text-gray-text mb-8 max-w-2xl mx-auto">
-          Whether you're launching a DePIN network, scaling distributed infrastructure, or need a technical partner
-          who can architect <em>and</em> execute — let's talk.
+          Whether you're starting a new product, scaling infrastructure, or need a technical partner
+          who can architect <em>and</em> execute — we'd love to hear about it.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a class="btn btn-primary text-lg px-8 py-4" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry"> Start Your Project </a>
+          <a class="btn btn-primary text-lg px-8 py-4" href="mailto:build@memeticblock.com?subject=Project%20Inquiry"> Start Your Project </a>
           <RouterLink class="btn text-lg px-8 py-4" to="/case-studies"> See Our Work </RouterLink>
         </div>
 
@@ -468,14 +469,14 @@ useHead({
       name: 'description',
       content:
         'Memetic Block is a software guild combining senior engineers with agentic coding teams under ' +
-        'human-in-the-loop oversight. We build enterprise-grade distributed systems, DePIN networks, and Web3 infrastructure.',
+        'human-in-the-loop oversight. High-quality production software — from distributed systems to web apps, SaaS, and B2B products.',
     },
     { name: 'twitter:title', content: 'About Memetic Block | Senior Engineers + Agentic Coding Teams' },
     {
       name: 'twitter:description',
       content:
-        'Software guild combining senior engineers with agentic coding teams under human-in-the-loop oversight. ' +
-        '7,500+ relays deployed. Open to new enterprise projects.',
+        'Software guild combining senior engineers with agentic coding teams. Production-grade quality across ' +
+        'distributed systems, web applications, SaaS, and B2B products.',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://memeticblock.com/about' },
