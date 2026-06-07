@@ -1,9 +1,9 @@
 <template>
   <div class="py-8">
     <section class="text-center mb-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-      <p v-if="showContactForm" class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
-      <p v-else class="text-gray-text mb-8">Have a question or want to work with us? Reach out via email below.</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Start Your Project</h1>
+      <p v-if="showContactForm" class="text-gray-text mb-8">Tell us about your project. We'll respond within one business day.</p>
+      <p v-else class="text-gray-text mb-8">Ready to ship enterprise-grade software faster? Reach out directly and let's talk.</p>
     </section>
 
     <section v-if="showContactForm" class="max-w-2xl mx-auto">
@@ -266,22 +266,26 @@ async function submitForm() {
 }
 
 useHead({
-  title: 'Contact Us',
+  title: 'Start Your Project',
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/contact' }],
   meta: [
-    { property: 'og:title', content: 'Contact Us | Memetic Block' },
+    { property: 'og:title', content: 'Start Your Project | Memetic Block' },
     {
       name: 'description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
+      content:
+        'Start a new enterprise distributed systems or Web3 project with Memetic Block. ' +
+        'Senior engineers + agentic teams. Reach us at build@memeticblock.com.',
     },
-    { name: 'twitter:title', content: 'Contact Us | Memetic Block' },
+    { name: 'twitter:title', content: 'Start Your Project | Memetic Block' },
     {
       name: 'twitter:description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
+      content: 'Start a new enterprise distributed systems or Web3 project with Memetic Block.',
     },
     { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://memeticblock.com/contact' },
     {
       name: 'keywords',
-      content: 'blockchain development, smart contract development, decentralized applications, Web3, DePIN',
+      content: 'hire blockchain developers, enterprise distributed systems, DePIN development, Web3 agency, build@memeticblock.com',
     },
   ],
 })

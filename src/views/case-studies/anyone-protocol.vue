@@ -283,7 +283,7 @@
     <meta itemprop="dateModified" content="2026-02-05" />
     <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
       <meta itemprop="name" content="Memetic Block" />
-      <meta itemprop="url" content="https://memeticblock.io" />
+      <meta itemprop="url" content="https://memeticblock.com" />
     </span>
   </article>
 </template>
@@ -325,7 +325,7 @@ import { useHead } from '@unhead/vue'
 
 useHead({
   title: 'Anyone Protocol Case Study | Building a Decentralized VPN from Scratch',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies/anyone-protocol' }],
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/case-studies/anyone-protocol' }],
   meta: [
     {
       name: 'description',
@@ -344,7 +344,7 @@ useHead({
         'contracts, microservices backend, and 22,000+ relays.',
     },
     { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: 'https://memeticblock.io/case-studies/anyone-protocol' },
+    { property: 'og:url', content: 'https://memeticblock.com/case-studies/anyone-protocol' },
     { property: 'article:published_time', content: '2026-02-05' },
     { property: 'article:author', content: 'Memetic Block' },
     { property: 'article:section', content: 'Case Studies' },
@@ -368,8 +368,8 @@ useHead({
     },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
-    { property: 'og:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
-    { name: 'twitter:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
+    { property: 'og:image', content: 'https://memeticblock.com/images/case-studies/fromzerotoanyone.png' },
+    { name: 'twitter:image', content: 'https://memeticblock.com/images/case-studies/fromzerotoanyone.png' },
     { name: "twitter:card", content: 'summary_large_image' }
   ],
   script: [
@@ -382,21 +382,21 @@ useHead({
         description:
           "How Memetic Block built Anyone Protocol's decentralized privacy network from scratch: multi-chain smart " +
           'contracts, microservices backend, and 22,000+ relays serving 69+ Gbps.',
-        url: 'https://memeticblock.io/case-studies/anyone-protocol',
+        url: 'https://memeticblock.com/case-studies/anyone-protocol',
         datePublished: '2026-02-05',
         dateModified: '2026-02-05',
         author: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
         },
         publisher: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://memeticblock.io/logo/memetic-block/logo.svg',
+            url: 'https://memeticblock.com/logo/memetic-block/logo.svg',
           },
         },
         about: {

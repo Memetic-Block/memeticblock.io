@@ -3,13 +3,14 @@
     <!-- Intro -->
     <div class="mb-8">
       <p class="text-lg">
-        <span class="font-bold">MEMETIC BLOCK</span> is a <span class="italic">Software Guild</span> focused on building
-        distributed systems of value and realizing creativity in the spaces between them.
+        <span class="font-bold">MEMETIC BLOCK</span> is a <span class="italic">Software Guild</span> combining
+        senior engineers with agentic coding teams operating under deliberate human-in-the-loop oversight
+        to deliver enterprise-grade distributed systems.
       </p>
       <p class="mt-4">We believe that software is willpower automated.</p>
       <p class="mt-4">
-        We are currently <span class="text-success font-bold">OPEN</span> to new projects →
-        <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com" target="_blank">
+        We are currently <span class="text-success font-bold">OPEN</span> to new enterprise projects →
+        <a class="underline hover:text-primary transition-colors" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry" target="_blank">
           build@memeticblock.com
         </a>
       </p>
@@ -201,7 +202,7 @@ const projects = [
     linkText: 'anyone.io',
     moreInfoLink: '/about#anyone-protocol',
     sup: '*',
-    info: ['6,000+ relays registered.'],
+    info: ['7,500+ active relays on mainnet.'],
   },
   {
     name: 'Wuzzy Search',

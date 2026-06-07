@@ -4,13 +4,14 @@
     <header class="relative py-16 md:py-24 text-center">
       <div class="max-w-4xl mx-auto px-4">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" itemprop="name">
-          Building the <span class="text-primary">Decentralized</span> Future
+          Senior Engineers +<br /><span class="text-primary">Agentic Teams</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-text mb-8 max-w-2xl mx-auto" itemprop="description">
-          Custom blockchain solutions, Web3 applications, and DePIN infrastructure engineered for scale and security.
+          A software guild delivering enterprise-grade distributed systems, DePIN networks, and Web3 infrastructure
+          through deliberate human-in-the-loop oversight.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink class="btn btn-primary" to="/contact"> Get a Free Consultation </RouterLink>
+          <a class="btn btn-primary" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry"> Start Your Project </a>
           <RouterLink class="btn" to="#projects"> View Our Work </RouterLink>
         </div>
       </div>
@@ -31,14 +32,15 @@
           </div>
           <div class="md:col-span-3 space-y-6">
             <p class="text-lg leading-relaxed">
-              <strong class="text-white">Memetic Block is a Software Guild</strong> founded by experienced blockchain
-              developers and distributed systems architects. We're dedicated to building distributed systems that create
-              value and foster creativity.
+              <strong class="text-white">Memetic Block is a Software Guild</strong> founded by experienced distributed
+              systems engineers and blockchain architects. We combine senior engineers with agentic coding teams
+              operating under deliberate human-in-the-loop oversight.
             </p>
             <p class="text-gray-text leading-relaxed">
-              We believe that <em>software is willpower automated</em>. This philosophy drives our commitment to
-              developing innovative blockchain solutions, decentralized applications, and Web3 infrastructure that
-              empowers communities and creators across all major blockchain networks.
+              We believe that <em>software is willpower automated</em>. This philosophy drives our approach:
+              senior engineers set architecture, define constraints, and review every meaningful decision while
+              agentic teams accelerate execution — delivering enterprise-grade outcomes at a pace traditional
+              teams can't match.
             </p>
           </div>
         </div>
@@ -238,7 +240,7 @@
                 </div>
                 <div>
                   <p class="text-gray-text mb-1">Results</p>
-                  <p class="text-primary font-semibold">6,000+ registered relays on mainnet launch</p>
+                  <p class="text-primary font-semibold">7,500+ active relays, 22,000+ registered</p>
                 </div>
               </div>
             </div>
@@ -366,43 +368,45 @@
       <div class="max-w-5xl mx-auto px-4">
         <div class="text-center mb-12 md:mb-16">
           <h2 id="process-heading" class="text-3xl md:text-4xl font-bold mb-4">How We Work</h2>
-          <p class="text-gray-text max-w-2xl mx-auto">Security-first development with transparent collaboration</p>
+          <p class="text-gray-text max-w-2xl mx-auto">Senior engineers directing agentic teams under deliberate human-in-the-loop oversight</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">01</div>
-            <h3 class="text-lg font-bold mb-2">Security-First</h3>
+            <h3 class="text-lg font-bold mb-2">Human-in-the-Loop</h3>
             <p class="text-sm text-gray-text">
-              Comprehensive testing and code review processes built into every project phase.
+              Senior engineers make every architectural decision, set constraints, and review all meaningful
+              outputs. Agentic teams amplify execution — they never replace engineering judgment.
             </p>
           </div>
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">02</div>
-            <h3 class="text-lg font-bold mb-2">Agile Methodology</h3>
+            <h3 class="text-lg font-bold mb-2">Agentic Execution</h3>
             <p class="text-sm text-gray-text">
-              Flexible sprint cycles adapted to your project requirements and timeline.
+              Purpose-built agentic coding teams handle implementation velocity — scaffolding, testing,
+              iteration — under continuous engineer supervision and course-correction.
             </p>
           </div>
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">03</div>
-            <h3 class="text-lg font-bold mb-2">Continuous Delivery</h3>
-            <p class="text-sm text-gray-text">Automated testing, CI/CD pipelines, and real-time monitoring.</p>
+            <h3 class="text-lg font-bold mb-2">Security-First</h3>
+            <p class="text-sm text-gray-text">Comprehensive code review, dependency auditing, and threat modeling built into every project phase.</p>
           </div>
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">04</div>
-            <h3 class="text-lg font-bold mb-2">Client-Centric</h3>
-            <p class="text-sm text-gray-text">Workflows tailored to match your team's needs and communication style.</p>
+            <h3 class="text-lg font-bold mb-2">End-to-End Ownership</h3>
+            <p class="text-sm text-gray-text">From architecture to production ops — we own the full stack, not just the code handoff.</p>
           </div>
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">05</div>
-            <h3 class="text-lg font-bold mb-2">Transparent Updates</h3>
-            <p class="text-sm text-gray-text">Regular progress reports and collaborative decision-making throughout.</p>
+            <h3 class="text-lg font-bold mb-2">Transparent Collaboration</h3>
+            <p class="text-sm text-gray-text">Regular progress reviews and collaborative decision-making. You always know where your project stands.</p>
           </div>
           <div class="p-6 border border-white/10">
             <div class="text-4xl font-bold text-primary/30 mb-4">06</div>
-            <h3 class="text-lg font-bold mb-2">Expert Leadership</h3>
-            <p class="text-sm text-gray-text">Lead developer oversight with specialized contractors for each domain.</p>
+            <h3 class="text-lg font-bold mb-2">Continuous Delivery</h3>
+            <p class="text-sm text-gray-text">Automated CI/CD pipelines, independent bare-metal infrastructure, and real-time observability across every service.</p>
           </div>
         </div>
       </div>
@@ -412,17 +416,15 @@
     <section id="contact-cta" class="py-20 md:py-28" aria-labelledby="cta-heading">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 id="cta-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Ready to Build Something Remarkable?
+          Ready to Ship Enterprise-Grade Software Faster?
         </h2>
         <p class="text-xl text-gray-text mb-8 max-w-2xl mx-auto">
-          Whether you're launching a DePIN network, creating Web3 applications, or integrating blockchain into existing
-          systems—let's make it happen.
+          Whether you're launching a DePIN network, scaling distributed infrastructure, or need a technical partner
+          who can architect <em>and</em> execute — let's talk.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <RouterLink class="btn btn-primary text-lg px-8 py-4" to="/contact"> Start Your Project </RouterLink>
-          <a class="btn text-lg px-8 py-4" href="mailto:build@memeticblock.com?subject=Project%20Inquiry">
-            Email Us Directly
-          </a>
+          <a class="btn btn-primary text-lg px-8 py-4" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry"> Start Your Project </a>
+          <RouterLink class="btn text-lg px-8 py-4" to="/case-studies"> See Our Work </RouterLink>
         </div>
 
         <div class="inline-flex items-center gap-2 px-4 py-2 border border-success/50 text-success rounded-full">
@@ -458,31 +460,30 @@
 import { useHead } from '@unhead/vue'
 
 useHead({
-  title: 'About Us - Blockchain Development & Web3 Solutions',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/about' }],
+  title: 'About | Senior Engineers + Agentic Teams',
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/about' }],
   meta: [
-    { property: 'og:title', content: 'About Memetic Block | Blockchain Development & Web3 Solutions' },
+    { property: 'og:title', content: 'About Memetic Block | Senior Engineers + Agentic Coding Teams' },
     {
       name: 'description',
       content:
-        'Memetic Block is a software guild specializing in blockchain development, DePIN infrastructure, ' +
-        'Web3 applications, and smart contract solutions. Get a free consultation for your decentralized project.',
+        'Memetic Block is a software guild combining senior engineers with agentic coding teams under ' +
+        'human-in-the-loop oversight. We build enterprise-grade distributed systems, DePIN networks, and Web3 infrastructure.',
     },
-    { name: 'twitter:title', content: 'About Memetic Block | Blockchain Development Experts' },
+    { name: 'twitter:title', content: 'About Memetic Block | Senior Engineers + Agentic Coding Teams' },
     {
       name: 'twitter:description',
       content:
-        'Expert blockchain development team delivering DePIN networks, Web3 apps, and smart contract solutions. ' +
-        '4,000+ relays deployed. Free consultation available.',
+        'Software guild combining senior engineers with agentic coding teams under human-in-the-loop oversight. ' +
+        '7,500+ relays deployed. Open to new enterprise projects.',
     },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://memeticblock.io/about' },
+    { property: 'og:url', content: 'https://memeticblock.com/about' },
     {
       name: 'keywords',
       content:
-        'blockchain development company, smart contract development, decentralized applications, ' +
-        'Web3 development, DePIN infrastructure, Arweave development, Ethereum development, Solana development, ' +
-        'blockchain consulting, Web3 agency',
+        'software guild, agentic coding teams, human-in-the-loop, distributed systems, DePIN infrastructure, ' +
+        'blockchain development, Web3 agency, enterprise software, smart contracts, Arweave, Ethereum, Solana',
     },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
@@ -494,21 +495,23 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Memetic Block',
-        url: 'https://memeticblock.io',
-        logo: 'https://memeticblock.io/logo/memetic-block/logo.svg',
+        url: 'https://memeticblock.com',
+        logo: 'https://memeticblock.com/logo/memetic-block/logo.svg',
         description:
-          'Software guild specializing in blockchain development, DePIN infrastructure, and Web3 applications.',
+          'Software guild combining senior engineers with agentic coding teams under human-in-the-loop oversight ' +
+          'to deliver enterprise-grade distributed systems, DePIN networks, and Web3 infrastructure.',
         email: 'build@memeticblock.com',
-        sameAs: ['https://x.com/memeticblock'],
+        sameAs: ['https://x.com/memeticblock', 'https://github.com/memetic-block'],
         knowsAbout: [
+          'Distributed Systems',
+          'Agentic Software Development',
+          'DePIN Infrastructure',
           'Blockchain Development',
           'Smart Contracts',
-          'DePIN',
           'Web3',
           'Decentralized Applications',
           'Arweave',
           'Ethereum',
-          'Solana',
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',

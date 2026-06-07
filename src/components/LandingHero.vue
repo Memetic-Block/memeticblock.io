@@ -5,6 +5,10 @@
       <div class="mt-4">
         <LogoText />
       </div>
+      <p class="mt-6 max-w-2xl text-gray-text text-base md:text-lg leading-relaxed">
+        A software guild combining senior engineers with agentic coding teams under deliberate
+        human-in-the-loop oversight — delivering enterprise-grade distributed systems.
+      </p>
     </div>
   </div>
 </template>

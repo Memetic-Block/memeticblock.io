@@ -284,7 +284,7 @@
     <meta itemprop="dateModified" :content="dateModified" />
     <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
       <meta itemprop="name" content="Memetic Block" />
-      <meta itemprop="url" content="https://memeticblock.io" />
+      <meta itemprop="url" content="https://memeticblock.com" />
     </span>
   </article>
 </template>
@@ -329,7 +329,7 @@ const dateModified = '2026-02-25'
 
 useHead({
   title: 'Beyond the Cloud | Bare-Metal Private Cloud Infrastructure',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies/bare-metal-private-cloud' }],
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/case-studies/bare-metal-private-cloud' }],
   meta: [
     {
       name: 'description',
@@ -348,7 +348,7 @@ useHead({
         'decentralized systems online when centralized providers go down.',
     },
     { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: 'https://memeticblock.io/case-studies/bare-metal-private-cloud' },
+    { property: 'og:url', content: 'https://memeticblock.com/case-studies/bare-metal-private-cloud' },
     { property: 'article:published_time', content: datePublished },
     { property: 'article:modified_time', content: dateModified },
     { property: 'article:author', content: 'Memetic Block' },
@@ -374,8 +374,8 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { property: 'og:image', content: 'https://memeticblock.io/images/case-studies/bare-metal-private-cloud.png' },
-    { name: 'twitter:image', content: 'https://memeticblock.io/images/case-studies/bare-metal-private-cloud.png' },
+    { property: 'og:image', content: 'https://memeticblock.com/images/case-studies/bare-metal-private-cloud.png' },
+    { name: 'twitter:image', content: 'https://memeticblock.com/images/case-studies/bare-metal-private-cloud.png' },
   ],
   script: [
     {
@@ -387,21 +387,21 @@ useHead({
         description:
           'How Memetic Block builds and operates private bare-metal cloud infrastructure to keep critical ' +
           'decentralized systems online when centralized providers go down.',
-        url: 'https://memeticblock.io/case-studies/bare-metal-private-cloud',
+        url: 'https://memeticblock.com/case-studies/bare-metal-private-cloud',
         datePublished: datePublished,
         dateModified: dateModified,
         author: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
         },
         publisher: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://memeticblock.io/logo/memetic-block/logo.svg',
+            url: 'https://memeticblock.com/logo/memetic-block/logo.svg',
           },
         },
         keywords: [

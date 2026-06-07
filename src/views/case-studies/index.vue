@@ -23,6 +23,58 @@
         <h2 id="case-studies-heading" class="sr-only">Featured Case Studies</h2>
 
         <div class="space-y-6 md:space-y-8">
+          <!-- Agentic Development Micro Case Study Card -->
+          <RouterLink
+            to="/case-studies/agentic-development"
+            class="group block p-6 md:p-8 border border-white/20 hover:border-primary/50 transition-colors duration-300 no-underline"
+            itemprop="hasPart"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <div class="grid md:grid-cols-4 gap-6 items-start">
+              <div class="md:col-span-1">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary border border-primary/30 mb-4"
+                >
+                  Agentic Engineering
+                </span>
+                <h3
+                  class="text-xl md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors"
+                  itemprop="headline"
+                >
+                  Agentic Development at Scale
+                </h3>
+                <p class="text-sm text-gray-text mb-3" itemprop="alternativeHeadline">Human-in-the-Loop Engineering</p>
+                <p class="text-xs text-gray-text mt-2">Published June 7, 2026</p>
+              </div>
+              <div class="md:col-span-3">
+                <p class="text-gray-text mb-6 leading-relaxed" itemprop="description">
+                  How Memetic Block built internal agentic coding capability — combining senior engineers with
+                  purpose-built AI coding teams to ship enterprise-grade distributed systems faster without
+                  sacrificing quality or correctness.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Human-in-Loop</p>
+                    <p class="text-xs text-gray-text">Oversight Model</p>
+                  </div>
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Senior-Led</p>
+                    <p class="text-xs text-gray-text">Architecture</p>
+                  </div>
+                  <div class="text-center p-3 border border-white/10">
+                    <p class="text-lg font-bold text-primary">Enterprise</p>
+                    <p class="text-xs text-gray-text">Quality Bar</p>
+                  </div>
+                </div>
+                <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+                  <span>Read full case study</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </div>
+          </RouterLink>
+
           <!-- Bare Metal Private Cloud Case Study Card -->
           <RouterLink
             to="/case-studies/bare-metal-private-cloud"
@@ -153,13 +205,14 @@
     <!-- CTA Section -->
     <section class="py-16 md:py-24 bg-surface/30" aria-labelledby="cta-heading">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">Want Results Like These?</h2>
+        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">Ready to Ship Enterprise-Grade Software Faster?</h2>
         <p class="text-xl text-gray-text mb-8 max-w-2xl mx-auto">
-          We build production-grade Web3 infrastructure. Let's discuss how we can help your project.
+          We architect and build production distributed systems — combining senior engineers with agentic teams.
+          Let's discuss your project.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink class="btn btn-primary" to="/contact"> Get a Free Consultation </RouterLink>
-          <RouterLink class="btn" to="/about"> Learn About Us </RouterLink>
+          <a class="btn btn-primary" href="mailto:build@memeticblock.com?subject=Enterprise%20Project%20Inquiry"> Start Your Project </a>
+          <RouterLink class="btn" to="/about"> How We Work </RouterLink>
         </div>
       </div>
     </section>
@@ -170,36 +223,35 @@
 import { useHead } from '@unhead/vue'
 
 useHead({
-  title: 'Case Studies - Web3 & DePIN Development Projects',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies' }],
+  title: 'Case Studies - Distributed Systems & DePIN Development',
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/case-studies' }],
   meta: [
     {
       name: 'description',
       content:
-        "Explore Memetic Block's Web3 and DePIN case studies. See how we build production blockchain " +
-        'infrastructure—from zero to thousands of nodes. Real projects, real results.',
+        "Explore Memetic Block's case studies in distributed systems and DePIN infrastructure. " +
+        'Senior engineers + agentic teams delivering enterprise-grade results. Real projects, real metrics.',
     },
-    { property: 'og:title', content: 'Case Studies | Web3 & DePIN Development | Memetic Block' },
+    { property: 'og:title', content: 'Case Studies | Distributed Systems & DePIN | Memetic Block' },
     {
       property: 'og:description',
       content:
-        'Explore our Web3 and DePIN case studies. Real projects with measurable results—22,000+ relays, ' +
-        '56 repositories, production networks built from scratch.',
+        'Enterprise distributed systems and DePIN case studies. 22,000+ relays, bare-metal private cloud, ' +
+        'production networks built from scratch.',
     },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://memeticblock.io/case-studies' },
-    { name: 'twitter:title', content: 'Case Studies | Web3 & DePIN Development | Memetic Block' },
+    { property: 'og:url', content: 'https://memeticblock.com/case-studies' },
+    { name: 'twitter:title', content: 'Case Studies | Distributed Systems & DePIN | Memetic Block' },
     {
       name: 'twitter:description',
       content:
-        'Explore our Web3 and DePIN case studies. Real projects with measurable results—production ' +
-        'networks built from scratch.',
+        'Enterprise distributed systems and DePIN case studies. Real projects with measurable results.',
     },
     {
       name: 'keywords',
       content:
-        'Web3 case studies, DePIN development case studies, blockchain development portfolio, ' +
-        'decentralized infrastructure projects, Web3 agency portfolio, blockchain project examples',
+        'distributed systems case studies, DePIN development case studies, blockchain development portfolio, ' +
+        'agentic development, enterprise software portfolio, decentralized infrastructure projects',
     },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
@@ -211,8 +263,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
         name: 'Case Studies',
-        description: 'Web3 and DePIN development case studies by Memetic Block',
-        url: 'https://memeticblock.io/case-studies',
+        description: 'Distributed systems and DePIN development case studies by Memetic Block',
+        url: 'https://memeticblock.com/case-studies',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: [
@@ -220,20 +272,26 @@ useHead({
               '@type': 'ListItem',
               position: 1,
               name: 'Anyone Protocol Case Study',
-              url: 'https://memeticblock.io/case-studies/anyone-protocol',
+              url: 'https://memeticblock.com/case-studies/anyone-protocol',
             },
             {
               '@type': 'ListItem',
               position: 2,
               name: 'Beyond the Cloud: Bare-Metal Private Cloud',
-              url: 'https://memeticblock.io/case-studies/bare-metal-private-cloud',
+              url: 'https://memeticblock.com/case-studies/bare-metal-private-cloud',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Agentic Development: Building Internal Coding Teams',
+              url: 'https://memeticblock.com/case-studies/agentic-development',
             },
           ],
         },
         publisher: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
         },
       }),
     },
