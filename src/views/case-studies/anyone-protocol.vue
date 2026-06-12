@@ -35,12 +35,8 @@
           itemprop="image"
         />
 
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" itemprop="headline">
-          From Zero to Anyone
-        </h1>
-        <h2 class="text-2xl md:text-3xl font-semibold mb-4">
-          Building a Decentralized VPN
-        </h2>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" itemprop="headline">From Zero to Anyone</h1>
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">Building a Decentralized VPN</h2>
 
         <p class="text-xl text-gray-text mb-8" itemprop="description">
           How Memetic Block built Anyone Protocol's decentralized privacy network from scratch.
@@ -50,7 +46,10 @@
           <div><span class="text-white font-medium">Client:</span> Anyone Protocol</div>
           <div><span class="text-white font-medium">Engagement:</span> 3+ years, ongoing</div>
           <div><span class="text-white font-medium">Scope:</span> Full-stack protocol engineering</div>
-          <div><span class="text-white font-medium">Published:</span> <time itemprop="datePublished" datetime="2026-02-05">Feb 5, 2026</time></div>
+          <div>
+            <span class="text-white font-medium">Published:</span>
+            <time itemprop="datePublished" datetime="2026-02-05">Feb 5, 2026</time>
+          </div>
         </div>
       </header>
 
@@ -61,10 +60,13 @@
         <p><strong>Anyone Protocol came to Memetic Block with a vision and a token.</strong></p>
 
         <p>
-          The <a class="pointer underline" href="https://anyone.io" target="_blank" rel="noopener noreferrer">Anyone Protocol</a> team had a
-          clear mission: build a decentralized privacy network that could rival
-          traditional VPNs while eliminating the trust problem. They understood that centralized VPN providers represent
-          single points of failure.
+          The
+          <a class="pointer underline" href="https://anyone.io" target="_blank" rel="noopener noreferrer"
+            >Anyone Protocol</a
+          >
+          team had a clear mission: build a decentralized privacy network that could rival traditional VPNs while
+          eliminating the trust problem. They understood that centralized VPN providers represent single points of
+          failure.
         </p>
 
         <p>
@@ -109,15 +111,17 @@
             href="https://github.com/anyone-protocol/facilitator"
             target="_blank"
             rel="noopener noreferrer"
-          >Facilitator</a>, which bridges token claims between
-          chains by dispatching events and integrating with Arweave for allocation tracking, and the
+            >Facilitator</a
+          >, which bridges token claims between chains by dispatching events and integrating with Arweave for allocation
+          tracking, and the
           <a
             class="pointer underline"
             href="https://github.com/anyone-protocol/hodler"
             target="_blank"
             rel="noopener noreferrer"
-          >Hodler</a>, which handles comprehensive token management including locking, staking, governance voting,
-          rewards distribution, and time-locked vaults.
+            >Hodler</a
+          >, which handles comprehensive token management including locking, staking, governance voting, rewards
+          distribution, and time-locked vaults.
         </p>
 
         <p>
@@ -127,9 +131,10 @@
             href="https://github.com/anyone-protocol/smart-contracts"
             target="_blank"
             rel="noopener noreferrer"
-          >Lua smart-contracts</a>
-          for relay operator and relay family registration,
-          rewards calculation and distribution, and cross-chain state synchronization.
+            >Lua smart-contracts</a
+          >
+          for relay operator and relay family registration, rewards calculation and distribution, and cross-chain state
+          synchronization.
         </p>
 
         <p>
@@ -152,41 +157,43 @@
             href="https://github.com/anyone-protocol/operator-registry-controller"
             target="_blank"
             rel="noopener noreferrer"
-          >Operator Registry Controller</a>
-          links relay operator identities, validates device certificates, and serves
-          as a network metrics oracle for AO processes.
-          The
+            >Operator Registry Controller</a
+          >
+          links relay operator identities, validates device certificates, and serves as a network metrics oracle for AO
+          processes. The
           <a
             class="pointer underline"
             href="https://github.com/anyone-protocol/relay-rewards-controller"
             target="_blank"
             rel="noopener noreferrer"
-          >Relay Rewards</a>
+            >Relay Rewards</a
+          >
           &
           <a
             class="pointer underline"
             href="https://github.com/anyone-protocol/staking-rewards-controller"
             target="_blank"
             rel="noopener noreferrer"
-          >Staking Rewards</a>
-          Controllers manage distribution flow for operator & staking rewards with
-          regular snapshots published to Arweave.
-          The Facilitator bridges multi-chain token events, ensuring cross-chain state consistency with rewards and
-          staking claims. Finally, a developer-friendly
+            >Staking Rewards</a
+          >
+          Controllers manage distribution flow for operator & staking rewards with regular snapshots published to
+          Arweave. The Facilitator bridges multi-chain token events, ensuring cross-chain state consistency with rewards
+          and staking claims. Finally, a developer-friendly
           <a
             class="pointer underline"
             href="https://github.com/anyone-protocol/api-service"
             target="_blank"
             rel="noopener noreferrer"
-          >API Service</a>
-          provides relay search, anonymized geolocation data
-          using H3 hex cells, hardware relay information, and
+            >API Service</a
+          >
+          provides relay search, anonymized geolocation data using H3 hex cells, hardware relay information, and
           <a
             class="pointer underline"
             href="https://github.com/anyone-protocol/anyone-dns"
             target="_blank"
             rel="noopener noreferrer"
-          >Unstoppable Domains</a>
+            >Unstoppable Domains</a
+          >
           integration serving the <code>.anyone</code>
 
           &nbsp;<a
@@ -194,7 +201,8 @@
             href="https://docs.anyone.io/sdk/native-sdk/tutorials/services1"
             target="_blank"
             rel="noopener noreferrer"
-          >hidden-service</a>
+            >hidden-service</a
+          >
           TLD.
         </p>
 
@@ -204,14 +212,10 @@
 
         <p>
           Relay operators needed a way to register, monitor, and manage their nodes. We built a production-grade,
-          <a
-            class="pointer underline"
-            href="https://dashboard.anyone.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >decentralized dashboard application</a>
-          using modern JavaScript frameworks with decentralized data sources and
-          state management.
+          <a class="pointer underline" href="https://dashboard.anyone.io" target="_blank" rel="noopener noreferrer"
+            >decentralized dashboard application</a
+          >
+          using modern JavaScript frameworks with decentralized data sources and state management.
         </p>
 
         <p>
@@ -223,8 +227,8 @@
         <h3>Infrastructure & Operations</h3>
 
         <p>
-          Code is only half the battle. We operate Anyone Protocol's infrastructure on a
-          dedicated, bare-metal private cloud.
+          Code is only half the battle. We operate Anyone Protocol's infrastructure on a dedicated, bare-metal private
+          cloud.
         </p>
 
         <p>
@@ -283,7 +287,7 @@
     <meta itemprop="dateModified" content="2026-02-05" />
     <span itemprop="author" itemscope itemtype="https://schema.org/Organization" hidden>
       <meta itemprop="name" content="Memetic Block" />
-      <meta itemprop="url" content="https://memeticblock.io" />
+      <meta itemprop="url" content="https://memeticblock.com" />
     </span>
   </article>
 </template>
@@ -325,12 +329,12 @@ import { useHead } from '@unhead/vue'
 
 useHead({
   title: 'Anyone Protocol Case Study | Building a Decentralized VPN from Scratch',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies/anyone-protocol' }],
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/case-studies/anyone-protocol' }],
   meta: [
     {
       name: 'description',
       content:
-        'How Memetic Block built Anyone Protocol\'s decentralized privacy network from scratch: multi-chain smart ' +
+        "How Memetic Block built Anyone Protocol's decentralized privacy network from scratch: multi-chain smart " +
         'contracts, microservices backend, and 22,000+ relays.',
     },
     {
@@ -340,11 +344,11 @@ useHead({
     {
       property: 'og:description',
       content:
-        'How Memetic Block built Anyone Protocol\'s decentralized privacy network from scratch: multi-chain smart ' +
+        "How Memetic Block built Anyone Protocol's decentralized privacy network from scratch: multi-chain smart " +
         'contracts, microservices backend, and 22,000+ relays.',
     },
     { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: 'https://memeticblock.io/case-studies/anyone-protocol' },
+    { property: 'og:url', content: 'https://memeticblock.com/case-studies/anyone-protocol' },
     { property: 'article:published_time', content: '2026-02-05' },
     { property: 'article:author', content: 'Memetic Block' },
     { property: 'article:section', content: 'Case Studies' },
@@ -368,9 +372,9 @@ useHead({
     },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:locale', content: 'en_US' },
-    { property: 'og:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
-    { name: 'twitter:image', content: 'https://memeticblock.io/images/case-studies/fromzerotoanyone.png' },
-    { name: "twitter:card", content: 'summary_large_image' }
+    { property: 'og:image', content: 'https://memeticblock.com/images/case-studies/fromzerotoanyone.png' },
+    { name: 'twitter:image', content: 'https://memeticblock.com/images/case-studies/fromzerotoanyone.png' },
+    { name: 'twitter:card', content: 'summary_large_image' },
   ],
   script: [
     {
@@ -382,21 +386,21 @@ useHead({
         description:
           "How Memetic Block built Anyone Protocol's decentralized privacy network from scratch: multi-chain smart " +
           'contracts, microservices backend, and 22,000+ relays serving 69+ Gbps.',
-        url: 'https://memeticblock.io/case-studies/anyone-protocol',
+        url: 'https://memeticblock.com/case-studies/anyone-protocol',
         datePublished: '2026-02-05',
         dateModified: '2026-02-05',
         author: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
         },
         publisher: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://memeticblock.io/logo/memetic-block/logo.svg',
+            url: 'https://memeticblock.com/logo/memetic-block/logo.svg',
           },
         },
         about: {

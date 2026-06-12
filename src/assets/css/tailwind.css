@@ -116,6 +116,62 @@ body {
   color: white;
 }
 
+/* Uppercase terminal eyebrow/label */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Status capsule (the one pill-radius exception to sharp corners) */
+.status-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 999px;
+  color: var(--color-success);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-success);
+  display: inline-block;
+}
+
+@keyframes mbpulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.animate-mbpulse {
+  animation: mbpulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-mbpulse {
+    animation: none;
+  }
+}
+
+/* Active top-nav link reads in the red accent */
+.nav-link.router-link-exact-active {
+  color: var(--color-primary);
+}
+
 .container-page {
   max-width: 72rem;
   margin-left: auto;

@@ -1,9 +1,13 @@
 <template>
   <div class="py-8">
     <section class="text-center mb-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-      <p v-if="showContactForm" class="text-gray-text mb-8">Ready to start your project? Get in touch with us.</p>
-      <p v-else class="text-gray-text mb-8">Have a question or want to work with us? Reach out via email below.</p>
+      <span class="eyebrow text-primary">Contact</span>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mt-3 mb-4">Book a Scoping Call</h1>
+      <div class="h-1 w-16 bg-primary mx-auto mb-5" />
+      <p class="text-gray-text mb-8 max-w-[58ch] mx-auto leading-relaxed">
+        Tell us what you're building. We'll give you a precise quote within 48 hours — no discovery theater, no surprise
+        invoices.
+      </p>
     </section>
 
     <section v-if="showContactForm" class="max-w-2xl mx-auto">
@@ -114,6 +118,10 @@
           build@memeticblock.com
         </a>
       </p>
+      <div class="mt-8 flex items-center justify-center gap-2.5 text-[13px] text-gray-text">
+        <span class="w-2 h-2 rounded-full bg-success animate-mbpulse" />
+        <span>Currently open to new engagements — we keep the roster small on purpose.</span>
+      </div>
     </section>
   </div>
 </template>
@@ -266,22 +274,28 @@ async function submitForm() {
 }
 
 useHead({
-  title: 'Contact Us',
+  title: 'Book a Scoping Call',
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/contact' }],
   meta: [
-    { property: 'og:title', content: 'Contact Us | Memetic Block' },
+    { property: 'og:title', content: 'Book a Scoping Call | Memetic Block' },
     {
       name: 'description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
+      content:
+        "Tell us what you're building. We'll give you a precise quote within 48 hours — engineering retainers, " +
+        'production readiness audits, and scoped builds for distributed systems and production AI.',
     },
-    { name: 'twitter:title', content: 'Contact Us | Memetic Block' },
+    { name: 'twitter:title', content: 'Book a Scoping Call | Memetic Block' },
     {
       name: 'twitter:description',
-      content: 'Contact Memetic Block for custom blockchain and decentralized software solutions.',
+      content: 'Senior engineers for distributed systems and production AI. Precise quote within 48 hours.',
     },
     { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://memeticblock.com/contact' },
     {
       name: 'keywords',
-      content: 'blockchain development, smart contract development, decentralized applications, Web3, DePIN',
+      content:
+        'engineering retainer, production readiness audit, scoped builds, distributed systems, production AI, ' +
+        'fractional CTO, DePIN, smart contract development',
     },
   ],
 })

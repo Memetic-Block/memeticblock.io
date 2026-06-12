@@ -1,20 +1,18 @@
 <template>
   <article class="case-studies-page" itemscope itemtype="https://schema.org/CollectionPage">
     <!-- Hero Section -->
-    <header class="relative pt-16 md:pt-24 text-center">
+    <header class="pt-16 md:pt-20 text-center">
       <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" itemprop="name">
+        <span class="eyebrow text-primary">Case Studies</span>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4 mb-6 leading-tight" itemprop="name">
           Case <span class="text-primary">Studies</span>
         </h1>
-        <p class="text-xl md:text-2xl text-gray-text mb-8 max-w-2xl mx-auto" itemprop="description">
-          Real-world Web3 and DePIN projects we've built from the ground up. Explore our work and see how we deliver.
+        <div class="h-1 w-16 bg-primary mx-auto mb-6" />
+        <p class="text-lg md:text-xl text-gray-text leading-relaxed mb-8 max-w-2xl mx-auto" itemprop="description">
+          The full record — client systems and internal R&amp;D alike. Written up in depth: what we built, how we run
+          it, and what it took.
         </p>
       </div>
-      <!-- Decorative gradient -->
-      <div
-        class="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"
-        aria-hidden="true"
-      />
     </header>
 
     <!-- Case Studies Grid -->
@@ -55,9 +53,9 @@
               </div>
               <div class="md:col-span-3">
                 <p class="text-gray-text mb-6 leading-relaxed" itemprop="description">
-                  How Memetic Block builds and operates private bare-metal cloud infrastructure to keep
-                  critical decentralized systems online when centralized providers go down. Full-stack
-                  observability, independent CI/CD, and bounded blast radius by design.
+                  How Memetic Block builds and operates private bare-metal cloud infrastructure to keep critical
+                  decentralized systems online when centralized providers go down. Full-stack observability, independent
+                  CI/CD, and bounded blast radius by design.
                 </p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   <div class="text-center p-3 border border-white/10">
@@ -117,9 +115,9 @@
               </div>
               <div class="md:col-span-3">
                 <p class="text-gray-text mb-6 leading-relaxed" itemprop="description">
-                  How Memetic Block helped Anyone Protocol build an entire DePIN privacy network that took
-                  them from an ERC-20 token to 22,000+ registered relays, Multi-chain smart contracts, backend
-                  microservices, operator dashboard, and full infrastructure operations.
+                  How Memetic Block helped Anyone Protocol build an entire DePIN privacy network that took them from an
+                  ERC-20 token to 22,000+ registered relays, Multi-chain smart contracts, backend microservices,
+                  operator dashboard, and full infrastructure operations.
                 </p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   <div class="text-center p-3 border border-white/10">
@@ -151,15 +149,15 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-surface/30" aria-labelledby="cta-heading">
+    <section class="py-16 md:py-24" aria-labelledby="cta-heading">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">Want Results Like These?</h2>
-        <p class="text-xl text-gray-text mb-8 max-w-2xl mx-auto">
-          We build production-grade Web3 infrastructure. Let's discuss how we can help your project.
+        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Want a system like these?</h2>
+        <p class="text-lg md:text-xl text-gray-text leading-relaxed mb-8 max-w-2xl mx-auto">
+          We build production systems and stay to operate them. Tell us what you're building.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink class="btn btn-primary" to="/contact"> Get a Free Consultation </RouterLink>
-          <RouterLink class="btn" to="/about"> Learn About Us </RouterLink>
+          <RouterLink class="btn btn-primary" to="/contact"> Book a Scoping Call → </RouterLink>
+          <RouterLink class="btn" to="/work"> View Highlighted Work </RouterLink>
         </div>
       </div>
     </section>
@@ -171,7 +169,7 @@ import { useHead } from '@unhead/vue'
 
 useHead({
   title: 'Case Studies - Web3 & DePIN Development Projects',
-  link: [{ rel: 'canonical', href: 'https://memeticblock.io/case-studies' }],
+  link: [{ rel: 'canonical', href: 'https://memeticblock.com/case-studies' }],
   meta: [
     {
       name: 'description',
@@ -187,7 +185,7 @@ useHead({
         '56 repositories, production networks built from scratch.',
     },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://memeticblock.io/case-studies' },
+    { property: 'og:url', content: 'https://memeticblock.com/case-studies' },
     { name: 'twitter:title', content: 'Case Studies | Web3 & DePIN Development | Memetic Block' },
     {
       name: 'twitter:description',
@@ -212,7 +210,7 @@ useHead({
         '@type': 'CollectionPage',
         name: 'Case Studies',
         description: 'Web3 and DePIN development case studies by Memetic Block',
-        url: 'https://memeticblock.io/case-studies',
+        url: 'https://memeticblock.com/case-studies',
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: [
@@ -220,20 +218,20 @@ useHead({
               '@type': 'ListItem',
               position: 1,
               name: 'Anyone Protocol Case Study',
-              url: 'https://memeticblock.io/case-studies/anyone-protocol',
+              url: 'https://memeticblock.com/case-studies/anyone-protocol',
             },
             {
               '@type': 'ListItem',
               position: 2,
               name: 'Beyond the Cloud: Bare-Metal Private Cloud',
-              url: 'https://memeticblock.io/case-studies/bare-metal-private-cloud',
+              url: 'https://memeticblock.com/case-studies/bare-metal-private-cloud',
             },
           ],
         },
         publisher: {
           '@type': 'Organization',
           name: 'Memetic Block',
-          url: 'https://memeticblock.io',
+          url: 'https://memeticblock.com',
         },
       }),
     },
