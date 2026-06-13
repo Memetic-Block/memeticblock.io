@@ -1,7 +1,7 @@
 <template>
   <div :class="center ? 'text-center' : 'text-left'">
     <span v-if="eyebrow" class="eyebrow text-primary">{{ eyebrow }}</span>
-    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-3.5 mb-0">{{ title }}</h2>
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-0">{{ title }}</h2>
     <div class="h-1 w-16 bg-primary mt-4" :class="center ? 'mx-auto' : ''" />
     <p
       v-if="lede"

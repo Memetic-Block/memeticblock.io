@@ -2,8 +2,8 @@
   <div>
     <!-- Page header -->
     <header class="pt-16 pb-2">
-      <span class="eyebrow text-primary">Selected work</span>
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4">Work</h1>
+      <span class="eyebrow text-primary">Work</span>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4">Selected Engineering Works 22-26</h1>
       <div class="h-1 w-16 bg-primary mt-5" />
       <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 max-w-[62ch]">
         Production systems we architected, shipped, and still run today. We build it, then we stay to operate it.

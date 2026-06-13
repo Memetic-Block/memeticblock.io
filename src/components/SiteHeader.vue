@@ -79,6 +79,7 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
   { to: '/work', label: 'Work' },
+  { to: '/case-studies', label: 'Case Studies' },
   { to: '/about', label: 'About' },
   // { to: '/contact', label: 'Contact' },
 ]

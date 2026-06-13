@@ -3,10 +3,10 @@
     <!-- Page header -->
     <header class="pt-16 pb-12">
       <span class="eyebrow text-primary">Services</span>
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4">Services</h1>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4">Engineering Services</h1>
       <div class="h-1 w-16 bg-primary mt-5" />
-      <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 mb-9 max-w-[64ch]">
-        A guild, not an agency. Small, senior, and accountable — we architect systems, build them, and stay to operate
+      <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 mb-9 max-w-[58ch]">
+        A guild - not an agency - Small, senior, and accountable. We architect systems, build them, and stay to operate
         them. Three ways to engage us.
       </p>
       <div class="flex flex-wrap gap-3">
@@ -24,7 +24,7 @@
 
     <!-- Service blocks -->
     <section v-for="s in SERVICES" :id="s.id" :key="s.id" class="scroll-mt-24 py-16 border-t border-white/20">
-      <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-start pt-4">
         <!-- left rail -->
         <div class="lg:sticky lg:top-24">
           <span class="text-[13px] font-bold text-primary">§{{ Number(s.no) }}</span>
@@ -37,7 +37,7 @@
 
         <!-- right detail -->
         <div>
-          <p class="eyebrow text-gray-text mb-4">{{ s.listLabel }}</p>
+          <p class="eyebrow text-gray-text mt-8 mb-4">{{ s.listLabel }}</p>
 
           <ul v-if="s.list" class="list-none m-0 mb-8 p-0 border-t border-white/10">
             <li v-for="[h, b] in s.list" :key="h" class="grid grid-cols-[20px_1fr] gap-3 py-4 border-b border-white/10">
@@ -68,13 +68,13 @@
     <section class="border-t border-white/20 pt-16">
       <div class="border border-white/20 p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
         <div>
-          <span class="eyebrow text-primary">Commercials</span>
+          <span class="eyebrow text-primary">Building with us</span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight mt-3.5">What does it cost?</h2>
         </div>
         <div>
           <p class="text-[15px] md:text-base text-gray-text leading-relaxed mb-7">
             Retainers are fixed monthly fees scoped to your system; audits and builds are fixed-fee. We'll give you a
-            precise quote within 48 hours of a scoping call — no discovery theater, no surprise invoices.
+            precise quote within 48 hours of a scoping call with no discovery theater and no surprise invoices.
           </p>
           <div class="flex flex-wrap items-center gap-4">
             <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
@@ -125,15 +125,15 @@ const SERVICES: ServiceBlock[] = [
     blocks: [
       [
         "Who it's for",
-        'funded startups shipping AI or platform products; protocols and networks that need their stack maintained and evolved; any team where downtime has real consequences.',
+        'Funded startups shipping AI or platform products; protocols and networks that need their stack maintained and evolved; any team where downtime has real consequences.',
       ],
       [
         'How it works',
-        'fixed monthly retainer, scoped to your system and response requirements. Month to month after an initial term. Senior engineers only. We keep a deliberately small roster — slots are limited.',
+        'Fixed monthly retainer, scoped to your system and response requirements. Month to month after an initial term. Senior engineers only. We keep a deliberately small roster — slots are limited.',
       ],
       [
         'The proof',
-        'this is the model behind Anyone Protocol. We built their entire stack from zero and have operated it ever since — through launch, through growth past 22,000 registered relays, through every incident.',
+        'The model that built Anyone Protocol. We built their entire stack from zero and have operated it ever since — through launch, through growth past 22,000 registered relays, through every incident.',
       ],
     ],
   },
@@ -162,11 +162,11 @@ const SERVICES: ServiceBlock[] = [
     blocks: [
       [
         'What you get',
-        'a written findings report ranked by severity and blast radius, a prioritized hardening roadmap (quick wins vs. structural work, with effort estimates), and an executive readout with our senior engineers.',
+        'A written findings report ranked by severity and blast radius, a prioritized hardening roadmap (quick wins vs. structural work, with effort estimates), and an executive readout with our senior engineers.',
       ],
       [
         'Terms',
-        'fixed fee. Two weeks, kickoff to readout. The full audit fee is credited toward a retainer signed within 30 days.',
+        'Fixed fee. Two weeks, kickoff to readout. The full audit fee is credited toward a retainer signed within 30 days.',
       ],
     ],
   },
@@ -184,11 +184,12 @@ const SERVICES: ServiceBlock[] = [
       'AI/LLM systems & agent pipelines',
       'Smart contracts & token systems',
       'Infrastructure & DevOps overhauls',
+      'B2B Integrations & full SaaS stacks'
     ],
     blocks: [
       [
         'How it works',
-        "fixed scope and fee, agreed before work begins. Every build ships with documentation, observability, and a handoff plan — or rolls into a retainer if you'd rather we keep running it.",
+        "Fixed scope and fee, agreed before work begins. Every build ships with documentation, observability, and a handoff plan — or rolls into a retainer if you'd rather we keep running it.",
       ],
     ],
   },

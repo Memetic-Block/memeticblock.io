@@ -1,26 +1,23 @@
 <template>
   <article class="case-studies-page" itemscope itemtype="https://schema.org/CollectionPage">
     <!-- Hero Section -->
-    <header class="pt-16 md:pt-20 text-center">
-      <div class="max-w-4xl mx-auto px-4">
-        <span class="eyebrow text-primary">Case Studies</span>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4 mb-6 leading-tight" itemprop="name">
-          Case <span class="text-primary">Studies</span>
-        </h1>
-        <div class="h-1 w-16 bg-primary mx-auto mb-6" />
-        <p class="text-lg md:text-xl text-gray-text leading-relaxed mb-8 max-w-2xl mx-auto" itemprop="description">
-          The full record — client systems and internal R&amp;D alike. Written up in depth: what we built, how we run
-          it, and what it took.
-        </p>
-      </div>
+    <header class="pt-16 pb-2">
+      <span class="eyebrow text-primary">Case Studies</span>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4" itemprop="name">
+        Case Studies
+      </h1>
+      <div class="h-1 w-16 bg-primary mt-5" />
+      <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 max-w-[62ch]" itemprop="description">
+        The full record — client systems and internal R&amp;D alike. Written up in depth: what we built, how we run
+        it, and what it took.
+      </p>
     </header>
 
     <!-- Case Studies Grid -->
-    <section class="pb-16 md:pb-24" aria-labelledby="case-studies-heading">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 id="case-studies-heading" class="sr-only">Featured Case Studies</h2>
+    <section class="pt-12" aria-labelledby="case-studies-heading">
+      <h2 id="case-studies-heading" class="sr-only">Featured Case Studies</h2>
 
-        <div class="space-y-6 md:space-y-8">
+      <div class="space-y-6 md:space-y-8">
           <!-- Bare Metal Private Cloud Case Study Card -->
           <RouterLink
             to="/case-studies/bare-metal-private-cloud"
@@ -129,7 +126,7 @@
                     <p class="text-xs text-gray-text">Relays Registered</p>
                   </div>
                   <div class="text-center p-3 border border-white/10">
-                    <p class="text-2xl font-bold text-primary">69+</p>
+                    <p class="text-2xl font-bold text-primary">70+</p>
                     <p class="text-xs text-gray-text">Gbps Bandwidth</p>
                   </div>
                   <div class="text-center p-3 border border-white/10">
@@ -145,20 +142,17 @@
             </div>
           </RouterLink>
         </div>
-      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24" aria-labelledby="cta-heading">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Want a system like these?</h2>
-        <p class="text-lg md:text-xl text-gray-text leading-relaxed mb-8 max-w-2xl mx-auto">
-          We build production systems and stay to operate them. Tell us what you're building.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink class="btn btn-primary" to="/contact"> Book a Scoping Call → </RouterLink>
-          <RouterLink class="btn" to="/work"> View Highlighted Work </RouterLink>
-        </div>
+    <section class="py-16 md:py-24 text-center" aria-labelledby="cta-heading">
+      <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Want a system like these?</h2>
+      <p class="text-lg md:text-xl text-gray-text leading-relaxed mb-8 max-w-2xl mx-auto">
+        We build production systems and stay to operate them. Tell us what you're building.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <RouterLink class="btn btn-primary" to="/contact"> Book a Scoping Call → </RouterLink>
+        <RouterLink class="btn" to="/work"> View Highlighted Work </RouterLink>
       </div>
     </section>
   </article>

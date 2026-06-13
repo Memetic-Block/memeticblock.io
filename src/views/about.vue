@@ -1,23 +1,22 @@
 <template>
   <article class="about-page" itemscope itemtype="https://schema.org/Organization">
     <!-- Hero -->
-    <header class="py-16 md:py-20 text-center">
-      <div class="max-w-3xl mx-auto px-4">
-        <span class="eyebrow text-primary">About</span>
-        <h1
-          class="text-3xl md:text-5xl font-bold leading-tight tracking-tight mt-4 mb-5 max-w-[20ch] mx-auto"
-          itemprop="name"
-        >
-          A senior engineering <span class="text-primary">guild</span>, not an agency.
-        </h1>
-        <p class="text-lg md:text-xl text-gray-text leading-relaxed max-w-[56ch] mx-auto mb-8" itemprop="description">
-          Senior engineers for distributed systems and production AI. We architect systems, build them, and stay to
-          operate them — small, senior, and accountable.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
-          <RouterLink class="btn" to="/work">View Our Work</RouterLink>
-        </div>
+    <header class="pt-16 pb-2">
+      <span class="eyebrow text-primary">About</span>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4" itemprop="name">
+        Memetic Block
+      </h1>
+      <div class="h-1 w-16 bg-primary mt-5" />
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight mt-6 mb-5" itemprop="name">
+        A senior engineering <span class="text-primary">guild</span>, not an agency.
+      </h2>
+      <p class="text-lg md:text-xl text-gray-text leading-relaxed max-w-[56ch] mb-8" itemprop="description">
+        Senior engineers for distributed systems and production AI. We architect systems, build them, and stay to
+        operate them — small, senior, and accountable.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
+        <RouterLink class="btn" to="/work">View Our Work</RouterLink>
       </div>
     </header>
 

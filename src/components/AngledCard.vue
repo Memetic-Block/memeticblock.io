@@ -1,5 +1,22 @@
 <template>
-  <component :is="tag" :class="['angled-card', `corner-${corner}`, { hoverable }]" :style="{ padding: pad }">
+  <component
+    :is="tag"
+    :class="{
+      'angled-card': true,
+      [`corner-br`]: Array.isArray(corners) && (corners as Corner[]).includes('br') || corner === 'br',
+      [`corner-bl`]: Array.isArray(corners) && (corners as Corner[]).includes('bl') || corner === 'bl',
+      [`corner-tr`]: Array.isArray(corners) && (corners as Corner[]).includes('tr') || corner === 'tr',
+      [`corner-tl`]: Array.isArray(corners) && (corners as Corner[]).includes('tl') || corner === 'tl',
+      hoverable: hoverable
+    }"
+    :style="{ padding: pad }"
+  >
+    {{
+      Array.isArray(corners) && (corners as Corner[]).includes('br'),
+      Array.isArray(corners) && (corners as Corner[]).includes('bl'),
+      Array.isArray(corners) && (corners as Corner[]).includes('tr'),
+      Array.isArray(corners) && (corners as Corner[]).includes('tl')
+    }}
     <span class="angled-fill" aria-hidden="true" />
     <div class="angled-content"><slot /></div>
   </component>
@@ -62,10 +79,12 @@
 </style>
 
 <script setup lang="ts">
+type Corner = 'br' | 'bl' | 'tr' | 'tl'
 withDefaults(
   defineProps<{
     /** Which corner gets the 24px diagonal cut. */
-    corner?: 'br' | 'bl' | 'tr' | 'tl'
+    corner?: Corner
+    corners?: Corner[]
     /** Raise the hairline frame to the red accent on hover. */
     hoverable?: boolean
     /** Inner padding (any CSS length / shorthand). */

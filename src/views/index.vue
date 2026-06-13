@@ -1,25 +1,29 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="min-h-[58vh] flex flex-col items-center justify-center text-center pt-12 pb-14 px-4">
-      <MemeticBlockLogo class="w-20 h-20 md:w-24 md:h-24" />
-      <span class="eyebrow text-primary mt-7">Memetic Block — A Software Guild</span>
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mt-4 max-w-[22ch]">
-        We build production systems. Then we stay to run them.
+    <section class="min-h-[58vh] flex flex-col items-center justify-center text-center pt-12 pb-12 px-4">
+      <MemeticBlockLogo class="w-40 h-40 md:w-40 md:h-40" />
+      <!-- <span class="text-lg mt-0 whitespace-nowrap">
+        <span class="font-bold">MEMETIC</span> <span class="font-normal">BLOCK</span>
+      </span> -->
+      <!-- <span class="eyebrow mt-7"><span class="font-bold">Memetic</span> Block</span> -->
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mt-4 max-w-[28ch]">
+        We build production systems.<br />Then we stay to <span class="text-primary">run them.</span>
       </h1>
       <p class="text-lg text-gray-text leading-relaxed mt-6 mb-8 max-w-[66ch]">
-        Senior engineers for distributed systems and production AI. We architected and built Anyone Protocol's entire
-        stack — and we've operated it on retainer ever since. 22,000+ relays registered. 7,600+ active. 69+ Gbps.
-        <span class="text-white font-bold">Our pager, not yours.</span>
+        We are senior engineers experienced in distributed systems and production AI.
+        We architect, build, and operate your stack from zero to production,
+        like Anyone Protocol's 7,600+ active relay DePIN privacy network.
+        <span class="text-white font-bold">Our pager, <span class="text-primary">not yours.</span></span>
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
-        <RouterLink class="btn" to="/work">Read the Case Study →</RouterLink>
+        <RouterLink class="btn" to="/case-studies/anyone-protocol">Read the Case Study →</RouterLink>
       </div>
     </section>
 
     <!-- Proof bar -->
-    <div class="border-y border-white/10">
+    <!-- <div class="border-y border-white/10">
       <div class="grid grid-cols-2 md:grid-cols-4">
         <div
           v-for="(p, i) in PROOF"
@@ -38,24 +42,24 @@
           <span class="text-[13px] text-gray-text">{{ p.label }}</span>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- What we do -->
-    <section class="pt-20 pb-2">
+    <section class="pt-2 pb-2">
       <SectionHeading
-        eyebrow="What we do"
         title="Most firms build and leave."
-        lede="We build and answer the pager. Every engagement is senior engineers only — no bench, no handoffs, no juniors learning on your dime."
-        max-lede="58ch"
+        lede="We build and answer the pager. Every engagement is senior engineers only: no bench, no handoffs, no juniors learning on your dime."
+        max-lede="60ch"
       />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-11">
         <AngledCard
           v-for="(o, i) in OFFERS"
           :key="o.id"
-          :corner="(['br', 'tr', 'bl'] as const)[i]"
+          :corners="['tr', 'bl']"
           pad="1.75rem 1.75rem 1.85rem"
           class="min-h-[262px]"
         >
+        <!-- :corner="(['tr', 'tr', 'tr'] as const)[i]" -->
           <div class="flex flex-col h-full">
             <span class="text-[13px] font-bold text-primary">{{ o.no }}</span>
             <h3 class="text-xl font-bold mt-3.5 mb-3">{{ o.name }}</h3>
@@ -81,8 +85,8 @@
       <SectionHeading
         eyebrow="Selected work"
         title="Work"
-        lede="Two systems we architected, shipped, and still run today."
-        max-lede="50ch"
+        lede="Systems we've architected, shipped, and operate today."
+        max-lede="60ch"
       />
       <div class="grid gap-7 mt-11">
         <FeaturedWorkCard v-for="(c, i) in FEATURED" :key="c.id" :project="c" :flip="i % 2 === 1" />

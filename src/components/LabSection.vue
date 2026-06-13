@@ -1,9 +1,9 @@
 <template>
   <section class="py-20">
     <SectionHeading
-      eyebrow="R&D"
+      eyebrow="Research & Development"
       title="The Lab"
-      lede="Where we sharpen the craft. Lab projects are ours — built to test ideas, win hackathons, and keep the guild honest."
+      lede="Where we sharpen the craft. Lab projects are ours: built to test ideas, explore the frontier, and keep the guild honest."
       max-lede="60ch"
     />
     <div class="lab-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mt-11 relative">
@@ -18,6 +18,9 @@
             <StatusLabel :label="l.status" :tone="l.tone" />
           </div>
           <p class="text-gray-text text-sm leading-relaxed mt-3 mb-0">{{ l.body }}</p>
+          <a v-if="l.link" :href="l.link.url" :target="l.link.newTab ? '_blank' : '_self'" rel="noopener" class="mt-4 text-sm text-white underline hover:text-primary transition-colors">
+            {{ l.link.label }}
+          </a>
         </div>
       </AngledCard>
     </div>
@@ -29,10 +32,19 @@
   --gap: 1.5rem;
 }
 
+/* Make every row the same height as the tallest card so the 2×2 stays a
+   uniform block no matter how much text each card holds. */
+@media (min-width: 640px) {
+  .lab-grid {
+    grid-auto-rows: 1fr;
+  }
+}
+
 .lab-center {
   position: absolute;
   left: 50%;
-  top: calc(50% - var(--gap) / 2);
+  /* With equal-height rows the true center of the grid is exactly 50%. */
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 </style>

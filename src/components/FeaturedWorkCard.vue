@@ -10,7 +10,7 @@
       <img
         :src="project.img"
         :alt="project.imgAlt"
-        class="w-full h-full object-cover block"
+        class="w-full h-full object-contain block"
         :class="large ? 'min-h-[280px] md:min-h-[360px]' : 'min-h-[220px] md:min-h-[280px]'"
         loading="lazy"
       />
@@ -52,7 +52,6 @@
 
       <!-- footer -->
       <div v-if="large" class="flex flex-wrap items-center gap-5 mt-6">
-        <span class="text-xs text-gray-500 italic">Operated by Memetic Block since launch.</span>
         <a
           v-if="project.external"
           :href="`https://${project.external}`"

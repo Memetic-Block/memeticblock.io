@@ -18,8 +18,7 @@ export interface ProofStat {
 }
 
 export const PROOF: ProofStat[] = [
-  { num: '22,000+', label: 'relays registered' },
-  { num: '7,600+', label: 'active relays' },
+  { num: '7,600+', label: 'network relays supported' },
   { num: '69+ Gbps', label: 'network bandwidth' },
   { num: null, label: 'On call since launch', dot: true },
 ]
@@ -37,19 +36,19 @@ export const OFFERS: Offer[] = [
     id: 'retainer',
     no: '01',
     name: 'Engineering Retainer',
-    body: 'Your senior engineering team, on call. Architecture, full-stack build, infrastructure, and operations — owned end to end, month over month. The model behind every production system we run.',
+    body: 'Your senior engineering team, on call. Architecture, full-stack build, infrastructure, and operations owned end to end, month over month. The model behind every production system we run.',
   },
   {
     id: 'audit',
     no: '02',
     name: 'Production Readiness Audit',
-    body: 'A fixed-fee, two-week review of your system by engineers who operate production infrastructure for a living. What will break, what it costs you, what to fix first.',
+    body: 'A fixed-fee, two-week review of your system by senior engineers who operate production infrastructure for a living. We identify what will break, what it costs you, and what to fix first.',
   },
   {
     id: 'scoped',
     no: '03',
     name: 'Scoped Builds',
-    body: 'A defined system, designed and shipped: protocol infrastructure, backend platforms, AI/LLM systems, smart contracts. Fixed scope, senior team, production-grade from the first commit.',
+    body: 'A defined system, designed and shipped: protocol infrastructure, backend platforms, AI/LLM piplines, smart contracts. Fixed scope, senior team, production-grade and security-first from the first commit.',
   },
 ]
 
@@ -78,8 +77,8 @@ export const FEATURED: FeaturedProject[] = [
     tag: 'DePIN',
     img: '/images/case-studies/fromzerotoanyone-notext.png',
     imgAlt: 'From Zero to Anyone: Anyone Protocol case study',
-    body: 'DePIN privacy network. We took Anyone Protocol from an ERC-20 token to a live decentralized VPN: multi-chain smart contracts, backend microservices, operator dashboard, and full infrastructure operations — built from zero, operated by us since launch.',
-    stats: '22,000+ relays registered · 7,600+ active · 69+ Gbps',
+    body: 'DePIN privacy network. We took Anyone Protocol from an ERC-20 token to a live decentralized VPN: multi-chain smart contracts, backend microservices, operator dashboard, and full infrastructure operations.  From zero to Anyone.',
+    stats: '7,600+ active DePIN relays, 70+ Gbps privacy network bandwidth',
     caseStudy: '/case-studies/anyone-protocol',
     external: 'anyone.io',
   },
@@ -91,7 +90,7 @@ export const FEATURED: FeaturedProject[] = [
     tag: 'Infrastructure',
     img: '/images/case-studies/bare-metal-private-cloud-notext.png',
     imgAlt: 'Beyond the Cloud: Bare-Metal Private Cloud case study',
-    body: 'How we keep critical decentralized systems online when centralized providers go down. Independent CI/CD, full-stack observability, isolated networking, bounded blast radius — infrastructure designed to fail small.',
+    body: 'How we keep critical decentralized systems online when centralized providers go down. Independent CI/CD, full-stack observability, isolated networking, bounded blast radius with resilient infrastructure designed to fail small.',
     stats: null,
     caseStudy: '/case-studies/bare-metal-private-cloud',
     external: null,
@@ -104,6 +103,11 @@ export interface LabProject {
   tone: Tone
   corner: 'br' | 'bl' | 'tr' | 'tl'
   body: string
+  link?: {
+    url: string
+    label: string
+    newTab?: boolean
+  }
 }
 
 export const LAB: LabProject[] = [
@@ -112,27 +116,47 @@ export const LAB: LabProject[] = [
     status: 'In progress',
     tone: 'info',
     corner: 'br',
-    body: 'An autonomous software-delivery pipeline: requirements → issues → pull requests → CI green → human-gated merge. One full sprint completed end to end. Writeup coming.',
+    body: 'Human-orchestrated, autonomous software-delivery pipeline.  Agentic Software Engineering at scale.',
+    link: {
+      url: 'https://x.com/memeticblock',
+      label: 'Follow along on X →',
+      newTab: true
+    }
   },
   {
     name: 'Wuzzy Search',
     status: 'Live alpha',
     tone: 'warning',
     corner: 'bl',
-    body: 'Permaweb search engine. Agents of AO Hackathon winner, 2025.',
+    body: 'Decentralized search engine for the Arweave Permaweb. Agents of AO Hackathon winner, 2025.',
+    link: {
+      url: 'https://wuzzy.io',
+      label: 'wuzzy.io →',
+      newTab: true
+    }
   },
   {
-    name: 'Frostor',
+    name: 'Permaweb Infrastructure',
     status: 'Live',
     tone: 'success',
     corner: 'tr',
-    body: 'Arweave gateway. 200k+ $ARIO staked.',
+    body: 'Enterprise-grade DePIN infrastructure for the Arweave Permaweb.',
+    link: {
+      url: 'https://frostor.xyz',
+      label: 'frostor.xyz →',
+      newTab: true
+    }
   },
   {
-    name: 'Art By City',
-    status: 'Dormant',
-    tone: 'muted',
+    name: 'Open Source Code',
+    status: 'Growing',
+    tone: 'info',
     corner: 'tl',
-    body: 'Web3 artist empowerment. 60+ artists, 40+ GB of art, 31k+ data transactions.',
+    body: 'Past projects, experiments, and learnings from the guild. A living library of what we build in public.',
+    link: {
+      url: 'https://github.com/memetic-block',
+      label: 'Memetic Block on GitHub →',
+      newTab: true
+    }
   },
 ]
