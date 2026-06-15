@@ -10,12 +10,14 @@
               <span class="font-bold">MEMETIC</span> <span class="font-normal">BLOCK</span>
             </p>
           </div>
-          <p class="text-gray-text text-sm">A Software Guild focused on building distributed systems of value.</p>
+          <p class="text-gray-text text-sm max-w-[36ch]">
+            A senior engineering guild for distributed systems and production AI. We build it, then we stay to run it.
+          </p>
         </div>
 
         <!-- Links -->
         <div>
-          <p class="font-bold mb-2">Links</p>
+          <p class="font-bold mb-2">Site</p>
           <ul class="list-none m-0 p-0 space-y-2">
             <li>
               <RouterLink to="/" class="text-gray-text hover:text-white no-underline transition-colors">
@@ -23,13 +25,23 @@
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="/about" class="text-gray-text hover:text-white no-underline transition-colors">
-                About
+              <RouterLink to="/services" class="text-gray-text hover:text-white no-underline transition-colors">
+                Services
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/work" class="text-gray-text hover:text-white no-underline transition-colors">
+                Work
               </RouterLink>
             </li>
             <li>
               <RouterLink to="/case-studies" class="text-gray-text hover:text-white no-underline transition-colors">
                 Case Studies
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/about" class="text-gray-text hover:text-white no-underline transition-colors">
+                About
               </RouterLink>
             </li>
             <li>
@@ -44,6 +56,11 @@
         <div>
           <p class="font-bold mb-2">Connect</p>
           <ul class="list-none m-0 p-0 space-y-2">
+            <li>
+              <RouterLink to="/contact" class="inline-block mt-2 text-gray-text hover:text-white" @click="mobileMenuOpen = false">
+                Book a Scoping Call →
+              </RouterLink>
+            </li>
             <li>
               <a
                 href="mailto:build@memeticblock.com"

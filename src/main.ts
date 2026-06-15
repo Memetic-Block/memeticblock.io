@@ -11,6 +11,8 @@ if (import.meta.env.SSR && typeof window !== 'undefined') {
 
 // Import page components
 import Home from './views/index.vue'
+import Services from './views/services.vue'
+import Work from './views/work.vue'
 import About from './views/about.vue'
 import Contact from './views/contact.vue'
 import CaseStudies from './views/case-studies/index.vue'
@@ -19,11 +21,18 @@ import CaseStudyBareMetalPrivateCloud from './views/case-studies/bare-metal-priv
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'Home', component: Home },
+  { path: '/services', name: 'Services', component: Services },
+  { path: '/work', name: 'Work', component: Work },
   { path: '/about', name: 'About', component: About },
   { path: '/contact', name: 'Contact', component: Contact },
+  // Work = curated highlights; Case Studies = the full index (client + internal).
   { path: '/case-studies', name: 'CaseStudies', component: CaseStudies },
   { path: '/case-studies/anyone-protocol', name: 'CaseStudyAnyoneProtocol', component: CaseStudyAnyoneProtocol },
-  { path: '/case-studies/bare-metal-private-cloud', name: 'CaseStudyBareMetalPrivateCloud', component: CaseStudyBareMetalPrivateCloud },
+  {
+    path: '/case-studies/bare-metal-private-cloud',
+    name: 'CaseStudyBareMetalPrivateCloud',
+    component: CaseStudyBareMetalPrivateCloud,
+  },
 ]
 
 export const createApp = ViteSSG(App, {
