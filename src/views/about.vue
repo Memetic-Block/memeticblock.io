@@ -11,8 +11,8 @@
         A senior engineering <span class="text-primary">guild</span>, not an agency.
       </h2>
       <p class="text-lg md:text-xl text-gray-text leading-relaxed max-w-[56ch] mb-8" itemprop="description">
-        Senior engineers for distributed systems and production AI. We architect systems, build them, and stay to
-        operate them — small, senior, and accountable.
+        Senior engineers experienced in distributed systems and production AI. We architect systems, build them, and stay to
+        operate them.  Small, senior, and accountable.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>

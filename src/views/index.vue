@@ -12,18 +12,16 @@
       </h1>
       <p class="text-lg text-gray-text leading-relaxed mt-6 mb-8 max-w-[66ch]">
         We are senior engineers experienced in distributed systems and production AI.
-        We architect, build, and operate your stack from zero to production,
-        like Anyone Protocol's 7,600+ active relay DePIN privacy network.
+        We architect, build, and operate your stack from zero to production.
         <span class="text-white font-bold">Our pager, <span class="text-primary">not yours.</span></span>
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
-        <RouterLink class="btn" to="/case-studies/anyone-protocol">Read the Case Study →</RouterLink>
       </div>
     </section>
 
     <!-- Proof bar -->
-    <!-- <div class="border-y border-white/10">
+    <div class="border-y border-white/10 mt-10 mb-20">
       <div class="grid grid-cols-2 md:grid-cols-4">
         <div
           v-for="(p, i) in PROOF"
@@ -41,8 +39,11 @@
           </span>
           <span class="text-[13px] text-gray-text">{{ p.label }}</span>
         </div>
+        <div class="flex flex-col gap-1.5  py-6">
+          <RouterLink class="btn" to="/case-studies/anyone-protocol">Read the Case Study →</RouterLink>
+        </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- What we do -->
     <section class="pt-2 pb-2">
@@ -62,7 +63,8 @@
         <!-- :corner="(['tr', 'tr', 'tr'] as const)[i]" -->
           <div class="flex flex-col h-full">
             <span class="text-[13px] font-bold text-primary">{{ o.no }}</span>
-            <h3 class="text-xl font-bold mt-3.5 mb-3">{{ o.name }}</h3>
+            <h3 class="text-xl font-bold mb-4">{{ o.name }}</h3>
+            <!-- <div class="h-1 w-16 bg-primary mb-2" /> -->
             <p class="text-sm text-gray-text leading-relaxed m-0 flex-1">{{ o.body }}</p>
             <RouterLink
               :to="{ path: '/services', hash: `#${o.id}` }"
@@ -103,15 +105,16 @@
           <span class="status-dot animate-mbpulse" />
           Accepting new engagements
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mx-auto mb-4 max-w-[22ch]">
-          Currently open to new engagements.
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mx-auto mb-4">
+          Limited engagement slots are available.
         </h2>
-        <p class="text-base text-gray-text leading-relaxed mx-auto mb-8 max-w-[56ch]">
+        <p class="text-base text-gray-text leading-relaxed mx-auto mb-8 max-w-[62ch]">
           We keep the roster small on purpose. If you need senior engineers who take ownership and stay accountable,
           let's talk.
         </p>
         <div class="flex flex-wrap gap-4 justify-center items-center">
           <RouterLink class="btn btn-primary" to="/contact">Book a Scoping Call →</RouterLink>
+          or
           <a :href="`mailto:${EMAIL}`" class="text-sm text-gray-text underline hover:text-primary transition-colors">
             {{ EMAIL }}
           </a>

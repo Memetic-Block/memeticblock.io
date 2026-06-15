@@ -11,12 +11,6 @@
     }"
     :style="{ padding: pad }"
   >
-    {{
-      Array.isArray(corners) && (corners as Corner[]).includes('br'),
-      Array.isArray(corners) && (corners as Corner[]).includes('bl'),
-      Array.isArray(corners) && (corners as Corner[]).includes('tr'),
-      Array.isArray(corners) && (corners as Corner[]).includes('tl')
-    }}
     <span class="angled-fill" aria-hidden="true" />
     <div class="angled-content"><slot /></div>
   </component>

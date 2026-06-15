@@ -63,7 +63,6 @@
         </a>
       </div>
       <RouterLink
-        v-else
         :to="project.caseStudy"
         class="self-start mt-5 text-sm text-white underline hover:text-primary transition-colors"
       >

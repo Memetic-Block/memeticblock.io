@@ -18,9 +18,10 @@ export interface ProofStat {
 }
 
 export const PROOF: ProofStat[] = [
-  { num: '7,600+', label: 'network relays supported' },
-  { num: '69+ Gbps', label: 'network bandwidth' },
-  { num: null, label: 'On call since launch', dot: true },
+  { num: 'Anyone Protocol', label: 'DePIN privacy network' },
+  { num: '7,600+', label: 'network relays online' },
+  { num: '70+ Gbps', label: 'network bandwidth' },
+  // { num: null, label: 'On call since launch', dot: true },
 ]
 
 export interface Offer {
@@ -41,7 +42,7 @@ export const OFFERS: Offer[] = [
   {
     id: 'audit',
     no: '02',
-    name: 'Production Readiness Audit',
+    name: 'Production Audit',
     body: 'A fixed-fee, two-week review of your system by senior engineers who operate production infrastructure for a living. We identify what will break, what it costs you, and what to fix first.',
   },
   {
@@ -125,7 +126,7 @@ export const LAB: LabProject[] = [
   },
   {
     name: 'Wuzzy Search',
-    status: 'Live alpha',
+    status: 'Experimental Demo',
     tone: 'warning',
     corner: 'bl',
     body: 'Decentralized search engine for the Arweave Permaweb. Agents of AO Hackathon winner, 2025.',

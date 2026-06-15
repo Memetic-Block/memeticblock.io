@@ -5,8 +5,8 @@
       <span class="eyebrow text-primary">Services</span>
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-4">Engineering Services</h1>
       <div class="h-1 w-16 bg-primary mt-5" />
-      <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 mb-9 max-w-[58ch]">
-        A guild - not an agency - Small, senior, and accountable. We architect systems, build them, and stay to operate
+      <p class="text-lg md:text-xl text-gray-text leading-relaxed mt-6 mb-9 max-w-[60ch]">
+        Small, senior, and accountable. We architect systems, build them, and stay to operate
         them. Three ways to engage us.
       </p>
       <div class="flex flex-wrap gap-3">
