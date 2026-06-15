@@ -57,7 +57,7 @@
           <p class="font-bold mb-2">Connect</p>
           <ul class="list-none m-0 p-0 space-y-2">
             <li>
-              <RouterLink to="/contact" class="inline-block mt-2 text-gray-text hover:text-white" @click="mobileMenuOpen = false">
+              <RouterLink to="/contact" class="inline-block mt-2 text-gray-text hover:text-white">
                 Book a Scoping Call →
               </RouterLink>
             </li>
